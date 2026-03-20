@@ -44,3 +44,5 @@ coverage/
 .turbo/
 .env.example.local
 t.txt
+
+prompt.md
