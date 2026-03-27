@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Icono } from "@/components/ui/Icono";
 import { RefreshCcw } from "lucide-react";
+import { RevealClipText } from "@/components/shared/RevealClipText";
 
 const stepLabels = [
   "Datos personales",
@@ -246,6 +247,7 @@ export const Steps = () => {
   };
 
   const currentStatus = otpStatusCopy[otpStatus];
+  const headlineLines = ["Tu voto es único", "y está protegido."];
 
   return (
     <motion.section
@@ -480,44 +482,82 @@ export const Steps = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-col items-center gap-8 text-center"
+              className="flex flex-col items-center gap-18 text-center"
             >
-              <div className="inline-flex h-18 w-18 items-center justify-center rounded-full border border-brand-50/20 bg-brand-50/8 text-3xl text-brand-50">
-                03
-              </div>
-
               <div className="space-y-3">
-                <h2 className="text-3xl text-brand-50 md:text-4xl">
-                  Correo verificado
-                </h2>
-                <p className="mx-auto max-w-xl text-base leading-7 text-brand-50/60">
-                  La maqueta ya quedo lista para que en el siguiente paso
-                  conectemos el OTP real, validaciones del backend y navegacion
-                  final del flujo.
-                </p>
-              </div>
-
-              <div className="grid w-full max-w-2xl gap-4 rounded-3xl border border-brand-50/10 bg-white/3 p-5 text-left md:grid-cols-3">
-                <SummaryItem
-                  label="Nombre"
-                  value={formData.fullName || "Pendiente"}
-                />
-                <SummaryItem
-                  label="Correo"
-                  value={formData.email || "Pendiente"}
-                />
-                <SummaryItem
-                  label="Telefono"
-                  value={formData.phone || "Pendiente"}
+                <RevealClipText
+                  as="h2"
+                  lines={headlineLines}
+                  className="text-4xl md:text-7xl text-center"
+                  moveDuration={2}
+                  clipDuration={3}
                 />
               </div>
+              <div className="w-full flex-1 flex items-center justify-center gap-12 md:gap-24">
+                <div className="group flex-1 flex flex-col items-center justify-center gap-4">
+                  <RevealClipText
+                    as="p"
+                    lines={["Opción A"]}
+                    className="text-center text-2xl"
+                    moveDuration={2}
+                    clipDuration={3}
+                  />
+                  <motion.picture
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      delay: 1,
+                      duration: 0.5,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="w-80 h-40 inline-flex border border-cb group-hover:border-brand-50 rounded-2xl p-14 transition ease-in-out duration-500"
+                  >
+                    <img
+                      className="invert"
+                      src="/icons/logo-antiguo.svg"
+                      alt="logo antiguo"
+                    />
+                  </motion.picture>
+                </div>
+                <div className="group flex-1 flex flex-col items-center justify-center gap-4">
+                  <RevealClipText
+                    as="p"
+                    lines={["Opción B"]}
+                    className="text-center text-2xl"
+                    moveDuration={2}
+                    clipDuration={3}
+                  />
+                  <motion.picture
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      delay: 1,
+                      duration: 0.5,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="w-80 h-40 inline-flex border border-cb group-hover:border-brand-50 rounded-2xl p-13 transition ease-in-out duration-500"
+                  >
+                    <img src="/icons/logo-nuevo.svg" alt="logo nuevo" />
+                  </motion.picture>
+                </div>
+              </div>
 
-              <div className="flex items-center gap-4">
+              <div className="w-full flex items-center justify-between">
                 <Button variant="arrow" back onClick={() => setStep(2)}>
                   Volver
                 </Button>
-                <Button variant="arrow">Continuar</Button>
+                <Button variant="arrow">Registrar</Button>
               </div>
+
+              <RevealClipText
+                as="p"
+                lines={[
+                  "Las votaciones están siendo monitoreadas y revisadas por la prestigiosa firma de servicio y auditoría PricewaterhouseCoopers (PwC), todo con el objetivo de brindar confianza a nuestros votantes.",
+                ]}
+                className="text-center text-xs opacity-80 w-full"
+                moveDuration={2}
+                clipDuration={3}
+              />
             </motion.div>
           )}
         </AnimatePresence>
