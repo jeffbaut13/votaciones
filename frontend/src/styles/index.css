@@ -1,15 +1,32 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "ppneuemontreal book";
+  src: url("/fonts/ppneuemontreal-book.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ppneuemontreal medium";
+  src: url("/fonts/ppneuemontreal-medium.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "ppneuemontreal bold";
+  src: url("/fonts/ppneuemontreal-bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
 @theme inline {
-  --color-brand-50: #18191a;
-  --color-brand-100: #ffffff;
+  --color-brand-50: #ffffff;
+  --color-brand-100: #18191a;
   --color-brand-300: #b8c58b;
   --color-brand-500: #839340;
   --color-brand-900: #1b2110;
   --color-brand-950: #0e1208;
-  --color-accent: #ff7a18;
-  --font-display: Georgia, serif;
-  --font-body: Tahoma, sans-serif;
+  --color-accent: #d32121;
+  --color-cb: color-mix(in oklab, #ffffff 30%, transparent);
+  --font-ppbook: "ppneuemontreal book", serif;
+  --font-ppmedium: "ppneuemontreal medium", serif;
+  --font-ppbold: "ppneuemontreal bold", serif;
 }
 
 :root {
@@ -17,7 +34,7 @@
   background:
     radial-gradient(circle at top, rgba(255, 122, 24, 0.18), transparent 30%),
     linear-gradient(180deg, #171f0d 0%, #0e1208 100%);
-  font-family: Tahoma, sans-serif;
+  font-family: var(--font-ppbook), serif;
   cursor: default;
 }
 
@@ -28,14 +45,21 @@
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 #root {
-  min-height: 100vh;
+  @apply h-dvh min-h-dvh flex flex-col;
 }
-
+.full {
+  @apply size-full;
+}
 a {
-  color: inherit;
   text-decoration: none;
+}
+img {
+  @apply inline-flex object-contain size-full;
+}
+.input-style {
+  @apply bg-transparent border-b border-cb w-full py-3 text-2xl focus:outline-none focus:ring-cb focus:ring-offset-1 focus:ring-offset-transparent;
 }

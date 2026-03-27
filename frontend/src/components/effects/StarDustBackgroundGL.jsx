@@ -52,8 +52,10 @@ function cubicPoint(p0, p1, p2, p3, t) {
   const t2 = t * t;
 
   return {
-    x: mt2 * mt * p0.x + 3 * mt2 * t * p1.x + 3 * mt * t2 * p2.x + t2 * t * p3.x,
-    y: mt2 * mt * p0.y + 3 * mt2 * t * p1.y + 3 * mt * t2 * p2.y + t2 * t * p3.y,
+    x:
+      mt2 * mt * p0.x + 3 * mt2 * t * p1.x + 3 * mt * t2 * p2.x + t2 * t * p3.x,
+    y:
+      mt2 * mt * p0.y + 3 * mt2 * t * p1.y + 3 * mt * t2 * p2.y + t2 * t * p3.y,
   };
 }
 
@@ -78,7 +80,10 @@ function createPlume(width, height) {
     edge === 0
       ? { x: -width * 0.08, y: height * (0.08 + Math.random() * 0.84) }
       : edge === 1
-        ? { x: width * (1.02 + Math.random() * 0.08), y: height * (0.08 + Math.random() * 0.84) }
+        ? {
+            x: width * (1.02 + Math.random() * 0.08),
+            y: height * (0.08 + Math.random() * 0.84),
+          }
         : edge === 2
           ? { x: width * (0.06 + Math.random() * 0.88), y: -height * 0.08 }
           : { x: width * (0.06 + Math.random() * 0.88), y: height * 1.08 };
@@ -117,7 +122,9 @@ function createShapeProfile(width, height) {
   const plumeCount = 15 + Math.floor(Math.random() * 1);
 
   return {
-    plumes: Array.from({ length: plumeCount }, () => createPlume(width, height)),
+    plumes: Array.from({ length: plumeCount }, () =>
+      createPlume(width, height),
+    ),
     stirrers: Array.from({ length: 5 + Math.floor(Math.random() * 3) }, () => ({
       plumeIndex: Math.floor(Math.random() * plumeCount),
       t: Math.random(),
@@ -130,9 +137,17 @@ function createShapeProfile(width, height) {
   };
 }
 
-function createParticleData(width, height, config, reducedMotion, shapeProfile) {
+function createParticleData(
+  width,
+  height,
+  config,
+  reducedMotion,
+  shapeProfile,
+) {
   const densityScale = clamp((width * height) / 1080000, 0.82, 1.32);
-  const total = Math.round(config.particleCount * densityScale * (reducedMotion ? 0.65 : 1));
+  const total = Math.round(
+    config.particleCount * densityScale * (reducedMotion ? 0.65 : 1),
+  );
 
   const state = new Float32Array(total * STRIDE);
   const render = new Float32Array(total * STRIDE);
@@ -145,21 +160,30 @@ function createParticleData(width, height, config, reducedMotion, shapeProfile) 
     const plumeIndex = Math.floor(Math.random() * shapeProfile.plumes.length);
     const plume = shapeProfile.plumes[plumeIndex];
     const t = Math.pow(Math.random(), 0.72);
-    const tangent = normalize(cubicTangent(plume.p0, plume.p1, plume.p2, plume.p3, t));
+    const tangent = normalize(
+      cubicTangent(plume.p0, plume.p1, plume.p2, plume.p3, t),
+    );
     const normal = { x: -tangent.y, y: tangent.x };
     const point = cubicPoint(plume.p0, plume.p1, plume.p2, plume.p3, t);
     const widthAtT = plume.bodyWidth * (0.6 + Math.sin(t * Math.PI) * 1.26);
-    const scatter = (Math.random() - 0.5) * widthAtT * (1.0 + Math.random() * 1.18);
+    const scatter =
+      (Math.random() - 0.5) * widthAtT * (1.0 + Math.random() * 1.18);
     const along = (Math.random() - 0.5) * widthAtT * 0.46;
     const x = point.x + normal.x * scatter + tangent.x * along;
     const y = point.y + normal.y * scatter + tangent.y * along;
 
-    if (x < -width * 0.12 || x > width * 1.12 || y < -height * 0.12 || y > height * 1.12) {
+    if (
+      x < -width * 0.12 ||
+      x > width * 1.12 ||
+      y < -height * 0.12 ||
+      y > height * 1.12
+    ) {
       continue;
     }
 
-    const density = (1 - Math.min(Math.abs(scatter) / Math.max(widthAtT, 1), 1)) * plume.gain;
-    const size = 1.16 + density * 1.78 + Math.random() * 0.58;
+    const density =
+      (1 - Math.min(Math.abs(scatter) / Math.max(widthAtT, 1), 1)) * plume.gain;
+    const size = 1.8 + density * 1.78 + Math.random() * 0.58;
     const alpha = 0.042 + density * 0.062 + Math.random() * 0.014;
 
     const stateOffset = created * STRIDE;
@@ -307,6 +331,9 @@ export function StarDustBackgroundGL({
 
     let width = 1;
     let height = 1;
+    let lastRebuildWidth = 0;
+    let lastRebuildHeight = 0;
+    let lastRebuildTier = "desktop";
     let ratio = 1;
     let config = BASE_CONFIG.desktop;
     let shapeProfile = createShapeProfile(1, 1);
@@ -316,25 +343,16 @@ export function StarDustBackgroundGL({
     let metaData = null;
     let previousTime = 0;
     let buffer = null;
-
-    const program = createProgram(gl, vertexShaderSource, fragmentShaderSource);
-    gl.useProgram(program);
-    gl.disable(gl.DEPTH_TEST);
-    gl.enable(gl.BLEND);
-    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
-
-    const attribs = {
-      position: gl.getAttribLocation(program, "a_position"),
-      size: gl.getAttribLocation(program, "a_size"),
-      alpha: gl.getAttribLocation(program, "a_alpha"),
-    };
-
-    const uniforms = {
-      resolution: gl.getUniformLocation(program, "u_resolution"),
-      dpr: gl.getUniformLocation(program, "u_dpr"),
-    };
+    let program = null;
+    let attribs = null;
+    let uniforms = null;
+    let isDisposed = false;
 
     const setAttributes = () => {
+      if (!attribs) {
+        return;
+      }
+
       const stride = STRIDE * 4;
       gl.enableVertexAttribArray(attribs.position);
       gl.vertexAttribPointer(attribs.position, 2, gl.FLOAT, false, stride, 0);
@@ -344,19 +362,79 @@ export function StarDustBackgroundGL({
       gl.vertexAttribPointer(attribs.alpha, 1, gl.FLOAT, false, stride, 12);
     };
 
-    const resize = () => {
+    const initializeSceneResources = () => {
+      if (gl.isContextLost()) {
+        return false;
+      }
+
+      if (program) {
+        gl.deleteProgram(program);
+        program = null;
+      }
+
+      if (buffer) {
+        gl.deleteBuffer(buffer);
+        buffer = null;
+      }
+
+      program = createProgram(gl, vertexShaderSource, fragmentShaderSource);
+      gl.useProgram(program);
+      gl.disable(gl.DEPTH_TEST);
+      gl.enable(gl.BLEND);
+      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+
+      attribs = {
+        position: gl.getAttribLocation(program, "a_position"),
+        size: gl.getAttribLocation(program, "a_size"),
+        alpha: gl.getAttribLocation(program, "a_alpha"),
+      };
+
+      uniforms = {
+        resolution: gl.getUniformLocation(program, "u_resolution"),
+        dpr: gl.getUniformLocation(program, "u_dpr"),
+      };
+
+      buffer = gl.createBuffer();
+      previousTime = 0;
+
+      return true;
+    };
+
+    const syncCanvasSize = () => {
       const rect = canvas.getBoundingClientRect();
       rectRef.current = rect;
-      width = Math.max(1, Math.round(rect.width));
-      height = Math.max(1, Math.round(rect.height));
-      config = BASE_CONFIG[getTier(width)];
+      const rawWidth = Math.round(rect.width);
+      const rawHeight = Math.round(rect.height);
+      width = Math.max(1, rawWidth);
+      height = Math.max(1, rawHeight);
+      const tier = getTier(width);
+      config = BASE_CONFIG[tier];
       ratio = Math.min(window.devicePixelRatio || 1, 1.35);
 
       canvas.width = Math.round(width * ratio);
       canvas.height = Math.round(height * ratio);
-      canvas.style.width = `${width}px`;
-      canvas.style.height = `${height}px`;
       gl.viewport(0, 0, canvas.width, canvas.height);
+      if (uniforms) {
+        gl.uniform2f(uniforms.resolution, width, height);
+        gl.uniform1f(uniforms.dpr, ratio);
+      }
+
+      return {
+        tier,
+        hasVisibleArea: rawWidth > 0 && rawHeight > 0,
+      };
+    };
+
+    const rebuildParticles = () => {
+      if (!program || !buffer || gl.isContextLost()) {
+        return false;
+      }
+
+      const size = syncCanvasSize();
+
+      if (!size.hasVisibleArea) {
+        return false;
+      }
 
       shapeProfile = createShapeProfile(width, height);
       const particles = createParticleData(
@@ -374,16 +452,38 @@ export function StarDustBackgroundGL({
       stateData = particles.state;
       renderData = particles.render;
       metaData = particles.meta;
-
-      if (!buffer) {
-        buffer = gl.createBuffer();
-      }
-
       gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
       gl.bufferData(gl.ARRAY_BUFFER, renderData, gl.DYNAMIC_DRAW);
       setAttributes();
-      gl.uniform2f(uniforms.resolution, width, height);
-      gl.uniform1f(uniforms.dpr, ratio);
+
+      lastRebuildWidth = width;
+      lastRebuildHeight = height;
+      lastRebuildTier = size.tier;
+      return true;
+    };
+
+    const handleResize = () => {
+      const size = syncCanvasSize();
+
+      if (!size.hasVisibleArea) {
+        return;
+      }
+
+      const widthDelta = Math.abs(width - lastRebuildWidth);
+      const heightDelta = Math.abs(height - lastRebuildHeight);
+      const shouldRebuild =
+        count === 0 ||
+        widthDelta >= 24 ||
+        heightDelta >= 24 ||
+        size.tier !== lastRebuildTier;
+
+      if (shouldRebuild) {
+        rebuildParticles();
+      }
+    };
+
+    const handleScroll = () => {
+      rectRef.current = canvas.getBoundingClientRect();
     };
 
     const updateSimulation = (time, deltaMs) => {
@@ -391,7 +491,7 @@ export function StarDustBackgroundGL({
       const activeRadius = magnetRadius ?? config.radius;
       const activeStrength = reducedMotion
         ? (magnetStrength ?? config.pullStrength) * 0.55
-        : magnetStrength ?? config.pullStrength;
+        : (magnetStrength ?? config.pullStrength);
       const opacityRadius = activeRadius > 0 ? activeRadius * 2.6 : 0;
       const dt = Math.min(deltaMs / 16.666, 1.6);
       const timeSeconds = time * 0.001;
@@ -414,35 +514,90 @@ export function StarDustBackgroundGL({
         const seed = metaData[metaOffset + 6];
         const sizeBase = metaData[metaOffset + 7];
 
-        const flowT = clamp(baseT + Math.sin(timeSeconds * 0.42 + plume.phase + seed * 0.002) * 0.05, 0.02, 0.98);
+        const flowT = clamp(
+          baseT +
+            Math.sin(timeSeconds * 0.42 + plume.phase + seed * 0.002) * 0.05,
+          0.02,
+          0.98,
+        );
         const point = cubicPoint(plume.p0, plume.p1, plume.p2, plume.p3, flowT);
-        const tangent = normalize(cubicTangent(plume.p0, plume.p1, plume.p2, plume.p3, flowT));
+        const tangent = normalize(
+          cubicTangent(plume.p0, plume.p1, plume.p2, plume.p3, flowT),
+        );
         const normal = { x: -tangent.y, y: tangent.x };
-        const widthAtT = plume.bodyWidth * (0.62 + Math.sin(flowT * Math.PI) * 1.24);
+        const widthAtT =
+          plume.bodyWidth * (0.62 + Math.sin(flowT * Math.PI) * 1.24);
 
         let targetX =
           point.x +
           normal.x * lateral * widthAtT +
           tangent.x * along * widthAtT * 0.5 +
-          tangent.x * Math.sin(timeSeconds * 0.74 + plume.phase + flowT * 5.1) * (20 + density * 18) +
-          normal.x * Math.cos(timeSeconds * 0.62 + plume.phase * 1.1 + flowT * 3.8) * (16 + density * 12) +
-          config.drift * driftStrength * timeSeconds * 28;
+          tangent.x *
+            Math.sin(timeSeconds * 0.74 + plume.phase + flowT * 5.1) *
+            (20 + density * 18) +
+          normal.x *
+            Math.cos(timeSeconds * 0.62 + plume.phase * 1.1 + flowT * 3.8) *
+            (16 + density * 12) +
+          Math.sin(timeSeconds * (0.16 + density * 0.04) + phase) *
+            config.drift *
+            driftStrength *
+            32;
 
         let targetY =
           point.y +
           normal.y * lateral * widthAtT +
           tangent.y * along * widthAtT * 0.5 +
-          tangent.y * Math.sin(timeSeconds * 0.74 + plume.phase + flowT * 5.1) * (20 + density * 18) +
-          normal.y * Math.cos(timeSeconds * 0.62 + plume.phase * 1.1 + flowT * 3.8) * (16 + density * 12) +
+          tangent.y *
+            Math.sin(timeSeconds * 0.74 + plume.phase + flowT * 5.1) *
+            (20 + density * 18) +
+          normal.y *
+            Math.cos(timeSeconds * 0.62 + plume.phase * 1.1 + flowT * 3.8) *
+            (16 + density * 12) +
           Math.sin(timeSeconds * 0.22 + plume.phase) * 8;
+
+        const padding = -48 + density * 22;
+        const minX = padding;
+        const maxX = width - padding;
+        const minY = padding;
+        const maxY = height - padding;
+
+        if (targetX < minX) {
+          targetX = lerp(targetX, minX, 0.55);
+        } else if (targetX > maxX) {
+          targetX = lerp(targetX, maxX, 0.55);
+        }
+
+        if (targetY < minY) {
+          targetY = lerp(targetY, minY, 0.55);
+        } else if (targetY > maxY) {
+          targetY = lerp(targetY, maxY, 0.55);
+        }
 
         for (const stirrer of shapeProfile.stirrers) {
           const stirPlume = shapeProfile.plumes[stirrer.plumeIndex];
           const stirT = (stirrer.t + timeSeconds * stirrer.speed * 0.18) % 1;
-          const stirPoint = cubicPoint(stirPlume.p0, stirPlume.p1, stirPlume.p2, stirPlume.p3, stirT);
-          const stirTangent = normalize(cubicTangent(stirPlume.p0, stirPlume.p1, stirPlume.p2, stirPlume.p3, stirT));
-          const stirX = stirPoint.x + Math.sin(timeSeconds * 1.2 + stirrer.phase) * width * 0.018;
-          const stirY = stirPoint.y + Math.cos(timeSeconds * 1.05 + stirrer.phase) * height * 0.014;
+          const stirPoint = cubicPoint(
+            stirPlume.p0,
+            stirPlume.p1,
+            stirPlume.p2,
+            stirPlume.p3,
+            stirT,
+          );
+          const stirTangent = normalize(
+            cubicTangent(
+              stirPlume.p0,
+              stirPlume.p1,
+              stirPlume.p2,
+              stirPlume.p3,
+              stirT,
+            ),
+          );
+          const stirX =
+            stirPoint.x +
+            Math.sin(timeSeconds * 1.2 + stirrer.phase) * width * 0.018;
+          const stirY =
+            stirPoint.y +
+            Math.cos(timeSeconds * 1.05 + stirrer.phase) * height * 0.014;
           const diffX = stirX - stateData[stateOffset];
           const diffY = stirY - stateData[stateOffset + 1];
           const distance = Math.hypot(diffX, diffY);
@@ -461,9 +616,20 @@ export function StarDustBackgroundGL({
           const behind = Math.max(-(toX * pointerDirX + toY * pointerDirY), 0);
           const lateral = Math.abs(toX * -pointerDirY + toY * pointerDirX);
           const wakeRadius = activeRadius * (0.24 + density * 0.08);
-          const wakeFalloff = Math.exp(-Math.pow(lateral / Math.max(wakeRadius, 1), 2) * 1.8);
-          const trailFalloff = Math.exp(-Math.pow(behind / Math.max(activeRadius * 1.8, 1), 2) * 0.48);
-          const frontCut = 1 - clamp((toX * pointerDirX + toY * pointerDirY + activeRadius * 0.08) / (activeRadius * 0.2), 0, 1);
+          const wakeFalloff = Math.exp(
+            -Math.pow(lateral / Math.max(wakeRadius, 1), 2) * 1.8,
+          );
+          const trailFalloff = Math.exp(
+            -Math.pow(behind / Math.max(activeRadius * 1.8, 1), 2) * 0.48,
+          );
+          const frontCut =
+            1 -
+            clamp(
+              (toX * pointerDirX + toY * pointerDirY + activeRadius * 0.08) /
+                (activeRadius * 0.2),
+              0,
+              1,
+            );
           const wake = wakeFalloff * trailFalloff * frontCut;
 
           if (wake > 0.001) {
@@ -482,8 +648,16 @@ export function StarDustBackgroundGL({
         velocityX *= 0.968;
         velocityY *= 0.968;
 
-        const nextX = currentX + velocityX * 0.12 * dt;
-        const nextY = currentY + velocityY * 0.12 * dt;
+        const nextX = clamp(currentX + velocityX * 0.12 * dt, minX, maxX);
+        const nextY = clamp(currentY + velocityY * 0.12 * dt, minY, maxY);
+
+        if (nextX === minX || nextX === maxX) {
+          velocityX *= 0.72;
+        }
+
+        if (nextY === minY || nextY === maxY) {
+          velocityY *= 0.72;
+        }
 
         stateData[stateOffset] = nextX;
         stateData[stateOffset + 1] = nextY;
@@ -493,10 +667,13 @@ export function StarDustBackgroundGL({
         const renderOffset = i * STRIDE;
         renderData[renderOffset] = nextX;
         renderData[renderOffset + 1] = nextY;
-        renderData[renderOffset + 2] = sizeBase * (2.24 + density * 1.08);
+        renderData[renderOffset + 2] = sizeBase * (2.24 + density * 3);
         let opacityBoost = 0.6;
         if (pointer.active && opacityRadius > 0) {
-          const pointerDistance = Math.hypot(nextX - pointer.x, nextY - pointer.y);
+          const pointerDistance = Math.hypot(
+            nextX - pointer.x,
+            nextY - pointer.y,
+          );
           if (pointerDistance < opacityRadius) {
             const normalized = 1 - clamp(pointerDistance / opacityRadius, 0, 1);
             const boost = normalized * normalized * (3 - 2 * normalized);
@@ -505,32 +682,52 @@ export function StarDustBackgroundGL({
         }
         renderData[renderOffset + 3] =
           (0.068 + density * 0.074) *
-          (0.94 + 0.06 * Math.sin(timeSeconds * 0.14 + nextX * 0.0012 + nextY * 0.0009 + phase)) *
+          (0.94 +
+            0.06 *
+              Math.sin(
+                timeSeconds * 0.14 + nextX * 0.0012 + nextY * 0.0009 + phase,
+              )) *
           opacityBoost;
       }
     };
 
     const render = (now) => {
+      if (isDisposed || gl.isContextLost()) {
+        return;
+      }
+
       const pointer = pointerRef.current;
       const smoothing = now - pointer.lastMovedAt > 120 ? 0.08 : 0.24;
       pointer.x = lerp(pointer.x, pointer.targetX, smoothing);
       pointer.y = lerp(pointer.y, pointer.targetY, smoothing);
       pointer.trailX = lerp(pointer.trailX, pointer.x, 0.022);
       pointer.trailY = lerp(pointer.trailY, pointer.y, 0.022);
-      pointer.velocityX = lerp(pointer.velocityX, pointer.x - pointer.trailX, 0.22);
-      pointer.velocityY = lerp(pointer.velocityY, pointer.y - pointer.trailY, 0.22);
+      pointer.velocityX = lerp(
+        pointer.velocityX,
+        pointer.x - pointer.trailX,
+        0.22,
+      );
+      pointer.velocityY = lerp(
+        pointer.velocityY,
+        pointer.y - pointer.trailY,
+        0.22,
+      );
 
       const deltaMs = previousTime ? now - previousTime : 16.666;
       previousTime = now;
 
       updateSimulation(now, deltaMs);
 
-      gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-      gl.bufferSubData(gl.ARRAY_BUFFER, 0, renderData);
+      if (buffer && renderData && count > 0) {
+        gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+        gl.bufferSubData(gl.ARRAY_BUFFER, 0, renderData);
+      }
 
       gl.clearColor(0.03, 0.035, 0.045, 1);
       gl.clear(gl.COLOR_BUFFER_BIT);
-      gl.drawArrays(gl.POINTS, 0, count);
+      if (count > 0) {
+        gl.drawArrays(gl.POINTS, 0, count);
+      }
 
       animationFrameRef.current = window.requestAnimationFrame(render);
     };
@@ -539,7 +736,11 @@ export function StarDustBackgroundGL({
       const rect = rectRef.current;
       const localX = event.clientX - rect.left;
       const localY = event.clientY - rect.top;
-      const inside = localX >= 0 && localY >= 0 && localX <= rect.width && localY <= rect.height;
+      const inside =
+        localX >= 0 &&
+        localY >= 0 &&
+        localX <= rect.width &&
+        localY <= rect.height;
 
       pointerRef.current.active = inside;
       pointerRef.current.targetX = localX;
@@ -553,34 +754,106 @@ export function StarDustBackgroundGL({
       pointerRef.current.velocityY = 0;
     };
 
-    resize();
+    const handleContextLost = (event) => {
+      event.preventDefault();
+      count = 0;
+      renderData = null;
+      stateData = null;
+      metaData = null;
+      window.cancelAnimationFrame(animationFrameRef.current);
+    };
+
+    const handleContextRestored = () => {
+      if (isDisposed) {
+        return;
+      }
+
+      if (!initializeSceneResources()) {
+        return;
+      }
+
+      rebuildParticles();
+      animationFrameRef.current = window.requestAnimationFrame(render);
+    };
+
+    initializeSceneResources();
+    rebuildParticles();
     animationFrameRef.current = window.requestAnimationFrame(render);
 
-    window.addEventListener("resize", resize);
-    window.addEventListener("scroll", resize, { passive: true });
-    window.addEventListener("pointermove", handlePointerMove, { passive: true, capture: true });
+    const resizeObserver =
+      typeof ResizeObserver !== "undefined"
+        ? new ResizeObserver(() => {
+            handleResize();
+          })
+        : null;
+
+    if (resizeObserver) {
+      resizeObserver.observe(canvas);
+      if (canvas.parentElement) {
+        resizeObserver.observe(canvas.parentElement);
+      }
+    }
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        handleResize();
+      }
+    };
+
+    const handlePageShow = () => {
+      handleResize();
+    };
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("pointermove", handlePointerMove, {
+      passive: true,
+      capture: true,
+    });
     window.addEventListener("pointerleave", handlePointerLeave);
     window.addEventListener("blur", handlePointerLeave);
+    window.addEventListener("pageshow", handlePageShow);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    canvas.addEventListener("webglcontextlost", handleContextLost);
+    canvas.addEventListener("webglcontextrestored", handleContextRestored);
 
     return () => {
+      isDisposed = true;
       window.cancelAnimationFrame(animationFrameRef.current);
-      window.removeEventListener("resize", resize);
-      window.removeEventListener("scroll", resize);
-      window.removeEventListener("pointermove", handlePointerMove, { capture: true });
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("pointermove", handlePointerMove, {
+        capture: true,
+      });
       window.removeEventListener("pointerleave", handlePointerLeave);
       window.removeEventListener("blur", handlePointerLeave);
+      window.removeEventListener("pageshow", handlePageShow);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      canvas.removeEventListener("webglcontextlost", handleContextLost);
+      canvas.removeEventListener("webglcontextrestored", handleContextRestored);
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      }
       if (buffer) {
         gl.deleteBuffer(buffer);
       }
-      gl.deleteProgram(program);
+      if (program) {
+        gl.deleteProgram(program);
+      }
     };
-  }, [driftStrength, magnetRadius, magnetStrength, particleMultiplier, reducedMotion]);
+  }, [
+    driftStrength,
+    magnetRadius,
+    magnetStrength,
+    particleMultiplier,
+    reducedMotion,
+  ]);
 
   return (
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className={`pointer-events-none absolute inset-0 z-0 h-full w-full ${className}`}
+      className={`pointer-events-none fixed inset-0 z-0 size-full ${className}`}
     />
   );
 }

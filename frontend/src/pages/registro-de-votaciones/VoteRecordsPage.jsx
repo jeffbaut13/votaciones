@@ -30,11 +30,11 @@ export function VoteRecordsPage() {
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
           <p className="text-xs uppercase tracking-[0.3em] text-brand-300">Resultado A</p>
-          <p className="mt-4 font-display text-5xl text-brand-50">{summary.A}</p>
+          <p className="mt-4 text-5xl text-brand-50">{summary.A}</p>
         </Card>
         <Card>
           <p className="text-xs uppercase tracking-[0.3em] text-brand-300">Resultado B</p>
-          <p className="mt-4 font-display text-5xl text-brand-50">{summary.B}</p>
+          <p className="mt-4 text-5xl text-brand-50">{summary.B}</p>
         </Card>
       </div>
       <div className="mt-8 space-y-4">
@@ -45,7 +45,7 @@ export function VoteRecordsPage() {
                 <p className="text-sm text-brand-100">{record.phoneMasked}</p>
                 <p className="text-xs uppercase tracking-[0.25em] text-brand-300">{record.createdAt}</p>
               </div>
-              <p className="font-display text-3xl text-accent">{record.option}</p>
+              <p className=" text-3xl text-accent">{record.option}</p>
             </div>
           </Card>
         ))}

@@ -1,6 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import { getCursorSize, resolveCursorState } from "@/utils/cursorRegistry";
+import { usePopOpenStore } from "@/store/video-pop-store";
 
 function getScaleForSpeed(speed) {
   if (speed > 32) {
@@ -14,8 +21,18 @@ function getScaleForSpeed(speed) {
   return 1;
 }
 
-export function MagneticCursor({ disabled = false, reducedMotion = false, baseSize = "md" }) {
-  const [cursorState, setCursorState] = useState({ key: "default", label: "", icon: "spark", size: baseSize });
+export function MagneticCursor({
+  disabled = false,
+  reducedMotion = false,
+  baseSize = "xs",
+}) {
+  const { openVideo, play } = usePopOpenStore();
+  const [cursorState, setCursorState] = useState({
+    key: "default",
+    label: "",
+    icon: "spark",
+    size: baseSize,
+  });
   const [visible, setVisible] = useState(false);
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
@@ -23,14 +40,44 @@ export function MagneticCursor({ disabled = false, reducedMotion = false, baseSi
   const rotate = useMotionValue(0);
   const springX = useSpring(x, { stiffness: 320, damping: 30, mass: 0.28 });
   const springY = useSpring(y, { stiffness: 320, damping: 30, mass: 0.28 });
-  const springScale = useSpring(scale, { stiffness: 220, damping: 22, mass: 0.4 });
-  const rotateSpring = useSpring(rotate, { stiffness: 180, damping: 26, mass: 0.5 });
+  const springScale = useSpring(scale, {
+    stiffness: 220,
+    damping: 22,
+    mass: 0.4,
+  });
+  const rotateSpring = useSpring(rotate, {
+    stiffness: 180,
+    damping: 26,
+    mass: 0.5,
+  });
   const opacity = useTransform(springScale, [0.86, 1.1], [0.82, 1]);
-  const pointerRef = useRef({ x: -100, y: -100, lastX: -100, lastY: -100, lastTime: 0 });
+  const pointerRef = useRef({
+    x: -100,
+    y: -100,
+    lastX: -100,
+    lastY: -100,
+    lastTime: 0,
+  });
+  const idleTimeoutRef = useRef(null);
 
   useEffect(() => {
-    
+    if (!openVideo || !play) {
+      return undefined;
+    }
 
+    idleTimeoutRef.current = window.setTimeout(() => {
+      setVisible(false);
+    }, 180);
+
+    return () => {
+      if (idleTimeoutRef.current) {
+        window.clearTimeout(idleTimeoutRef.current);
+        idleTimeoutRef.current = null;
+      }
+    };
+  }, [openVideo, play]);
+
+  useEffect(() => {
     const updateCursorState = (target) => {
       setCursorState(resolveCursorState(target));
     };
@@ -41,7 +88,7 @@ export function MagneticCursor({ disabled = false, reducedMotion = false, baseSi
       const deltaTime = Math.max(now - (pointer.lastTime || now), 16);
       const deltaX = event.clientX - pointer.lastX;
       const deltaY = event.clientY - pointer.lastY;
-      const speed = Math.hypot(deltaX, deltaY) / deltaTime * 16;
+      const speed = (Math.hypot(deltaX, deltaY) / deltaTime) * 16;
 
       pointer.x = event.clientX;
       pointer.y = event.clientY;
@@ -49,12 +96,23 @@ export function MagneticCursor({ disabled = false, reducedMotion = false, baseSi
       pointer.lastY = event.clientY;
       pointer.lastTime = now;
 
+      if (idleTimeoutRef.current) {
+        window.clearTimeout(idleTimeoutRef.current);
+        idleTimeoutRef.current = null;
+      }
+
       x.set(event.clientX);
       y.set(event.clientY);
       scale.set(reducedMotion ? 1 : getScaleForSpeed(speed));
       rotate.set(clampAngle(Math.atan2(deltaY, deltaX) * (180 / Math.PI)));
       setVisible(true);
       updateCursorState(event.target);
+
+      if (openVideo && play) {
+        idleTimeoutRef.current = window.setTimeout(() => {
+          setVisible(false);
+        }, 180);
+      }
     };
 
     const handlePointerDown = () => scale.set(0.92);
@@ -62,28 +120,38 @@ export function MagneticCursor({ disabled = false, reducedMotion = false, baseSi
     const handlePointerLeave = () => {
       setVisible(false);
       scale.set(0.94);
-      setCursorState({ key: "default", label: "", icon: "spark", size: baseSize });
+      setCursorState({
+        key: "default",
+        label: "",
+        icon: "spark",
+        size: baseSize,
+      });
     };
 
     const handleMouseOver = (event) => {
       updateCursorState(event.target);
     };
 
-    window.addEventListener("pointermove", handlePointerMove, { passive: true });
+    window.addEventListener("pointermove", handlePointerMove, {
+      passive: true,
+    });
     window.addEventListener("pointerdown", handlePointerDown);
     window.addEventListener("pointerup", handlePointerUp);
     window.addEventListener("pointerleave", handlePointerLeave);
     document.addEventListener("mouseover", handleMouseOver);
 
     return () => {
-       
+      if (idleTimeoutRef.current) {
+        window.clearTimeout(idleTimeoutRef.current);
+        idleTimeoutRef.current = null;
+      }
       window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("pointerdown", handlePointerDown);
       window.removeEventListener("pointerup", handlePointerUp);
       window.removeEventListener("pointerleave", handlePointerLeave);
       document.removeEventListener("mouseover", handleMouseOver);
     };
-  }, [baseSize, disabled, reducedMotion, rotate, scale, x, y]);
+  }, [baseSize, disabled, openVideo, play, reducedMotion, rotate, scale, x, y]);
 
   if (disabled) {
     return null;
@@ -94,7 +162,7 @@ export function MagneticCursor({ disabled = false, reducedMotion = false, baseSi
   return (
     <motion.div
       aria-hidden="true"
-      className="pointer-events-none fixed left-0 top-0 z-70 mix-blend-difference"
+      className="pointer-events-none fixed left-0 top-0 z-70  "
       style={{
         translateX: springX,
         translateY: springY,
@@ -152,19 +220,62 @@ function clampAngle(angle) {
 function renderCursorGlyph(iconKey) {
   switch (iconKey) {
     case "play":
-      return <span className="inline-flex"><svg viewBox="0 0 24 24" className="size-4 fill-current"><path d="M8 6.5v11l9-5.5-9-5.5Z" /></svg></span>;
-    case "grab":
-      return <span className="text-[10px] font-semibold uppercase tracking-[0.28em]">DRAG</span>;
+      return (
+        <span className="inline-flex">
+          <svg
+            id="uuid-0c744af1-9c48-483a-8baf-b0fe70b9dc35"
+            data-name="Capa 2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 7.79 8.82"
+            className="w-3 fill-brand-50"
+          >
+            <g
+              id="uuid-5fac4218-484b-4d23-a8e5-dda042cfc828"
+              data-name="Capa 1"
+            >
+              <path d="M0,7.64V1.19C0,.32.98-.25,1.83.11l5.22,3.02c.96.41.99,1.66.06,2.12l-5.22,3.43c-.86.42-1.89-.15-1.89-1.05Z" />
+            </g>
+          </svg>
+        </span>
+      );
+    case "pause":
+      return (
+        <span className="inline-flex">
+          <svg
+            id="uuid-33149552-37c4-462b-9229-cab70a97027f"
+            data-name="Capa 2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 6.82 7.76"
+            className="w-3 fill-brand-50"
+          >
+            <g
+              id="uuid-abe8f5d5-25cb-4ffa-bd73-a2d67996bb09"
+              data-name="Capa 1"
+            >
+              <g>
+                <rect width="1.96" height="7.76" />
+                <rect x="4.86" width="1.96" height="7.76" />
+              </g>
+            </g>
+          </svg>
+        </span>
+      );
     case "eye":
       return (
-        <svg viewBox="0 0 24 24" className="size-4 fill-none stroke-current stroke-[1.6]">
+        <svg
+          viewBox="0 0 24 24"
+          className="size-4 fill-none stroke-current stroke-[1.6]"
+        >
           <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z" />
           <circle cx="12" cy="12" r="3" />
         </svg>
       );
     case "arrow":
       return (
-        <svg viewBox="0 0 24 24" className="size-4 fill-none stroke-current stroke-[1.6]">
+        <svg
+          viewBox="0 0 24 24"
+          className="size-4 fill-none stroke-current stroke-[1.6]"
+        >
           <path d="M5 12h14" />
           <path d="m13 6 6 6-6 6" />
         </svg>
@@ -173,8 +284,6 @@ function renderCursorGlyph(iconKey) {
       return <span className="size-1.5 rounded-full bg-white" />;
     case "spark":
     default:
-      return (
-        <></>
-      );
+      return <></>;
   }
 }

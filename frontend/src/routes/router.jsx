@@ -16,8 +16,6 @@ export const router = createBrowserRouter([
       { path: "auth-sms", element: <AuthSmsPage /> },
       { path: "votacion", element: <VotingPage /> },
       { path: "registro-de-votaciones", element: <VoteRecordsPage /> },
-      { path: "effects-lab", element: <EffectsShowcasePage /> },
-      { path: "effects-lab-gl", element: <EffectsShowcaseGLPage /> },
     ],
   },
 ]);
