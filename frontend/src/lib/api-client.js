@@ -1,22 +1,28 @@
-import { env } from "../config/env.js";
+import { env } from "@/config/env";
 
 async function request(path, options = {}) {
-  const response = await fetch(`${env.apiBaseUrl}${path}`, {
-    headers: { "Content-Type": "application/json" },
+  const response = await fetch(`${env.apiUrl}${path}`, {
+    headers: {
+      "Content-Type": "application/json",
+      ...(options.headers || {}),
+    },
     ...options,
   });
 
-  const json = await response.json();
+  const data = await response.json().catch(() => ({}));
 
   if (!response.ok) {
-    throw new Error(json.message || "Error en la solicitud.");
+    throw new Error(data.message || "Request failed");
   }
 
-  return json;
+  return data;
 }
 
 export const apiClient = {
+  get: (path) => request(path),
   post: (path, body) =>
-    request(path, { method: "POST", body: JSON.stringify(body) }),
-  get: (path) => request(path, { method: "GET" }),
+    request(path, {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
 };

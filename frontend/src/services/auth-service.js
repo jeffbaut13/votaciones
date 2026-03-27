@@ -1,7 +1,6 @@
-import { apiClient } from "../lib/api-client.js";
+import { apiClient } from "@/lib/api-client";
 
 export const authService = {
-  register: (data) => apiClient.post("/api/auth/register", data),
-  verifyOtp: (data) => apiClient.post("/api/auth/verify-otp", data),
-  resendOtp: (data) => apiClient.post("/api/auth/resend-otp", data),
+  requestOtp: (payload) => apiClient.post("/auth/request-otp", payload),
+  verifyOtp: (payload) => apiClient.post("/auth/verify-otp", payload),
 };

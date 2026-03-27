@@ -1,5 +1,7 @@
-import { apiClient } from "../lib/api-client.js";
+import { apiClient } from "@/lib/api-client";
 
 export const votingService = {
-  submitVote: (data) => apiClient.post("/api/votes", data),
+  submitVote: (payload) => apiClient.post("/votes", payload),
+  getSummary: () => apiClient.get("/votes/summary"),
+  getRecords: () => apiClient.get("/votes/records"),
 };
