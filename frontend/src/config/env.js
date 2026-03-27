@@ -1,11 +1,5 @@
+// La URL base del backend. En desarrollo, Vite hace proxy de /api → localhost:4000
+// En producción establece VITE_API_BASE_URL a la URL real del servidor.
 export const env = {
-  apiUrl: import.meta.env.VITE_API_URL || "http://localhost:4000/api",
-  firebase: {
-    apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "",
-    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "",
-    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "",
-    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "",
-    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "",
-    appId: import.meta.env.VITE_FIREBASE_APP_ID || "",
-  },
+  apiBaseUrl: import.meta.env.VITE_API_BASE_URL || "",
 };

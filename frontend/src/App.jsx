@@ -1,5 +1,5 @@
-import { EffectsShowcasePage } from "@/pages/effects-lab/EffectsShowcasePage";
+import VotingFlow from "./pages/VotingFlow.jsx";
 
 export default function App() {
-  return <EffectsShowcasePage />;
+  return <VotingFlow />;
 }

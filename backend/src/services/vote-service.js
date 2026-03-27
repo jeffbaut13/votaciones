@@ -1,36 +1,37 @@
-import crypto from "node:crypto";
+import { userRepository } from "../modules/user/user-repository.js";
 import { voteRepository } from "../modules/vote/vote-repository.js";
 
 export const voteService = {
-  submitVote({ phone, option }) {
-    if (!["A", "B"].includes(option)) {
+  async submitVote({ userId, candidato }) {
+    if (!["A", "B"].includes(candidato)) {
       throw new Error("Opcion de voto invalida.");
     }
 
-    const existingVote = voteRepository.findVoteByPhone(phone);
-    if (existingVote) {
-      throw new Error("El usuario ya registro un voto.");
-    }
+    const user = await userRepository.findById(userId);
+    if (!user) throw new Error("Usuario no encontrado.");
+    if (user.estado === "ya_voto") throw new Error("El usuario ya voto.");
+    if (user.estado !== "habilitado") throw new Error("El usuario no esta habilitado para votar.");
 
-    voteRepository.saveVote({
-      id: crypto.randomUUID(),
-      phone,
-      option,
-      createdAt: new Date().toISOString(),
-    });
+    await voteRepository.create({ candidato, modalidad: "web" });
+    await userRepository.updateEstado(userId, "ya_voto", "web");
 
-    return {
-      summary: voteRepository.getSummary(),
-    };
+    return { message: "Voto registrado exitosamente." };
   },
-  getSummary() {
-    return {
-      summary: voteRepository.getSummary(),
-    };
+
+  async markPresencial({ userId }) {
+    const user = await userRepository.findById(userId);
+    if (!user) throw new Error("Usuario no encontrado.");
+    if (user.estado === "ya_voto") throw new Error("El usuario ya voto.");
+    if (user.estado !== "habilitado") throw new Error("El usuario no esta habilitado para votar.");
+
+    // El voto fisico es secreto: se registra la participacion sin candidato
+    await voteRepository.create({ candidato: null, modalidad: "presencial" });
+    await userRepository.updateEstado(userId, "ya_voto", "presencial");
+
+    return { message: "Participacion presencial registrada." };
   },
-  getRecords() {
-    return {
-      records: voteRepository.getRecords(),
-    };
+
+  async getSummary() {
+    return voteRepository.getSummary();
   },
 };
