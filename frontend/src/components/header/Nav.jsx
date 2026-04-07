@@ -23,7 +23,7 @@ export const Nav = ({ isOpen, setIsNavOpen }) => {
               onClick={() => setIsNavOpen(false)}
             />
             <motion.nav
-              className="fixed w-96 bg-brand-100 h-dvh right-0 top-0 z-30 flex flex-col items-center justify-center gap-8 p-6 shadow-lg"
+              className="fixed w-120 pl-12 bg-brand-100 h-dvh right-0 top-0 z-30 flex flex-col items-start justify-center gap-8 shadow-lg"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -35,7 +35,7 @@ export const Nav = ({ isOpen, setIsNavOpen }) => {
                   to={link.to}
                   onClick={() => setIsNavOpen(false)}
                   className={({ isActive }) =>
-                    `rounded-full px-4 py-2 transition ${
+                    `rounded-full px-4 py-2 text-4xl transition ${
                       isActive
                         ? " text-brand-50"
                         : "text-brand-50/40 hover:text-brand-50 hover:bg-brand-50/10"
