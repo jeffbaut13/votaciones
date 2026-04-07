@@ -31,7 +31,7 @@ export function RegistroDeVotoPage() {
     >
       <div className="w-full max-w-4xl space-y-16">
         <div className="text-center">
-          <h1 className="text-5xl leading-tight text-brand-50">
+          <h1 className="text-6xl leading-tight text-brand-50">
             Hemos registrado tu voto
           </h1>
         </div>
@@ -51,27 +51,25 @@ export function RegistroDeVotoPage() {
                   <span className="text-5xl">%</span>
                 </div>
 
-                <div className="text-sm uppercase tracking-wider text-brand-50/70">
+                <div className="text-lg uppercase tracking-wider text-brand-50">
                   {option.votes.toLocaleString("es-CO")} VOTOS
                 </div>
 
-                <div className="h-32 w-full rounded-2xl border border-brand-50/20 bg-brand-100/50 flex items-center justify-center">
-                  <img
-                    src={option.logo}
-                    alt={option.label}
-                    className="h-16 w-auto"
-                  />
+                <div className="h-32 w-full rounded-2xl flex items-center justify-center">
+                  <picture className="w-40 h-auto">
+                    <img
+                      src={option.logo}
+                      alt={option.label}
+                      className="size-full object-contain"
+                    />
+                  </picture>
                 </div>
-
-                <p className="text-center text-xl text-brand-50">
-                  {option.label}
-                </p>
               </motion.div>
             ))}
           </div>
 
-          <div className="border-t border-brand-50/20 pt-12 text-center">
-            <p className="text-4xl text-brand-50">
+          <div className="text-center">
+            <p className="text-6xl leading-tight text-brand-50">
               Votos totales:{" "}
               <span className="font-bold">
                 {voteData.totalVotes.toLocaleString("es-CO")}

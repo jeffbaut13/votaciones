@@ -42,7 +42,7 @@ const options = [
   {
     id: "voto-blanco",
     label: "Voto en blanco",
-    className: "bg-brand-50",
+    className: "bg-brand-50 hover:bg-brand-100",
     content: <span className="text-4xl text-brand-100">Voto en blanco</span>,
   },
 ];
@@ -95,15 +95,15 @@ export function NuevoEstadoPage() {
                   isSelected ? "bg-brand-50" : option.className
                 } ${
                   isSelected
-                    ? "border-brand-50 shadow-[0_0_0_2px_rgba(240,240,240,0.22)]"
-                    : "border-cb hover:border-brand-50/50"
+                    ? "border-brand-50"
+                    : "border-cb hover:border-brand-50/50 hover:bg-brand-50 group"
                 }`}
               >
                 {isSelected ? <SelectedCardMarks /> : null}
 
                 <div className="flex h-full w-full cursor-pointer items-center justify-center px-6">
                   <picture
-                    className={`p-6 transition duration-300 ${
+                    className={`p-6 transition group-hover:invert duration-300 ${
                       shouldInvertSelection ? "invert" : ""
                     }`}
                   >
