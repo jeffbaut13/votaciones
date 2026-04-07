@@ -1,0 +1,13 @@
+{
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "files.associations": {
+    "*.jsx": "javascriptreact"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

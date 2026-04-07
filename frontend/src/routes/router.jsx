@@ -6,6 +6,11 @@ import { VotingPage } from "@/pages/votacion/VotingPage";
 import { VoteRecordsPage } from "@/pages/registro-de-votaciones/VoteRecordsPage";
 import { EffectsShowcasePage } from "@/pages/effects-lab/EffectsShowcasePage";
 import { EffectsShowcaseGLPage } from "@/pages/effects-lab/EffectsShowcaseGLPage";
+import { YaVotoEstadoPage } from "@/pages/votacion-estados/YaVotoEstadoPage";
+import { HabilitadoEstadoPage } from "@/pages/votacion-estados/HabilitadoEstadoPage";
+import { PendienteEstadoPage } from "@/pages/votacion-estados/PendienteEstadoPage";
+import { NuevoEstadoPage } from "@/pages/votacion-estados/NuevoEstadoPage";
+import { RegistroDeVotoPage } from "@/pages/votacion-estados/RegistroDeVotoPage";
 
 export const router = createBrowserRouter([
   {
@@ -15,9 +20,18 @@ export const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "auth-sms", element: <AuthSmsPage /> },
       { path: "votacion", element: <VotingPage /> },
+      { path: "votacion/estado/ya-voto", element: <YaVotoEstadoPage /> },
+      {
+        path: "votacion/estado/habilitado",
+        element: <HabilitadoEstadoPage />,
+      },
+      {
+        path: "votacion/estado/pendiente",
+        element: <PendienteEstadoPage />,
+      },
+      { path: "votacion/estado/nuevo", element: <NuevoEstadoPage /> },
+      { path: "registro-de-voto", element: <RegistroDeVotoPage /> },
       { path: "registro-de-votaciones", element: <VoteRecordsPage /> },
-      { path: "effects-lab", element: <EffectsShowcasePage /> },
-      { path: "effects-lab-gl", element: <EffectsShowcaseGLPage /> },
     ],
   },
 ]);

@@ -1,48 +1,26 @@
 # Dependencies
 node_modules/
+
+# Environment variables (contain secrets — never commit)
+backend/.env
+backend/.env.local
+frontend/.env
+frontend/.env.local
+.env
+.env.local
+
+# Build outputs
+frontend/dist/
+frontend/.vite/
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Build output
-dist/
-build/
-.dist/
-.next/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
-*.sublime-project
-*.sublime-workspace
 
 # OS
+.DS_Store
 Thumbs.db
 
-# Logs
-logs/
-*.log
-
-# Cache
-.cache/
-.eslintcache
-
-# Testing
-coverage/
-
-# Misc
-.turbo/
-.env.example.local
-t.txt
-
-prompt.md
+# Firebase
+.firebase/

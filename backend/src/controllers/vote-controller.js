@@ -1,25 +1,39 @@
 import { voteService } from "../services/vote-service.js";
 
 export const voteController = {
-  submitVote(request, response, next) {
+  async submitVote(request, response, next) {
     try {
-      const data = voteService.submitVote(request.body);
-      response.status(201).json({ message: "Voto registrado", data });
+      const { userId, candidato } = request.body;
+
+      if (!userId || !candidato) {
+        return response.status(400).json({ message: "userId y candidato son requeridos." });
+      }
+
+      const data = await voteService.submitVote({ userId, candidato });
+      response.status(201).json({ data });
     } catch (error) {
       next(error);
     }
   },
-  getSummary(_request, response, next) {
+
+  async markPresencial(request, response, next) {
     try {
-      const data = voteService.getSummary();
-      response.json({ data });
+      const { userId } = request.body;
+
+      if (!userId) {
+        return response.status(400).json({ message: "userId es requerido." });
+      }
+
+      const data = await voteService.markPresencial({ userId });
+      response.status(201).json({ data });
     } catch (error) {
       next(error);
     }
   },
-  getRecords(_request, response, next) {
+
+  async getSummary(_request, response, next) {
     try {
-      const data = voteService.getRecords();
+      const data = await voteService.getSummary();
       response.json({ data });
     } catch (error) {
       next(error);

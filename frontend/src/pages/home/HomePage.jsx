@@ -3,8 +3,8 @@ import { FlowSection } from "@/pages/home/sections/FlowSection";
 
 export function HomePage() {
   return (
-    <div>
+    <>
       <HeroSection />
-    </div>
+    </>
   );
 }

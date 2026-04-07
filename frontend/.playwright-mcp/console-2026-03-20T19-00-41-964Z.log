@@ -1,0 +1,2 @@
+[  861792ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5174/src/pages/home/sections/HeroSection.jsx?t=1774034103554:0
+[  861927ms] [ERROR] [vite] Failed to reload /src/pages/home/sections/HeroSection.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:904

@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flujo Sistema de Votaciones</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f4f8;
+      padding: 40px 20px 60px;
+      color: #1e293b;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 6px;
+      letter-spacing: -0.3px;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 40px;
+    }
+
+    /* ── Actors row ── */
+    .actors {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      max-width: 960px;
+      margin: 0 auto 8px;
+      padding: 0 40px;
+    }
+    .actor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      width: 130px;
+    }
+    .actor-icon {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,.12);
+    }
+    .actor-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      text-align: center;
+    }
+
+    /* ── Main layout ── */
+    .diagram {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    /* ── Phase block ── */
+    .phase {
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 6px;
+      position: relative;
+    }
+    .phase-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .phase-title .badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .ph-register  { background: #eff6ff; border: 1.5px solid #bfdbfe; }
+    .ph-register  .phase-title { color: #1d4ed8; }
+    .ph-register  .badge { background: #2563eb; }
+
+    .ph-otp       { background: #f0fdf4; border: 1.5px solid #bbf7d0; }
+    .ph-otp       .phase-title { color: #15803d; }
+    .ph-otp       .badge { background: #16a34a; }
+
+    .ph-vote      { background: #fefce8; border: 1.5px solid #fde68a; }
+    .ph-vote      .phase-title { color: #92400e; }
+    .ph-vote      .badge { background: #d97706; }
+
+    .ph-summary   { background: #faf5ff; border: 1.5px solid #e9d5ff; }
+    .ph-summary   .phase-title { color: #6b21a8; }
+    .ph-summary   .badge { background: #7c3aed; }
+
+    /* ── Row of steps ── */
+    .steps-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .steps-row.centered { justify-content: center; }
+
+    /* ── Arrow ── */
+    .arrow {
+      display: flex;
+      align-items: center;
+      padding-top: 18px;
+      color: #94a3b8;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .arrow.down {
+      padding-top: 0;
+      justify-content: center;
+      font-size: 20px;
+      color: #cbd5e1;
+      margin: 2px 0;
+    }
+
+    /* ── Step box ── */
+    .step {
+      background: #fff;
+      border-radius: 12px;
+      padding: 12px 14px;
+      min-width: 140px;
+      flex: 1;
+      box-shadow: 0 1px 4px rgba(0,0,0,.07);
+      border: 1px solid rgba(0,0,0,.06);
+      position: relative;
+    }
+    .step-who {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      color: #94a3b8;
+      margin-bottom: 4px;
+    }
+    .step-action {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1e293b;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+    .step-endpoint {
+      display: inline-block;
+      font-family: 'Courier New', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+    .ep-post { background: #dbeafe; color: #1d4ed8; }
+    .ep-get  { background: #d1fae5; color: #065f46; }
+    .ep-note { background: #f1f5f9; color: #475569; font-family: inherit; font-weight: 400; }
+
+    .step-detail {
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+
+    /* ── Alt branch ── */
+    .branch-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+    .branch {
+      flex: 1;
+      min-width: 130px;
+      border-radius: 10px;
+      padding: 10px 12px;
+      border: 1.5px dashed;
+    }
+    .br-success  { border-color: #86efac; background: #f0fdf4; }
+    .br-error    { border-color: #fca5a5; background: #fef2f2; }
+    .br-warning  { border-color: #fcd34d; background: #fffbeb; }
+    .br-info     { border-color: #93c5fd; background: #eff6ff; }
+
+    .branch-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin-bottom: 5px;
+    }
+    .br-success .branch-label  { color: #15803d; }
+    .br-error   .branch-label  { color: #b91c1c; }
+    .br-warning .branch-label  { color: #92400e; }
+    .br-info    .branch-label  { color: #1d4ed8; }
+
+    .branch-text {
+      font-size: 12px;
+      color: #374151;
+      line-height: 1.4;
+    }
+
+    /* ── Divider between phases ── */
+    .phase-arrow {
+      text-align: center;
+      font-size: 24px;
+      color: #cbd5e1;
+      margin: 0 0 2px;
+      line-height: 1;
+    }
+
+    /* ── Vote split ── */
+    .vote-split {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .vote-col {
+      flex: 1;
+      border-radius: 12px;
+      padding: 14px;
+      border: 1.5px solid;
+    }
+    .vc-web       { border-color: #fde68a; background: #fefce8; }
+    .vc-presencial { border-color: #e9d5ff; background: #faf5ff; }
+
+    .vote-col-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .vc-web       .vote-col-title { color: #92400e; }
+    .vc-presencial .vote-col-title { color: #6b21a8; }
+
+    .vc-step {
+      background: #fff;
+      border-radius: 8px;
+      padding: 9px 11px;
+      margin-bottom: 6px;
+      border: 1px solid rgba(0,0,0,.05);
+    }
+    .vc-step:last-child { margin-bottom: 0; }
+    .vc-step-who {
+      font-size: 10px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .6px;
+      color: #94a3b8; margin-bottom: 3px;
+    }
+    .vc-step-action { font-size: 12px; font-weight: 600; color: #1e293b; margin-bottom: 4px; }
+
+    /* ── Firestore fields ── */
+    .db-fields {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 6px;
+    }
+    .db-field {
+      font-family: 'Courier New', monospace;
+      font-size: 10.5px;
+      padding: 2px 7px;
+      border-radius: 5px;
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid #e2e8f0;
+    }
+    .df-key   { color: #7c3aed; }
+    .df-val   { color: #0369a1; }
+
+    /* ── Summary output ── */
+    .summary-output {
+      background: #1e293b;
+      border-radius: 10px;
+      padding: 14px 18px;
+      color: #e2e8f0;
+      font-family: 'Courier New', monospace;
+      font-size: 12.5px;
+      line-height: 1.7;
+      margin-top: 8px;
+    }
+    .sk { color: #93c5fd; }
+    .sv { color: #86efac; }
+    .sn { color: #fcd34d; }
+
+    /* ── Print button ── */
+    .print-btn {
+      position: fixed;
+      top: 20px; right: 20px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(37,99,235,.35);
+      z-index: 999;
+    }
+    .print-btn:hover { background: #1d4ed8; }
+    @media print {
+      .print-btn { display: none; }
+      body { background: #fff; padding: 20px; }
+      .phase { break-inside: avoid; }
+    }
+
+    /* ── Legend ── */
+    .legend {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .legend-item {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; color: #475569;
+    }
+    .legend-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">⬇ Guardar / Imprimir</button>
+
+<h1>Sistema de Votaciones — Flujo Completo</h1>
+<p class="subtitle">Nueva Imagen · Backend Express + Firestore + n8n</p>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#2563eb"></div> Paso 1: Registro</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div> Paso 2: OTP</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div> Paso 3A: Voto Web</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#7c3aed"></div> Paso 3B: Presencial</div>
+  <div class="legend-item"><span class="step-endpoint ep-post">POST</span> Endpoint</div>
+  <div class="legend-item"><span class="step-endpoint ep-get">GET</span> Endpoint</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PASO 1 — REGISTRO
+════════════════════════════════════════ -->
+<div class="diagram">
+
+  <div class="phase ph-register">
+    <div class="phase-title">
+      <span class="badge">1</span>
+      Registro — Verificación de identidad
+    </div>
+
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-who">👤 Usuario</div>
+        <div class="step-action">Ingresa nombre, email y teléfono</div>
+        <span class="step-endpoint ep-note">Formulario web / QR presencial</span>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="step">
+        <div class="step-who">🖥 Frontend → Backend</div>
+        <div class="step-action">Valida y busca en Firestore</div>
+        <span class="step-endpoint ep-post">POST /api/auth/register</span>
+        <div class="step-detail">Body: <code>{ nombre, email, telefono }</code></div>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="step">
+        <div class="step-who">🔁 Backend responde</div>
+        <div class="step-action">4 posibles respuestas según estado</div>
+        <div class="branch-row">
+          <div class="branch br-error">
+            <div class="branch-label">🚫 ya_voto</div>
+            <div class="branch-text">Ya participó. Se bloquea el flujo.</div>
+          </div>
+          <div class="branch br-info">
+            <div class="branch-label">⚡ habilitado</div>
+            <div class="branch-text">Sesión activa. Salta al Paso 3.</div>
+          </div>
+          <div class="branch br-warning">
+            <div class="branch-label">📧 pendiente</div>
+            <div class="branch-text">Existe pero no verificó. Reenvía OTP.</div>
+          </div>
+          <div class="branch br-success">
+            <div class="branch-label">✅ nuevo</div>
+            <div class="branch-text">Crea usuario + envía OTP por correo via n8n.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="db-fields" style="margin-top:14px;">
+      <span style="font-size:11px;color:#64748b;align-self:center;">Firestore usuarios:</span>
+      <span class="db-field"><span class="df-key">nombre</span></span>
+      <span class="db-field"><span class="df-key">email</span></span>
+      <span class="db-field"><span class="df-key">telefono</span></span>
+      <span class="db-field"><span class="df-key">estado</span>: <span class="df-val">"pendiente"</span></span>
+      <span class="db-field"><span class="df-key">otpHash</span>: <span class="df-val">SHA-256</span></span>
+      <span class="db-field"><span class="df-key">otpExpiresAt</span>: <span class="df-val">now + 60s</span></span>
+    </div>
+  </div>
+
+  <div class="phase-arrow">↓</div>
+
+  <!-- ═══════════════════════════════════════
+       PASO 2 — OTP
+  ════════════════════════════════════════ -->
+  <div class="phase ph-otp">
+    <div class="phase-title">
+      <span class="badge">2</span>
+      Verificación OTP — Código de 6 caracteres por correo
+    </div>
+
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-who">👤 Usuario</div>
+        <div class="step-action">Ingresa código OTP recibido por correo</div>
+        <span class="step-endpoint ep-note">6 chars · mayúsculas · 60s vigencia</span>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="step">
+        <div class="step-who">🖥 Frontend → Backend</div>
+        <div class="step-action">Verifica código contra hash en Firestore</div>
+        <span class="step-endpoint ep-post">POST /api/auth/verify-otp</span>
+        <div class="step-detail">Body: <code>{ userId, code }</code></div>
+        <div class="step-detail" style="margin-top:4px">🔒 Rate limit: 5 intentos / 10 min</div>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="step">
+        <div class="step-who">🔁 Backend responde</div>
+        <div class="step-action">3 posibles resultados</div>
+        <div class="branch-row">
+          <div class="branch br-success">
+            <div class="branch-label">✅ válido</div>
+            <div class="branch-text">estado → <strong>habilitado</strong>. Pasa al Paso 3.</div>
+          </div>
+          <div class="branch br-error">
+            <div class="branch-label">❌ incorrecto</div>
+            <div class="branch-text">Código equivocado. Puede reintentar.</div>
+          </div>
+          <div class="branch br-warning">
+            <div class="branch-label">⏱ expirado</div>
+            <div class="branch-text">Pasaron 60s. Muestra botón reenviar.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="steps-row" style="margin-top:12px">
+      <div class="step" style="flex:0 0 auto; min-width:280px;">
+        <div class="step-who">🔄 Reenvío de código</div>
+        <div class="step-action">Usuario pide nuevo OTP (tras 60s)</div>
+        <span class="step-endpoint ep-post">POST /api/auth/resend-otp</span>
+        <div class="step-detail">Body: <code>{ userId }</code> · Rate limit: 3 reenvíos / 10 min</div>
+        <div class="step-detail" style="margin-top:4px;">⚡ Sobreescribe hash → código anterior <strong>inválido de inmediato</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phase-arrow">↓</div>
+
+  <!-- ═══════════════════════════════════════
+       PASO 3 — VOTACIÓN (split)
+  ════════════════════════════════════════ -->
+  <div class="phase ph-vote">
+    <div class="phase-title">
+      <span class="badge">3</span>
+      Votación — Web o Presencial
+    </div>
+
+    <div class="vote-split">
+
+      <!-- WEB -->
+      <div class="vote-col vc-web">
+        <div class="vote-col-title">🌐 Modalidad Web</div>
+
+        <div class="vc-step">
+          <div class="vc-step-who">👤 Usuario</div>
+          <div class="vc-step-action">Selecciona Candidato A o Candidato B</div>
+        </div>
+
+        <div class="vc-step">
+          <div class="vc-step-who">🖥 Frontend → Backend</div>
+          <div class="vc-step-action">Registra voto digital anónimo</div>
+          <span class="step-endpoint ep-post">POST /api/votes</span>
+          <div class="step-detail" style="margin-top:5px">Body: <code>{ userId, candidato: "A"|"B" }</code></div>
+        </div>
+
+        <div class="vc-step">
+          <div class="vc-step-who">🗄 Firestore</div>
+          <div class="db-fields">
+            <span class="db-field"><span class="df-key">candidato</span>: <span class="df-val">"A" o "B"</span></span>
+            <span class="db-field"><span class="df-key">modalidad</span>: <span class="df-val">"web"</span></span>
+            <span class="db-field"><span class="df-key">createdAt</span></span>
+          </div>
+          <div class="step-detail" style="margin-top:6px">Usuario → <strong>estado: ya_voto · modalidad: web</strong></div>
+        </div>
+
+        <div class="vc-step" style="background:#f0fdf4; border-color:#86efac;">
+          <div class="vc-step-action" style="color:#15803d;">✅ "¡Voto registrado exitosamente!"</div>
+        </div>
+      </div>
+
+      <!-- PRESENCIAL -->
+      <div class="vote-col vc-presencial">
+        <div class="vote-col-title">🏛 Modalidad Presencial</div>
+
+        <div class="vc-step">
+          <div class="vc-step-who">👤 Usuario</div>
+          <div class="vc-step-action">Muestra pantalla "Habilitado ✅" al jurado</div>
+        </div>
+
+        <div class="vc-step">
+          <div class="vc-step-who">👮 Jurado → Backend</div>
+          <div class="vc-step-action">Registra participación presencial</div>
+          <span class="step-endpoint ep-post">POST /api/votes/presencial</span>
+          <div class="step-detail" style="margin-top:5px">Body: <code>{ userId }</code></div>
+        </div>
+
+        <div class="vc-step">
+          <div class="vc-step-who">🗄 Firestore</div>
+          <div class="db-fields">
+            <span class="db-field"><span class="df-key">candidato</span>: <span class="df-val">null</span></span>
+            <span class="db-field"><span class="df-key">modalidad</span>: <span class="df-val">"presencial"</span></span>
+            <span class="db-field"><span class="df-key">createdAt</span></span>
+          </div>
+          <div class="step-detail" style="margin-top:6px">Usuario → <strong>estado: ya_voto · modalidad: presencial</strong></div>
+        </div>
+
+        <div class="vc-step" style="background:#faf5ff; border-color:#c4b5fd;">
+          <div class="vc-step-action" style="color:#6b21a8;">🗳️ Jurado entrega tarjetón físico al votante</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="phase-arrow">↓</div>
+
+  <!-- ═══════════════════════════════════════
+       RESUMEN
+  ════════════════════════════════════════ -->
+  <div class="phase ph-summary">
+    <div class="phase-title">
+      <span class="badge">📊</span>
+      Resumen de votaciones (admin)
+    </div>
+
+    <div class="steps-row centered" style="gap:14px;">
+      <div class="step" style="flex:0 0 auto; min-width:220px; max-width:280px;">
+        <div class="step-who">🖥 Admin</div>
+        <div class="step-action">Consulta el conteo de votos</div>
+        <span class="step-endpoint ep-get">GET /api/votes/summary</span>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div style="flex:1; min-width:280px;">
+        <div class="summary-output">
+{<br>
+&nbsp;&nbsp;<span class="sk">"web"</span>: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="sk">"A"</span>: <span class="sn">120</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="sk">"B"</span>: <span class="sn">98</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="sk">"total"</span>: <span class="sn">218</span><br>
+&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;<span class="sk">"presencial"</span>: <span class="sn">340</span>,<br>
+&nbsp;&nbsp;<span class="sk">"total"</span>: <span class="sn">558</span><br>
+}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       TABLA DE ENDPOINTS
+  ════════════════════════════════════════ -->
+  <div style="margin-top:30px; background:#fff; border-radius:16px; padding:20px 24px; box-shadow:0 1px 4px rgba(0,0,0,.07); border:1px solid rgba(0,0,0,.06);">
+    <div style="font-size:13px; font-weight:700; color:#0f172a; margin-bottom:14px; text-transform:uppercase; letter-spacing:.8px;">Referencia de Endpoints</div>
+    <table style="width:100%; border-collapse:collapse; font-size:12.5px;">
+      <thead>
+        <tr style="background:#f8fafc;">
+          <th style="text-align:left; padding:8px 12px; color:#64748b; font-weight:600; border-bottom:1px solid #e2e8f0;">Método</th>
+          <th style="text-align:left; padding:8px 12px; color:#64748b; font-weight:600; border-bottom:1px solid #e2e8f0;">Ruta</th>
+          <th style="text-align:left; padding:8px 12px; color:#64748b; font-weight:600; border-bottom:1px solid #e2e8f0;">Descripción</th>
+          <th style="text-align:left; padding:8px 12px; color:#64748b; font-weight:600; border-bottom:1px solid #e2e8f0;">Body</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f1f5f9;">
+          <td style="padding:8px 12px;"><span class="step-endpoint ep-post">POST</span></td>
+          <td style="padding:8px 12px; font-family:monospace;">/api/auth/register</td>
+          <td style="padding:8px 12px; color:#475569;">Registro e inicio del flujo OTP</td>
+          <td style="padding:8px 12px; font-family:monospace; color:#7c3aed;">{ nombre, email, telefono }</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9;">
+          <td style="padding:8px 12px;"><span class="step-endpoint ep-post">POST</span></td>
+          <td style="padding:8px 12px; font-family:monospace;">/api/auth/verify-otp</td>
+          <td style="padding:8px 12px; color:#475569;">Verifica el código OTP</td>
+          <td style="padding:8px 12px; font-family:monospace; color:#7c3aed;">{ userId, code }</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9;">
+          <td style="padding:8px 12px;"><span class="step-endpoint ep-post">POST</span></td>
+          <td style="padding:8px 12px; font-family:monospace;">/api/auth/resend-otp</td>
+          <td style="padding:8px 12px; color:#475569;">Reenvía nuevo OTP (invalida anterior)</td>
+          <td style="padding:8px 12px; font-family:monospace; color:#7c3aed;">{ userId }</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9;">
+          <td style="padding:8px 12px;"><span class="step-endpoint ep-post">POST</span></td>
+          <td style="padding:8px 12px; font-family:monospace;">/api/votes</td>
+          <td style="padding:8px 12px; color:#475569;">Registra voto digital (web)</td>
+          <td style="padding:8px 12px; font-family:monospace; color:#7c3aed;">{ userId, candidato }</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9;">
+          <td style="padding:8px 12px;"><span class="step-endpoint ep-post">POST</span></td>
+          <td style="padding:8px 12px; font-family:monospace;">/api/votes/presencial</td>
+          <td style="padding:8px 12px; color:#475569;">Registra participación presencial</td>
+          <td style="padding:8px 12px; font-family:monospace; color:#7c3aed;">{ userId }</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;"><span class="step-endpoint ep-get">GET</span></td>
+          <td style="padding:8px 12px; font-family:monospace;">/api/votes/summary</td>
+          <td style="padding:8px 12px; color:#475569;">Conteo de votos por modalidad</td>
+          <td style="padding:8px 12px; color:#94a3b8;">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,47 +1,37 @@
-const state = {
-  otpSessions: new Map(),
-  votes: [],
-};
+import { getDb } from "../../lib/firebase-admin.js";
 
-function maskPhone(phone) {
-  return phone.length < 4 ? phone : `${phone.slice(0, 3)}****${phone.slice(-2)}`;
-}
+const COLLECTION = "votos";
 
 export const voteRepository = {
-  findVoteByPhone(phone) {
-    return state.votes.find((vote) => vote.phone === phone) || null;
+  async create({ candidato, modalidad }) {
+    const db = getDb();
+    await db.collection(COLLECTION).add({
+      candidato: candidato ?? null,
+      modalidad,
+      createdAt: new Date(),
+    });
   },
-  saveOtpSession(session) {
-    state.otpSessions.set(session.requestId, session);
-    return session;
-  },
-  findOtpSession(requestId) {
-    return state.otpSessions.get(requestId) || null;
-  },
-  consumeOtpSession(requestId) {
-    const session = state.otpSessions.get(requestId) || null;
-    state.otpSessions.delete(requestId);
-    return session;
-  },
-  saveVote(vote) {
-    state.votes.push(vote);
-    return vote;
-  },
-  getSummary() {
-    return state.votes.reduce(
-      (accumulator, vote) => ({
-        ...accumulator,
-        [vote.option]: accumulator[vote.option] + 1,
-      }),
-      { A: 0, B: 0 },
-    );
-  },
-  getRecords() {
-    return state.votes.map((vote) => ({
-      id: vote.id,
-      option: vote.option,
-      createdAt: vote.createdAt,
-      phoneMasked: maskPhone(vote.phone),
-    }));
+
+  async getSummary() {
+    const db = getDb();
+    const snapshot = await db.collection(COLLECTION).get();
+
+    const result = { web: { A: 0, B: 0 }, presencial: 0, total: 0 };
+
+    snapshot.forEach((doc) => {
+      const { candidato, modalidad } = doc.data();
+      result.total++;
+
+      if (modalidad === "presencial") {
+        result.presencial++;
+      } else if (modalidad === "web") {
+        if (candidato === "A" || candidato === "B") {
+          result.web[candidato]++;
+        }
+      }
+    });
+
+    result.web.total = result.web.A + result.web.B;
+    return result;
   },
 };

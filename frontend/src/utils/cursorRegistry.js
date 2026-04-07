@@ -57,7 +57,9 @@ export function resolveCursorState(target) {
     return CURSOR_DEFAULT_STATE;
   }
 
-  const element = target.closest("[data-cursor], [data-cursor-label], [data-cursor-icon]");
+  const element = target.closest(
+    "[data-cursor], [data-cursor-label], [data-cursor-icon]",
+  );
 
   if (!element) {
     return CURSOR_DEFAULT_STATE;
@@ -75,18 +77,20 @@ export function resolveCursorState(target) {
     icon,
     size,
     hint: element.getAttribute("data-cursor-hint") || "",
-    showArrow: variantKey === "next" || element.getAttribute("data-cursor-arrow") === "true",
+    showArrow:
+      variantKey === "next" ||
+      element.getAttribute("data-cursor-arrow") === "true",
   };
 }
 
 export function getCursorSize(size) {
   switch (size) {
-    case "sm":
-      return 58;
+    case "xs":
+      return 38;
     case "lg":
-      return 84;
+      return 62;
     default:
-      return 70;
+      return 46;
   }
 }
 

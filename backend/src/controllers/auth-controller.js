@@ -1,18 +1,46 @@
 import { otpService } from "../services/otp-service.js";
 
 export const authController = {
-  async requestOtp(request, response, next) {
+  async register(request, response, next) {
     try {
-      const data = await otpService.requestOtp(request.body.phone);
-      response.json({ message: "OTP procesado", data });
+      const { nombre, email, telefono } = request.body;
+
+      if (!nombre || !email || !telefono) {
+        return response.status(400).json({ message: "Nombre, email y telefono son requeridos." });
+      }
+
+      const data = await otpService.register({ nombre, email, telefono });
+      response.json({ data });
     } catch (error) {
       next(error);
     }
   },
-  verifyOtp(request, response, next) {
+
+  async verifyOtp(request, response, next) {
     try {
-      const data = otpService.verifyOtp(request.body);
-      response.json({ message: "OTP validado", data });
+      const { userId, code } = request.body;
+
+      if (!userId || !code) {
+        return response.status(400).json({ message: "userId y code son requeridos." });
+      }
+
+      const data = await otpService.verifyOtp({ userId, code });
+      response.json({ data });
+    } catch (error) {
+      next(error);
+    }
+  },
+
+  async resendOtp(request, response, next) {
+    try {
+      const { userId } = request.body;
+
+      if (!userId) {
+        return response.status(400).json({ message: "userId es requerido." });
+      }
+
+      const data = await otpService.resendOtp({ userId });
+      response.json({ data });
     } catch (error) {
       next(error);
     }

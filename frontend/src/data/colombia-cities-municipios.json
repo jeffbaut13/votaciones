@@ -1,0 +1,5517 @@
+﻿[
+    {
+        "department":  "Antioquia",
+        "municipality":  "Abejorral",
+        "label":  "Abejorral, Antioquia"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Ábrego",
+        "label":  "Ábrego, Norte de Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Abriaquí",
+        "label":  "Abriaquí, Antioquia"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Acacías",
+        "label":  "Acacías, Meta"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Acandí",
+        "label":  "Acandí, Chocó"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Acevedo",
+        "label":  "Acevedo, Huila"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Achí",
+        "label":  "Achí, Bolívar"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Agrado",
+        "label":  "Agrado, Huila"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Agua de Dios",
+        "label":  "Agua de Dios, Cundinamarca"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Aguachica",
+        "label":  "Aguachica, Cesar"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Aguada",
+        "label":  "Aguada, Santander"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Aguadas",
+        "label":  "Aguadas, Caldas"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Aguazul",
+        "label":  "Aguazul, Casanare"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Agustín Codazzi",
+        "label":  "Agustín Codazzi, Cesar"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Aipe",
+        "label":  "Aipe, Huila"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Albán",
+        "label":  "Albán, Cundinamarca"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "Albania",
+        "label":  "Albania, Caquetá"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "Albania",
+        "label":  "Albania, La Guajira"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Albania",
+        "label":  "Albania, Santander"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Alcalá",
+        "label":  "Alcalá, Valle del Cauca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Aldana",
+        "label":  "Aldana, Nariño"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Alejandría",
+        "label":  "Alejandría, Antioquia"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Algarrobo",
+        "label":  "Algarrobo, Magdalena"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Algeciras",
+        "label":  "Algeciras, Huila"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Almaguer",
+        "label":  "Almaguer, Cauca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Almeida",
+        "label":  "Almeida, Boyacá"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Alpujarra",
+        "label":  "Alpujarra, Tolima"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Altamira",
+        "label":  "Altamira, Huila"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Alto Baudó",
+        "label":  "Alto Baudó, Chocó"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Altos del Rosario",
+        "label":  "Altos del Rosario, Bolívar"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Alvarado",
+        "label":  "Alvarado, Tolima"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Amagá",
+        "label":  "Amagá, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Amalfi",
+        "label":  "Amalfi, Antioquia"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Ambalema",
+        "label":  "Ambalema, Tolima"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Anapoima",
+        "label":  "Anapoima, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Ancuyá",
+        "label":  "Ancuyá, Nariño"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Andalucía",
+        "label":  "Andalucía, Valle del Cauca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Andes",
+        "label":  "Andes, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Angelópolis",
+        "label":  "Angelópolis, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Angostura",
+        "label":  "Angostura, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Anolaima",
+        "label":  "Anolaima, Cundinamarca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Anorí",
+        "label":  "Anorí, Antioquia"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Anserma",
+        "label":  "Anserma, Caldas"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Ansermanuevo",
+        "label":  "Ansermanuevo, Valle del Cauca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Anzá",
+        "label":  "Anzá, Antioquia"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Anzoátegui",
+        "label":  "Anzoátegui, Tolima"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Apartadó",
+        "label":  "Apartadó, Antioquia"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "Apía",
+        "label":  "Apía, Risaralda"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Apulo",
+        "label":  "Apulo, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Aquitania",
+        "label":  "Aquitania, Boyacá"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Aracataca",
+        "label":  "Aracataca, Magdalena"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Aranzazu",
+        "label":  "Aranzazu, Caldas"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Aratoca",
+        "label":  "Aratoca, Santander"
+    },
+    {
+        "department":  "Arauca",
+        "municipality":  "Arauca",
+        "label":  "Arauca, Arauca"
+    },
+    {
+        "department":  "Arauca",
+        "municipality":  "Arauquita",
+        "label":  "Arauquita, Arauca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Arbeláez",
+        "label":  "Arbeláez, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Arboleda",
+        "label":  "Arboleda, Nariño"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Arboledas",
+        "label":  "Arboledas, Norte de Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Arboletes",
+        "label":  "Arboletes, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Arcabuco",
+        "label":  "Arcabuco, Boyacá"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Arenal",
+        "label":  "Arenal, Bolívar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Argelia",
+        "label":  "Argelia, Antioquia"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Argelia",
+        "label":  "Argelia, Cauca"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Argelia",
+        "label":  "Argelia, Valle del Cauca"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Ariguaní",
+        "label":  "Ariguaní, Magdalena"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Arjona",
+        "label":  "Arjona, Bolívar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Armenia",
+        "label":  "Armenia, Antioquia"
+    },
+    {
+        "department":  "Quindío",
+        "municipality":  "Armenia",
+        "label":  "Armenia, Quindío"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Armero",
+        "label":  "Armero, Tolima"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Arroyohondo",
+        "label":  "Arroyohondo, Bolívar"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Astrea",
+        "label":  "Astrea, Cesar"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Ataco",
+        "label":  "Ataco, Tolima"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Ayapel",
+        "label":  "Ayapel, Córdoba"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Bagadó",
+        "label":  "Bagadó, Chocó"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Bahía Solano",
+        "label":  "Bahía Solano, Chocó"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Bajo Baudó",
+        "label":  "Bajo Baudó, Chocó"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Balboa",
+        "label":  "Balboa, Cauca"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "Balboa",
+        "label":  "Balboa, Risaralda"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Baranoa",
+        "label":  "Baranoa, Atlántico"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Baraya",
+        "label":  "Baraya, Huila"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Barbacoas",
+        "label":  "Barbacoas, Nariño"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Barbosa",
+        "label":  "Barbosa, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Barbosa",
+        "label":  "Barbosa, Santander"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Barichara",
+        "label":  "Barichara, Santander"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Barranca de Upía",
+        "label":  "Barranca de Upía, Meta"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Barrancabermeja",
+        "label":  "Barrancabermeja, Santander"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "Barrancas",
+        "label":  "Barrancas, La Guajira"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Barranco de Loba",
+        "label":  "Barranco de Loba, Bolívar"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Barranquilla",
+        "label":  "Barranquilla, Atlántico"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Becerril",
+        "label":  "Becerril, Cesar"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Belalcázar",
+        "label":  "Belalcázar, Caldas"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Belén",
+        "label":  "Belén, Boyacá"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Belén",
+        "label":  "Belén, Nariño"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "Belén de los Andaquíes",
+        "label":  "Belén de los Andaquíes, Caquetá"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "Belén de Umbría",
+        "label":  "Belén de Umbría, Risaralda"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Bello",
+        "label":  "Bello, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Belmira",
+        "label":  "Belmira, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Beltrán",
+        "label":  "Beltrán, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Berbeo",
+        "label":  "Berbeo, Boyacá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Betania",
+        "label":  "Betania, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Betéitiva",
+        "label":  "Betéitiva, Boyacá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Betulia",
+        "label":  "Betulia, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Betulia",
+        "label":  "Betulia, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Bituima",
+        "label":  "Bituima, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Boavita",
+        "label":  "Boavita, Boyacá"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Bochalema",
+        "label":  "Bochalema, Norte de Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Bogotá",
+        "label":  "Bogotá, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Bojacá",
+        "label":  "Bojacá, Cundinamarca"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Bojayá",
+        "label":  "Bojayá, Chocó"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Bolívar",
+        "label":  "Bolívar, Cauca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Bolívar",
+        "label":  "Bolívar, Santander"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Bolívar",
+        "label":  "Bolívar, Valle del Cauca"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Bosconia",
+        "label":  "Bosconia, Cesar"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Boyacá",
+        "label":  "Boyacá, Boyacá"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Brazuelo de Papayal",
+        "label":  "Brazuelo de Papayal, Bolívar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Briceño",
+        "label":  "Briceño, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Briceño",
+        "label":  "Briceño, Boyacá"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Bucaramanga",
+        "label":  "Bucaramanga, Santander"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Bucarasica",
+        "label":  "Bucarasica, Norte de Santander"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Buenaventura",
+        "label":  "Buenaventura, Valle del Cauca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Buenavista",
+        "label":  "Buenavista, Boyacá"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Buenavista",
+        "label":  "Buenavista, Córdoba"
+    },
+    {
+        "department":  "Quindío",
+        "municipality":  "Buenavista",
+        "label":  "Buenavista, Quindío"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Buenavista",
+        "label":  "Buenavista, Sucre"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Buenos Aires",
+        "label":  "Buenos Aires, Cauca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Buesaco",
+        "label":  "Buesaco, Nariño"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Buga",
+        "label":  "Buga, Valle del Cauca"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Bugalagrande",
+        "label":  "Bugalagrande, Valle del Cauca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Buriticá",
+        "label":  "Buriticá, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Busbanzá",
+        "label":  "Busbanzá, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Cabrera",
+        "label":  "Cabrera, Cundinamarca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Cabrera",
+        "label":  "Cabrera, Santander"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Cabuyaro",
+        "label":  "Cabuyaro, Meta"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Cáceres",
+        "label":  "Cáceres, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Cachipay",
+        "label":  "Cachipay, Cundinamarca"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Cáchira",
+        "label":  "Cáchira, Norte de Santander"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Cácota",
+        "label":  "Cácota, Norte de Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Caicedo",
+        "label":  "Caicedo, Antioquia"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Caicedonia",
+        "label":  "Caicedonia, Valle del Cauca"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Caimito",
+        "label":  "Caimito, Sucre"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Cajamarca",
+        "label":  "Cajamarca, Tolima"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Cajibío",
+        "label":  "Cajibío, Cauca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Cajicá",
+        "label":  "Cajicá, Cundinamarca"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Calamar",
+        "label":  "Calamar, Bolívar"
+    },
+    {
+        "department":  "Guaviare",
+        "municipality":  "Calamar",
+        "label":  "Calamar, Guaviare"
+    },
+    {
+        "department":  "Quindío",
+        "municipality":  "Calarcá",
+        "label":  "Calarcá, Quindío"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Caldas",
+        "label":  "Caldas, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Caldas",
+        "label":  "Caldas, Boyacá"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Caldono",
+        "label":  "Caldono, Cauca"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Cali",
+        "label":  "Cali, Valle del Cauca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "California",
+        "label":  "California, Santander"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Calima",
+        "label":  "Calima, Valle del Cauca"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Caloto",
+        "label":  "Caloto, Cauca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Campamento",
+        "label":  "Campamento, Antioquia"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Campo de la Cruz",
+        "label":  "Campo de la Cruz, Atlántico"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Campoalegre",
+        "label":  "Campoalegre, Huila"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Campohermoso",
+        "label":  "Campohermoso, Boyacá"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Canalete",
+        "label":  "Canalete, Córdoba"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Candelaria",
+        "label":  "Candelaria, Atlántico"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Candelaria",
+        "label":  "Candelaria, Valle del Cauca"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Cantagallo",
+        "label":  "Cantagallo, Bolívar"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Cantón de San Pablo",
+        "label":  "Cantón de San Pablo, Chocó"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Cañasgordas",
+        "label":  "Cañasgordas, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Caparrapí",
+        "label":  "Caparrapí, Cundinamarca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Capitanejo",
+        "label":  "Capitanejo, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Cáqueza",
+        "label":  "Cáqueza, Cundinamarca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Caracolí",
+        "label":  "Caracolí, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Caramanta",
+        "label":  "Caramanta, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Carcasí",
+        "label":  "Carcasí, Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Carepa",
+        "label":  "Carepa, Antioquia"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Carmen de Apicalá",
+        "label":  "Carmen de Apicalá, Tolima"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Carmen de Carupa",
+        "label":  "Carmen de Carupa, Cundinamarca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Carolina del Príncipe",
+        "label":  "Carolina del Príncipe, Antioquia"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Cartagena de Indias",
+        "label":  "Cartagena de Indias, Bolívar"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "Cartagena del Chairá",
+        "label":  "Cartagena del Chairá, Caquetá"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Cartago",
+        "label":  "Cartago, Valle del Cauca"
+    },
+    {
+        "department":  "Vaupés",
+        "municipality":  "Carurú",
+        "label":  "Carurú, Vaupés"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Casabianca",
+        "label":  "Casabianca, Tolima"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Castilla la Nueva",
+        "label":  "Castilla la Nueva, Meta"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Caucasia",
+        "label":  "Caucasia, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Cepitá",
+        "label":  "Cepitá, Santander"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Cereté",
+        "label":  "Cereté, Córdoba"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Cerinza",
+        "label":  "Cerinza, Boyacá"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Cerrito",
+        "label":  "Cerrito, Santander"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Cerro de San Antonio",
+        "label":  "Cerro de San Antonio, Magdalena"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Cértegui",
+        "label":  "Cértegui, Chocó"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Chachagüí",
+        "label":  "Chachagüí, Nariño"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Chaguaní",
+        "label":  "Chaguaní, Cundinamarca"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Chalán",
+        "label":  "Chalán, Sucre"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Chámeza",
+        "label":  "Chámeza, Casanare"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Chaparral",
+        "label":  "Chaparral, Tolima"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Charalá",
+        "label":  "Charalá, Santander"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Charta",
+        "label":  "Charta, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Chía",
+        "label":  "Chía, Cundinamarca"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Chibolo",
+        "label":  "Chibolo, Magdalena"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Chigorodó",
+        "label":  "Chigorodó, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Chima",
+        "label":  "Chima, Santander"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Chimá",
+        "label":  "Chimá, Córdoba"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Chimichagua",
+        "label":  "Chimichagua, Cesar"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Chinácota",
+        "label":  "Chinácota, Norte de Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Chinavita",
+        "label":  "Chinavita, Boyacá"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Chinchiná",
+        "label":  "Chinchiná, Caldas"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Chinú",
+        "label":  "Chinú, Córdoba"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Chipaque",
+        "label":  "Chipaque, Cundinamarca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Chipatá",
+        "label":  "Chipatá, Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Chiquinquirá",
+        "label":  "Chiquinquirá, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Chíquiza",
+        "label":  "Chíquiza, Boyacá"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Chiriguaná",
+        "label":  "Chiriguaná, Cesar"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Chiscas",
+        "label":  "Chiscas, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Chita",
+        "label":  "Chita, Boyacá"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Chitagá",
+        "label":  "Chitagá, Norte de Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Chitaraque",
+        "label":  "Chitaraque, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Chivatá",
+        "label":  "Chivatá, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Chivor",
+        "label":  "Chivor, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Choachí",
+        "label":  "Choachí, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Chocontá",
+        "label":  "Chocontá, Cundinamarca"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Cicuco",
+        "label":  "Cicuco, Bolívar"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Ciénaga",
+        "label":  "Ciénaga, Magdalena"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Ciénaga de Oro",
+        "label":  "Ciénaga de Oro, Córdoba"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Ciénega",
+        "label":  "Ciénega, Boyacá"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Cimitarra",
+        "label":  "Cimitarra, Santander"
+    },
+    {
+        "department":  "Quindío",
+        "municipality":  "Circasia",
+        "label":  "Circasia, Quindío"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Cisneros",
+        "label":  "Cisneros, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Ciudad Bolívar",
+        "label":  "Ciudad Bolívar, Antioquia"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Clemencia",
+        "label":  "Clemencia, Bolívar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Cocorná",
+        "label":  "Cocorná, Antioquia"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Coello",
+        "label":  "Coello, Tolima"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Cogua",
+        "label":  "Cogua, Cundinamarca"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Colombia",
+        "label":  "Colombia, Huila"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Colón",
+        "label":  "Colón, Nariño"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "Colón",
+        "label":  "Colón, Putumayo"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Colosó",
+        "label":  "Colosó, Sucre"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Cómbita",
+        "label":  "Cómbita, Boyacá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Concepción",
+        "label":  "Concepción, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Concepción",
+        "label":  "Concepción, Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Concordia",
+        "label":  "Concordia, Antioquia"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Concordia",
+        "label":  "Concordia, Magdalena"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Condoto",
+        "label":  "Condoto, Chocó"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Confines",
+        "label":  "Confines, Santander"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Consacá",
+        "label":  "Consacá, Nariño"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Contadero",
+        "label":  "Contadero, Nariño"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Contratación",
+        "label":  "Contratación, Santander"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Convención",
+        "label":  "Convención, Norte de Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Copacabana",
+        "label":  "Copacabana, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Coper",
+        "label":  "Coper, Boyacá"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Córdoba",
+        "label":  "Córdoba, Bolívar"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Córdoba",
+        "label":  "Córdoba, Nariño"
+    },
+    {
+        "department":  "Quindío",
+        "municipality":  "Córdoba",
+        "label":  "Córdoba, Quindío"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Corinto",
+        "label":  "Corinto, Cauca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Coromoro",
+        "label":  "Coromoro, Santander"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Corozal",
+        "label":  "Corozal, Sucre"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Corrales",
+        "label":  "Corrales, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Cota",
+        "label":  "Cota, Cundinamarca"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Cotorra",
+        "label":  "Cotorra, Córdoba"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Covarachía",
+        "label":  "Covarachía, Boyacá"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Coveñas",
+        "label":  "Coveñas, Sucre"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Coyaima",
+        "label":  "Coyaima, Tolima"
+    },
+    {
+        "department":  "Arauca",
+        "municipality":  "Cravo Norte",
+        "label":  "Cravo Norte, Arauca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Cuaspud",
+        "label":  "Cuaspud, Nariño"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Cubará",
+        "label":  "Cubará, Boyacá"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Cubarral",
+        "label":  "Cubarral, Meta"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Cucaita",
+        "label":  "Cucaita, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Cucunubá",
+        "label":  "Cucunubá, Cundinamarca"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Cúcuta",
+        "label":  "Cúcuta, Norte de Santander"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Cucutilla",
+        "label":  "Cucutilla, Norte de Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Cuítiva",
+        "label":  "Cuítiva, Boyacá"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Cumaral",
+        "label":  "Cumaral, Meta"
+    },
+    {
+        "department":  "Vichada",
+        "municipality":  "Cumaribo",
+        "label":  "Cumaribo, Vichada"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Cumbal",
+        "label":  "Cumbal, Nariño"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Cumbitara",
+        "label":  "Cumbitara, Nariño"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Cunday",
+        "label":  "Cunday, Tolima"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "Curillo",
+        "label":  "Curillo, Caquetá"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Curití",
+        "label":  "Curití, Santander"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Curumaní",
+        "label":  "Curumaní, Cesar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Dabeiba",
+        "label":  "Dabeiba, Antioquia"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Dagua",
+        "label":  "Dagua, Valle del Cauca"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "Dibulla",
+        "label":  "Dibulla, La Guajira"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "Distracción",
+        "label":  "Distracción, La Guajira"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Dolores",
+        "label":  "Dolores, Tolima"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Donmatías",
+        "label":  "Donmatías, Antioquia"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "Dosquebradas",
+        "label":  "Dosquebradas, Risaralda"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Duitama",
+        "label":  "Duitama, Boyacá"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Duranía",
+        "label":  "Duranía, Norte de Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Ebéjico",
+        "label":  "Ebéjico, Antioquia"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "El Águila",
+        "label":  "El Águila, Valle del Cauca"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "El Atrato",
+        "label":  "El Atrato, Chocó"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "El Bagre",
+        "label":  "El Bagre, Antioquia"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "El Banco",
+        "label":  "El Banco, Magdalena"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "El Cairo",
+        "label":  "El Cairo, Valle del Cauca"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "El Calvario",
+        "label":  "El Calvario, Meta"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "El Carmen",
+        "label":  "El Carmen, Norte de Santander"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "El Carmen de Atrato",
+        "label":  "El Carmen de Atrato, Chocó"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "El Carmen de Bolívar",
+        "label":  "El Carmen de Bolívar, Bolívar"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "El Carmen de Chucurí",
+        "label":  "El Carmen de Chucurí, Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "El Carmen de Viboral",
+        "label":  "El Carmen de Viboral, Antioquia"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "El Carmen del Darién",
+        "label":  "El Carmen del Darién, Chocó"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "El Castillo",
+        "label":  "El Castillo, Meta"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "El Cerrito",
+        "label":  "El Cerrito, Valle del Cauca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "El Charco",
+        "label":  "El Charco, Nariño"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "El Cocuy",
+        "label":  "El Cocuy, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "El Colegio",
+        "label":  "El Colegio, Cundinamarca"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "El Copey",
+        "label":  "El Copey, Cesar"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "El Doncello",
+        "label":  "El Doncello, Caquetá"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "El Dorado",
+        "label":  "El Dorado, Meta"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "El Dovio",
+        "label":  "El Dovio, Valle del Cauca"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "El Espinal",
+        "label":  "El Espinal, Tolima"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "El Espino",
+        "label":  "El Espino, Boyacá"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "El Guacamayo",
+        "label":  "El Guacamayo, Santander"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "El Guamo",
+        "label":  "El Guamo, Bolívar"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "El Molino",
+        "label":  "El Molino, La Guajira"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "El Paso",
+        "label":  "El Paso, Cesar"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "El Paujil",
+        "label":  "El Paujil, Caquetá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "El Peñol",
+        "label":  "El Peñol, Antioquia"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "El Peñol",
+        "label":  "El Peñol, Nariño"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "El Peñón",
+        "label":  "El Peñón, Bolívar"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "El Peñón",
+        "label":  "El Peñón, Cundinamarca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "El Peñón",
+        "label":  "El Peñón, Santander"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "El Piñón",
+        "label":  "El Piñón, Magdalena"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "El Pital",
+        "label":  "El Pital, Huila"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "El Playón",
+        "label":  "El Playón, Santander"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "El Retén",
+        "label":  "El Retén, Magdalena"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "El Retiro",
+        "label":  "El Retiro, Antioquia"
+    },
+    {
+        "department":  "Guaviare",
+        "municipality":  "El Retorno",
+        "label":  "El Retorno, Guaviare"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "El Roble",
+        "label":  "El Roble, Sucre"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "El Rosal",
+        "label":  "El Rosal, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "El Rosario",
+        "label":  "El Rosario, Nariño"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "El Santuario",
+        "label":  "El Santuario, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "El Socorro",
+        "label":  "El Socorro, Santander"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "El Tablón",
+        "label":  "El Tablón, Nariño"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "El Tambo",
+        "label":  "El Tambo, Cauca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "El Tambo",
+        "label":  "El Tambo, Nariño"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "El Tarra",
+        "label":  "El Tarra, Norte de Santander"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "El Zulia",
+        "label":  "El Zulia, Norte de Santander"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Elías",
+        "label":  "Elías, Huila"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Encino",
+        "label":  "Encino, Santander"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Enciso",
+        "label":  "Enciso, Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Entrerríos",
+        "label":  "Entrerríos, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Envigado",
+        "label":  "Envigado, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Facatativá",
+        "label":  "Facatativá, Cundinamarca"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Falán",
+        "label":  "Falán, Tolima"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Filadelfia",
+        "label":  "Filadelfia, Caldas"
+    },
+    {
+        "department":  "Quindío",
+        "municipality":  "Filandia",
+        "label":  "Filandia, Quindío"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Firavitoba",
+        "label":  "Firavitoba, Boyacá"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Flandes",
+        "label":  "Flandes, Tolima"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "Florencia",
+        "label":  "Florencia, Caquetá"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Florencia",
+        "label":  "Florencia, Cauca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Floresta",
+        "label":  "Floresta, Boyacá"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Florián",
+        "label":  "Florián, Santander"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Florida",
+        "label":  "Florida, Valle del Cauca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Floridablanca",
+        "label":  "Floridablanca, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Fómeque",
+        "label":  "Fómeque, Cundinamarca"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "Fonseca",
+        "label":  "Fonseca, La Guajira"
+    },
+    {
+        "department":  "Arauca",
+        "municipality":  "Fortul",
+        "label":  "Fortul, Arauca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Fosca",
+        "label":  "Fosca, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Francisco Pizarro",
+        "label":  "Francisco Pizarro, Nariño"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Fredonia",
+        "label":  "Fredonia, Antioquia"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Fresno",
+        "label":  "Fresno, Tolima"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Frontino",
+        "label":  "Frontino, Antioquia"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Fuente de Oro",
+        "label":  "Fuente de Oro, Meta"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Fundación",
+        "label":  "Fundación, Magdalena"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Funes",
+        "label":  "Funes, Nariño"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Funza",
+        "label":  "Funza, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Fúquene",
+        "label":  "Fúquene, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Fusagasugá",
+        "label":  "Fusagasugá, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Gachalá",
+        "label":  "Gachalá, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Gachancipá",
+        "label":  "Gachancipá, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Gachantivá",
+        "label":  "Gachantivá, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Gachetá",
+        "label":  "Gachetá, Cundinamarca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Galán",
+        "label":  "Galán, Santander"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Galapa",
+        "label":  "Galapa, Atlántico"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Galeras",
+        "label":  "Galeras, Sucre"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Gama",
+        "label":  "Gama, Cundinamarca"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Gamarra",
+        "label":  "Gamarra, Cesar"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Gámbita",
+        "label":  "Gámbita, Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Gámeza",
+        "label":  "Gámeza, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Garagoa",
+        "label":  "Garagoa, Boyacá"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Garzón",
+        "label":  "Garzón, Huila"
+    },
+    {
+        "department":  "Quindío",
+        "municipality":  "Génova",
+        "label":  "Génova, Quindío"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Gigante",
+        "label":  "Gigante, Huila"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Ginebra",
+        "label":  "Ginebra, Valle del Cauca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Giraldo",
+        "label":  "Giraldo, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Girardot",
+        "label":  "Girardot, Cundinamarca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Girardota",
+        "label":  "Girardota, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Girón",
+        "label":  "Girón, Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Gómez Plata",
+        "label":  "Gómez Plata, Antioquia"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "González",
+        "label":  "González, Cesar"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Gramalote",
+        "label":  "Gramalote, Norte de Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Granada",
+        "label":  "Granada, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Granada",
+        "label":  "Granada, Cundinamarca"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Granada",
+        "label":  "Granada, Meta"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Guaca",
+        "label":  "Guaca, Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Guacamayas",
+        "label":  "Guacamayas, Boyacá"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Guacarí",
+        "label":  "Guacarí, Valle del Cauca"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Guachené",
+        "label":  "Guachené, Cauca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Guachetá",
+        "label":  "Guachetá, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Guachucal",
+        "label":  "Guachucal, Nariño"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Guadalupe",
+        "label":  "Guadalupe, Antioquia"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Guadalupe",
+        "label":  "Guadalupe, Huila"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Guadalupe",
+        "label":  "Guadalupe, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Guaduas",
+        "label":  "Guaduas, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Guaitarilla",
+        "label":  "Guaitarilla, Nariño"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Gualmatán",
+        "label":  "Gualmatán, Nariño"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Guamal",
+        "label":  "Guamal, Magdalena"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Guamal",
+        "label":  "Guamal, Meta"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Guamo",
+        "label":  "Guamo, Tolima"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Guapí",
+        "label":  "Guapí, Cauca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Guapotá",
+        "label":  "Guapotá, Santander"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Guaranda",
+        "label":  "Guaranda, Sucre"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Guarne",
+        "label":  "Guarne, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Guasca",
+        "label":  "Guasca, Cundinamarca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Guatapé",
+        "label":  "Guatapé, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Guataquí",
+        "label":  "Guataquí, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Guatavita",
+        "label":  "Guatavita, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Guateque",
+        "label":  "Guateque, Boyacá"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "Guática",
+        "label":  "Guática, Risaralda"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Guavatá",
+        "label":  "Guavatá, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Guayabal de Síquima",
+        "label":  "Guayabal de Síquima, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Guayabetal",
+        "label":  "Guayabetal, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Guayatá",
+        "label":  "Guayatá, Boyacá"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Güepsa",
+        "label":  "Güepsa, Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Güicán",
+        "label":  "Güicán, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Gutiérrez",
+        "label":  "Gutiérrez, Cundinamarca"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Hacarí",
+        "label":  "Hacarí, Norte de Santander"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Hatillo de Loba",
+        "label":  "Hatillo de Loba, Bolívar"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Hato",
+        "label":  "Hato, Santander"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Hato Corozal",
+        "label":  "Hato Corozal, Casanare"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "Hatonuevo",
+        "label":  "Hatonuevo, La Guajira"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Heliconia",
+        "label":  "Heliconia, Antioquia"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Herrán",
+        "label":  "Herrán, Norte de Santander"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Herveo",
+        "label":  "Herveo, Tolima"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Hispania",
+        "label":  "Hispania, Antioquia"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Hobo",
+        "label":  "Hobo, Huila"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Honda",
+        "label":  "Honda, Tolima"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Ibagué",
+        "label":  "Ibagué, Tolima"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Icononzo",
+        "label":  "Icononzo, Tolima"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Iles",
+        "label":  "Iles, Nariño"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Imués",
+        "label":  "Imués, Nariño"
+    },
+    {
+        "department":  "Guainía",
+        "municipality":  "Inírida",
+        "label":  "Inírida, Guainía"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Inzá",
+        "label":  "Inzá, Cauca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Ipiales",
+        "label":  "Ipiales, Nariño"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Íquira",
+        "label":  "Íquira, Huila"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Isnos",
+        "label":  "Isnos, Huila"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Istmina",
+        "label":  "Istmina, Chocó"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Itagüí",
+        "label":  "Itagüí, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Ituango",
+        "label":  "Ituango, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Iza",
+        "label":  "Iza, Boyacá"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Jambaló",
+        "label":  "Jambaló, Cauca"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Jamundí",
+        "label":  "Jamundí, Valle del Cauca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Jardín",
+        "label":  "Jardín, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Jenesano",
+        "label":  "Jenesano, Boyacá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Jericó",
+        "label":  "Jericó, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Jericó",
+        "label":  "Jericó, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Jerusalén",
+        "label":  "Jerusalén, Cundinamarca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Jesús María",
+        "label":  "Jesús María, Santander"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Jordán",
+        "label":  "Jordán, Santander"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Juan de Acosta",
+        "label":  "Juan de Acosta, Atlántico"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Junín",
+        "label":  "Junín, Cundinamarca"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Juradó",
+        "label":  "Juradó, Chocó"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "La Apartada",
+        "label":  "La Apartada, Córdoba"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "La Argentina",
+        "label":  "La Argentina, Huila"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "La Belleza",
+        "label":  "La Belleza, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "La Calera",
+        "label":  "La Calera, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "La Capilla",
+        "label":  "La Capilla, Boyacá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "La Ceja",
+        "label":  "La Ceja, Antioquia"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "La Celia",
+        "label":  "La Celia, Risaralda"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "La Cruz",
+        "label":  "La Cruz, Nariño"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "La Cumbre",
+        "label":  "La Cumbre, Valle del Cauca"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "La Dorada",
+        "label":  "La Dorada, Caldas"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "La Esperanza",
+        "label":  "La Esperanza, Norte de Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "La Estrella",
+        "label":  "La Estrella, Antioquia"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "La Florida",
+        "label":  "La Florida, Nariño"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "La Gloria (Cesar)",
+        "label":  "La Gloria (Cesar), Cesar"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "La Jagua de Ibirico",
+        "label":  "La Jagua de Ibirico, Cesar"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "La Jagua del Pilar",
+        "label":  "La Jagua del Pilar, La Guajira"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "La Llanada",
+        "label":  "La Llanada, Nariño"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "La Macarena",
+        "label":  "La Macarena, Meta"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "La Merced",
+        "label":  "La Merced, Caldas"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "La Mesa",
+        "label":  "La Mesa, Cundinamarca"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "La Montañita",
+        "label":  "La Montañita, Caquetá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "La Palma",
+        "label":  "La Palma, Cundinamarca"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "La Paz",
+        "label":  "La Paz, Cesar"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "La Paz",
+        "label":  "La Paz, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "La Peña",
+        "label":  "La Peña, Cundinamarca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "La Pintada",
+        "label":  "La Pintada, Antioquia"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "La Plata",
+        "label":  "La Plata, Huila"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "La Playa de Belén",
+        "label":  "La Playa de Belén, Norte de Santander"
+    },
+    {
+        "department":  "Vichada",
+        "municipality":  "La Primavera",
+        "label":  "La Primavera, Vichada"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "La Salina",
+        "label":  "La Salina, Casanare"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "La Sierra",
+        "label":  "La Sierra, Cauca"
+    },
+    {
+        "department":  "Quindío",
+        "municipality":  "La Tebaida",
+        "label":  "La Tebaida, Quindío"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "La Tola",
+        "label":  "La Tola, Nariño"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "La Unión",
+        "label":  "La Unión, Antioquia"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "La Unión",
+        "label":  "La Unión, Nariño"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "La Unión",
+        "label":  "La Unión, Sucre"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "La Unión",
+        "label":  "La Unión, Valle del Cauca"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "La Uribe",
+        "label":  "La Uribe, Meta"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "La Uvita",
+        "label":  "La Uvita, Boyacá"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "La Vega",
+        "label":  "La Vega, Cauca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "La Vega",
+        "label":  "La Vega, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "La Victoria",
+        "label":  "La Victoria, Boyacá"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "La Victoria",
+        "label":  "La Victoria, Valle del Cauca"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "La Virginia",
+        "label":  "La Virginia, Risaralda"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Labateca",
+        "label":  "Labateca, Norte de Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Labranzagrande",
+        "label":  "Labranzagrande, Boyacá"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Landázuri",
+        "label":  "Landázuri, Santander"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Lebrija",
+        "label":  "Lebrija, Santander"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Leiva",
+        "label":  "Leiva, Nariño"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Lejanías",
+        "label":  "Lejanías, Meta"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Lenguazaque",
+        "label":  "Lenguazaque, Cundinamarca"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Lérida",
+        "label":  "Lérida, Tolima"
+    },
+    {
+        "department":  "Amazonas",
+        "municipality":  "Leticia",
+        "label":  "Leticia, Amazonas"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Líbano",
+        "label":  "Líbano, Tolima"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Liborina",
+        "label":  "Liborina, Antioquia"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Linares",
+        "label":  "Linares, Nariño"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Litoral de San Juan",
+        "label":  "Litoral de San Juan, Chocó"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Lloró",
+        "label":  "Lloró, Chocó"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "López de Micay",
+        "label":  "López de Micay, Cauca"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Lorica",
+        "label":  "Lorica, Córdoba"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Los Andes",
+        "label":  "Los Andes, Nariño"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Los Córdobas",
+        "label":  "Los Córdobas, Córdoba"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Los Palmitos",
+        "label":  "Los Palmitos, Sucre"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Los Patios",
+        "label":  "Los Patios, Norte de Santander"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Los Santos",
+        "label":  "Los Santos, Santander"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Lourdes",
+        "label":  "Lourdes, Norte de Santander"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Luruaco",
+        "label":  "Luruaco, Atlántico"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Macanal",
+        "label":  "Macanal, Boyacá"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Macaravita",
+        "label":  "Macaravita, Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Maceo",
+        "label":  "Maceo, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Machetá",
+        "label":  "Machetá, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Madrid",
+        "label":  "Madrid, Cundinamarca"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Magangué",
+        "label":  "Magangué, Bolívar"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Magüí Payán",
+        "label":  "Magüí Payán, Nariño"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Mahates",
+        "label":  "Mahates, Bolívar"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "Maicao",
+        "label":  "Maicao, La Guajira"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Majagual",
+        "label":  "Majagual, Sucre"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Málaga",
+        "label":  "Málaga, Santander"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Malambo",
+        "label":  "Malambo, Atlántico"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Mallama",
+        "label":  "Mallama, Nariño"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Manatí",
+        "label":  "Manatí, Atlántico"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "Manaure",
+        "label":  "Manaure, La Guajira"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Manaure Balcón del Cesar",
+        "label":  "Manaure Balcón del Cesar, Cesar"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Maní",
+        "label":  "Maní, Casanare"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Manizales",
+        "label":  "Manizales, Caldas"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Manta",
+        "label":  "Manta, Cundinamarca"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Manzanares",
+        "label":  "Manzanares, Caldas"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Mapiripán",
+        "label":  "Mapiripán, Meta"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Margarita",
+        "label":  "Margarita, Bolívar"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "María la Baja",
+        "label":  "María la Baja, Bolívar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Marinilla",
+        "label":  "Marinilla, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Maripí",
+        "label":  "Maripí, Boyacá"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Mariquita",
+        "label":  "Mariquita, Tolima"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Marmato",
+        "label":  "Marmato, Caldas"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Marquetalia",
+        "label":  "Marquetalia, Caldas"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "Marsella",
+        "label":  "Marsella, Risaralda"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Marulanda",
+        "label":  "Marulanda, Caldas"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Matanza",
+        "label":  "Matanza, Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Medellín",
+        "label":  "Medellín, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Medina",
+        "label":  "Medina, Cundinamarca"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Medio Atrato",
+        "label":  "Medio Atrato, Chocó"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Medio Baudó",
+        "label":  "Medio Baudó, Chocó"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Medio San Juan",
+        "label":  "Medio San Juan, Chocó"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Melgar",
+        "label":  "Melgar, Tolima"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Mercaderes",
+        "label":  "Mercaderes, Cauca"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Mesetas",
+        "label":  "Mesetas, Meta"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "Milán",
+        "label":  "Milán, Caquetá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Miraflores",
+        "label":  "Miraflores, Boyacá"
+    },
+    {
+        "department":  "Guaviare",
+        "municipality":  "Miraflores",
+        "label":  "Miraflores, Guaviare"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Miranda",
+        "label":  "Miranda, Cauca"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "Mistrató",
+        "label":  "Mistrató, Risaralda"
+    },
+    {
+        "department":  "Vaupés",
+        "municipality":  "Mitú",
+        "label":  "Mitú, Vaupés"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "Mocoa",
+        "label":  "Mocoa, Putumayo"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Mogotes",
+        "label":  "Mogotes, Santander"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Molagavita",
+        "label":  "Molagavita, Santander"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Momil",
+        "label":  "Momil, Córdoba"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Mompós",
+        "label":  "Mompós, Bolívar"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Mongua",
+        "label":  "Mongua, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Monguí",
+        "label":  "Monguí, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Moniquirá",
+        "label":  "Moniquirá, Boyacá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Montebello",
+        "label":  "Montebello, Antioquia"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Montecristo",
+        "label":  "Montecristo, Bolívar"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Montelíbano",
+        "label":  "Montelíbano, Córdoba"
+    },
+    {
+        "department":  "Quindío",
+        "municipality":  "Montenegro",
+        "label":  "Montenegro, Quindío"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Montería",
+        "label":  "Montería, Córdoba"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Monterrey",
+        "label":  "Monterrey, Casanare"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Moñitos",
+        "label":  "Moñitos, Córdoba"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Morales",
+        "label":  "Morales, Bolívar"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Morales",
+        "label":  "Morales, Cauca"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "Morelia",
+        "label":  "Morelia, Caquetá"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Morroa",
+        "label":  "Morroa, Sucre"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Mosquera",
+        "label":  "Mosquera, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Mosquera",
+        "label":  "Mosquera, Nariño"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Motavita",
+        "label":  "Motavita, Boyacá"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Murillo",
+        "label":  "Murillo, Tolima"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Murindó",
+        "label":  "Murindó, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Mutatá",
+        "label":  "Mutatá, Antioquia"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Mutiscua",
+        "label":  "Mutiscua, Norte de Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Muzo",
+        "label":  "Muzo, Boyacá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Nariño",
+        "label":  "Nariño, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Nariño",
+        "label":  "Nariño, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Nariño",
+        "label":  "Nariño, Nariño"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Nátaga",
+        "label":  "Nátaga, Huila"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Natagaima",
+        "label":  "Natagaima, Tolima"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Nechí",
+        "label":  "Nechí, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Necoclí",
+        "label":  "Necoclí, Antioquia"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Neira",
+        "label":  "Neira, Caldas"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Neiva",
+        "label":  "Neiva, Huila"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Nemocón",
+        "label":  "Nemocón, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Nilo",
+        "label":  "Nilo, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Nimaima",
+        "label":  "Nimaima, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Nobsa",
+        "label":  "Nobsa, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Nocaima",
+        "label":  "Nocaima, Cundinamarca"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Norcasia",
+        "label":  "Norcasia, Caldas"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Norosí",
+        "label":  "Norosí, Bolívar"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Nóvita",
+        "label":  "Nóvita, Chocó"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Nueva Granada",
+        "label":  "Nueva Granada, Magdalena"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Nuevo Colón",
+        "label":  "Nuevo Colón, Boyacá"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Nunchía",
+        "label":  "Nunchía, Casanare"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Nuquí",
+        "label":  "Nuquí, Chocó"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Obando",
+        "label":  "Obando, Valle del Cauca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Ocamonte",
+        "label":  "Ocamonte, Santander"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Ocaña",
+        "label":  "Ocaña, Norte de Santander"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Oiba",
+        "label":  "Oiba, Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Oicatá",
+        "label":  "Oicatá, Boyacá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Olaya",
+        "label":  "Olaya, Antioquia"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Olaya Herrera",
+        "label":  "Olaya Herrera, Nariño"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Onzaga",
+        "label":  "Onzaga, Santander"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Oporapa",
+        "label":  "Oporapa, Huila"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "Orito",
+        "label":  "Orito, Putumayo"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Orocué",
+        "label":  "Orocué, Casanare"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Ortega",
+        "label":  "Ortega, Tolima"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Ospina",
+        "label":  "Ospina, Nariño"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Otanche",
+        "label":  "Otanche, Boyacá"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Ovejas",
+        "label":  "Ovejas, Sucre"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Pachavita",
+        "label":  "Pachavita, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Pacho",
+        "label":  "Pacho, Cundinamarca"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Pácora",
+        "label":  "Pácora, Caldas"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Padilla",
+        "label":  "Padilla, Cauca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Páez",
+        "label":  "Páez, Boyacá"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Páez",
+        "label":  "Páez, Cauca"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Paicol",
+        "label":  "Paicol, Huila"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Pailitas",
+        "label":  "Pailitas, Cesar"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Paime",
+        "label":  "Paime, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Paipa",
+        "label":  "Paipa, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Pajarito",
+        "label":  "Pajarito, Boyacá"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Palermo",
+        "label":  "Palermo, Huila"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Palestina",
+        "label":  "Palestina, Caldas"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Palestina",
+        "label":  "Palestina, Huila"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Palmar",
+        "label":  "Palmar, Santander"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Palmar de Varela",
+        "label":  "Palmar de Varela, Atlántico"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Palmas del Socorro",
+        "label":  "Palmas del Socorro, Santander"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Palmira",
+        "label":  "Palmira, Valle del Cauca"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Palocabildo",
+        "label":  "Palocabildo, Tolima"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Pamplona",
+        "label":  "Pamplona, Norte de Santander"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Pamplonita",
+        "label":  "Pamplonita, Norte de Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Pandi",
+        "label":  "Pandi, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Panqueba",
+        "label":  "Panqueba, Boyacá"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Páramo",
+        "label":  "Páramo, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Paratebueno",
+        "label":  "Paratebueno, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Pasca",
+        "label":  "Pasca, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Pasto",
+        "label":  "Pasto, Nariño"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Patía",
+        "label":  "Patía, Cauca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Pauna",
+        "label":  "Pauna, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Paya",
+        "label":  "Paya, Boyacá"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Paz de Ariporo",
+        "label":  "Paz de Ariporo, Casanare"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Paz del Río",
+        "label":  "Paz del Río, Boyacá"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Pedraza",
+        "label":  "Pedraza, Magdalena"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Pelaya",
+        "label":  "Pelaya, Cesar"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Pensilvania",
+        "label":  "Pensilvania, Caldas"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Peque",
+        "label":  "Peque, Antioquia"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "Pereira",
+        "label":  "Pereira, Risaralda"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Pesca",
+        "label":  "Pesca, Boyacá"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Piamonte",
+        "label":  "Piamonte, Cauca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Piedecuesta",
+        "label":  "Piedecuesta, Santander"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Piedras",
+        "label":  "Piedras, Tolima"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Piendamó",
+        "label":  "Piendamó, Cauca"
+    },
+    {
+        "department":  "Quindío",
+        "municipality":  "Pijao",
+        "label":  "Pijao, Quindío"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Pijiño del Carmen",
+        "label":  "Pijiño del Carmen, Magdalena"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Pinchote",
+        "label":  "Pinchote, Santander"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Pinillos",
+        "label":  "Pinillos, Bolívar"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Piojó",
+        "label":  "Piojó, Atlántico"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Pisba",
+        "label":  "Pisba, Boyacá"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Pitalito",
+        "label":  "Pitalito, Huila"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Pivijay",
+        "label":  "Pivijay, Magdalena"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Planadas",
+        "label":  "Planadas, Tolima"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Planeta Rica",
+        "label":  "Planeta Rica, Córdoba"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Plato",
+        "label":  "Plato, Magdalena"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Policarpa",
+        "label":  "Policarpa, Nariño"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Polonuevo",
+        "label":  "Polonuevo, Atlántico"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Ponedera",
+        "label":  "Ponedera, Atlántico"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Popayán",
+        "label":  "Popayán, Cauca"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Pore",
+        "label":  "Pore, Casanare"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Potosí",
+        "label":  "Potosí, Nariño"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Pradera",
+        "label":  "Pradera, Valle del Cauca"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Prado",
+        "label":  "Prado, Tolima"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Providencia",
+        "label":  "Providencia, Nariño"
+    },
+    {
+        "department":  "San Andrés y Providencia",
+        "municipality":  "Providencia y Santa Catalina Islas",
+        "label":  "Providencia y Santa Catalina Islas, San Andrés y Providencia"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Pueblo Bello",
+        "label":  "Pueblo Bello, Cesar"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Pueblo Nuevo",
+        "label":  "Pueblo Nuevo, Córdoba"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "Pueblo Rico",
+        "label":  "Pueblo Rico, Risaralda"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Pueblo Viejo",
+        "label":  "Pueblo Viejo, Magdalena"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Pueblorrico",
+        "label":  "Pueblorrico, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Puente Nacional",
+        "label":  "Puente Nacional, Santander"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Puerres",
+        "label":  "Puerres, Nariño"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "Puerto Asís",
+        "label":  "Puerto Asís, Putumayo"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Puerto Berrío",
+        "label":  "Puerto Berrío, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Puerto Boyacá",
+        "label":  "Puerto Boyacá, Boyacá"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "Puerto Caicedo",
+        "label":  "Puerto Caicedo, Putumayo"
+    },
+    {
+        "department":  "Vichada",
+        "municipality":  "Puerto Carreño",
+        "label":  "Puerto Carreño, Vichada"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Puerto Colombia",
+        "label":  "Puerto Colombia, Atlántico"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Puerto Concordia",
+        "label":  "Puerto Concordia, Meta"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Puerto Escondido",
+        "label":  "Puerto Escondido, Córdoba"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Puerto Gaitán",
+        "label":  "Puerto Gaitán, Meta"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "Puerto Guzmán",
+        "label":  "Puerto Guzmán, Putumayo"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "Puerto Leguízamo",
+        "label":  "Puerto Leguízamo, Putumayo"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Puerto Libertador",
+        "label":  "Puerto Libertador, Córdoba"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Puerto Lleras",
+        "label":  "Puerto Lleras, Meta"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Puerto López",
+        "label":  "Puerto López, Meta"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Puerto Nare",
+        "label":  "Puerto Nare, Antioquia"
+    },
+    {
+        "department":  "Amazonas",
+        "municipality":  "Puerto Nariño",
+        "label":  "Puerto Nariño, Amazonas"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Puerto Parra",
+        "label":  "Puerto Parra, Santander"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "Puerto Rico",
+        "label":  "Puerto Rico, Caquetá"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Puerto Rico",
+        "label":  "Puerto Rico, Meta"
+    },
+    {
+        "department":  "Arauca",
+        "municipality":  "Puerto Rondón",
+        "label":  "Puerto Rondón, Arauca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Puerto Salgar",
+        "label":  "Puerto Salgar, Cundinamarca"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Puerto Santander",
+        "label":  "Puerto Santander, Norte de Santander"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Puerto Tejada",
+        "label":  "Puerto Tejada, Cauca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Puerto Triunfo",
+        "label":  "Puerto Triunfo, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Puerto Wilches",
+        "label":  "Puerto Wilches, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Pulí",
+        "label":  "Pulí, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Pupiales",
+        "label":  "Pupiales, Nariño"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Puracé",
+        "label":  "Puracé, Cauca"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Purificación",
+        "label":  "Purificación, Tolima"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Purísima",
+        "label":  "Purísima, Córdoba"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Quebradanegra",
+        "label":  "Quebradanegra, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Quetame",
+        "label":  "Quetame, Cundinamarca"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Quibdó",
+        "label":  "Quibdó, Chocó"
+    },
+    {
+        "department":  "Quindío",
+        "municipality":  "Quimbaya",
+        "label":  "Quimbaya, Quindío"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "Quinchía",
+        "label":  "Quinchía, Risaralda"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Quípama",
+        "label":  "Quípama, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Quipile",
+        "label":  "Quipile, Cundinamarca"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Ragonvalia",
+        "label":  "Ragonvalia, Norte de Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Ramiriquí",
+        "label":  "Ramiriquí, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Ráquira",
+        "label":  "Ráquira, Boyacá"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Recetor",
+        "label":  "Recetor, Casanare"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Regidor",
+        "label":  "Regidor, Bolívar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Remedios",
+        "label":  "Remedios, Antioquia"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Remolino",
+        "label":  "Remolino, Magdalena"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Repelón",
+        "label":  "Repelón, Atlántico"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Restrepo",
+        "label":  "Restrepo, Meta"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Restrepo",
+        "label":  "Restrepo, Valle del Cauca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Ricaurte",
+        "label":  "Ricaurte, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Ricaurte",
+        "label":  "Ricaurte, Nariño"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Río de Oro",
+        "label":  "Río de Oro, Cesar"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Río Iró",
+        "label":  "Río Iró, Chocó"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Río Quito",
+        "label":  "Río Quito, Chocó"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Río Viejo",
+        "label":  "Río Viejo, Bolívar"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Rioblanco",
+        "label":  "Rioblanco, Tolima"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Riofrío",
+        "label":  "Riofrío, Valle del Cauca"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "Riohacha",
+        "label":  "Riohacha, La Guajira"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Rionegro",
+        "label":  "Rionegro, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Rionegro",
+        "label":  "Rionegro, Santander"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Riosucio",
+        "label":  "Riosucio, Caldas"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Riosucio",
+        "label":  "Riosucio, Chocó"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Risaralda",
+        "label":  "Risaralda, Caldas"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Rivera",
+        "label":  "Rivera, Huila"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Roberto Payán",
+        "label":  "Roberto Payán, Nariño"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Roldanillo",
+        "label":  "Roldanillo, Valle del Cauca"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Roncesvalles",
+        "label":  "Roncesvalles, Tolima"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Rondón",
+        "label":  "Rondón, Boyacá"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Rosas",
+        "label":  "Rosas, Cauca"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Rovira",
+        "label":  "Rovira, Tolima"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Sabana de Torres",
+        "label":  "Sabana de Torres, Santander"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Sabanagrande",
+        "label":  "Sabanagrande, Atlántico"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Sabanalarga",
+        "label":  "Sabanalarga, Antioquia"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Sabanalarga",
+        "label":  "Sabanalarga, Atlántico"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Sabanalarga",
+        "label":  "Sabanalarga, Casanare"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Sabanas de San Ángel",
+        "label":  "Sabanas de San Ángel, Magdalena"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Sabaneta",
+        "label":  "Sabaneta, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Saboyá",
+        "label":  "Saboyá, Boyacá"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Sácama",
+        "label":  "Sácama, Casanare"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Sáchica",
+        "label":  "Sáchica, Boyacá"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Sahagún",
+        "label":  "Sahagún, Córdoba"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Saladoblanco",
+        "label":  "Saladoblanco, Huila"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Salamina",
+        "label":  "Salamina, Caldas"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Salamina",
+        "label":  "Salamina, Magdalena"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Salazar de Las Palmas",
+        "label":  "Salazar de Las Palmas, Norte de Santander"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Saldaña",
+        "label":  "Saldaña, Tolima"
+    },
+    {
+        "department":  "Quindío",
+        "municipality":  "Salento",
+        "label":  "Salento, Quindío"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Salgar",
+        "label":  "Salgar, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Samacá",
+        "label":  "Samacá, Boyacá"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Samaná",
+        "label":  "Samaná, Caldas"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Samaniego",
+        "label":  "Samaniego, Nariño"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Sampués",
+        "label":  "Sampués, Sucre"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "San Agustín",
+        "label":  "San Agustín, Huila"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "San Alberto",
+        "label":  "San Alberto, Cesar"
+    },
+    {
+        "department":  "San Andrés y Providencia",
+        "municipality":  "San Andrés",
+        "label":  "San Andrés, San Andrés y Providencia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "San Andrés",
+        "label":  "San Andrés, Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "San Andrés de Cuerquia",
+        "label":  "San Andrés de Cuerquia, Antioquia"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "San Andrés de Sotavento",
+        "label":  "San Andrés de Sotavento, Córdoba"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "San Antero",
+        "label":  "San Antero, Córdoba"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "San Antonio",
+        "label":  "San Antonio, Tolima"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "San Antonio de Palmito",
+        "label":  "San Antonio de Palmito, Sucre"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "San Antonio del Tequendama",
+        "label":  "San Antonio del Tequendama, Cundinamarca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "San Benito",
+        "label":  "San Benito, Santander"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "San Benito Abad",
+        "label":  "San Benito Abad, Sucre"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "San Bernardo",
+        "label":  "San Bernardo, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "San Bernardo",
+        "label":  "San Bernardo, Nariño"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "San Bernardo del Viento",
+        "label":  "San Bernardo del Viento, Córdoba"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "San Calixto",
+        "label":  "San Calixto, Norte de Santander"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "San Carlos",
+        "label":  "San Carlos, Antioquia"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "San Carlos",
+        "label":  "San Carlos, Córdoba"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "San Carlos de Guaroa",
+        "label":  "San Carlos de Guaroa, Meta"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "San Cayetano",
+        "label":  "San Cayetano, Cundinamarca"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "San Cayetano",
+        "label":  "San Cayetano, Norte de Santander"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "San Cristóbal",
+        "label":  "San Cristóbal, Bolívar"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "San Diego",
+        "label":  "San Diego, Cesar"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "San Eduardo",
+        "label":  "San Eduardo, Boyacá"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "San Estanislao",
+        "label":  "San Estanislao, Bolívar"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "San Fernando",
+        "label":  "San Fernando, Bolívar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "San Francisco",
+        "label":  "San Francisco, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "San Francisco",
+        "label":  "San Francisco, Cundinamarca"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "San Francisco",
+        "label":  "San Francisco, Putumayo"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "San Gil",
+        "label":  "San Gil, Santander"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "San Jacinto",
+        "label":  "San Jacinto, Bolívar"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "San Jacinto del Cauca",
+        "label":  "San Jacinto del Cauca, Bolívar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "San Jerónimo",
+        "label":  "San Jerónimo, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "San Joaquín",
+        "label":  "San Joaquín, Santander"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "San José",
+        "label":  "San José, Caldas"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "San José de Albán",
+        "label":  "San José de Albán, Nariño"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "San José de la Montaña",
+        "label":  "San José de la Montaña, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "San José de Miranda",
+        "label":  "San José de Miranda, Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "San José de Pare",
+        "label":  "San José de Pare, Boyacá"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "San José de Uré",
+        "label":  "San José de Uré, Córdoba"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "San José del Fragua",
+        "label":  "San José del Fragua, Caquetá"
+    },
+    {
+        "department":  "Guaviare",
+        "municipality":  "San José del Guaviare",
+        "label":  "San José del Guaviare, Guaviare"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "San José del Palmar",
+        "label":  "San José del Palmar, Chocó"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "San Juan de Arama",
+        "label":  "San Juan de Arama, Meta"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "San Juan de Betulia",
+        "label":  "San Juan de Betulia, Sucre"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "San Juan de Rioseco",
+        "label":  "San Juan de Rioseco, Cundinamarca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "San Juan de Urabá",
+        "label":  "San Juan de Urabá, Antioquia"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "San Juan del Cesar",
+        "label":  "San Juan del Cesar, La Guajira"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "San Juan Nepomuceno",
+        "label":  "San Juan Nepomuceno, Bolívar"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "San Juanito",
+        "label":  "San Juanito, Meta"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "San Lorenzo",
+        "label":  "San Lorenzo, Nariño"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "San Luis",
+        "label":  "San Luis, Antioquia"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "San Luis",
+        "label":  "San Luis, Tolima"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "San Luis de Gaceno",
+        "label":  "San Luis de Gaceno, Boyacá"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "San Luis de Palenque",
+        "label":  "San Luis de Palenque, Casanare"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "San Marcos",
+        "label":  "San Marcos, Sucre"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "San Martín",
+        "label":  "San Martín, Cesar"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "San Martín",
+        "label":  "San Martín, Meta"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "San Martín de Loba",
+        "label":  "San Martín de Loba, Bolívar"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "San Mateo",
+        "label":  "San Mateo, Boyacá"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "San Miguel",
+        "label":  "San Miguel, Putumayo"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "San Miguel",
+        "label":  "San Miguel, Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "San Miguel de Sema",
+        "label":  "San Miguel de Sema, Boyacá"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "San Onofre",
+        "label":  "San Onofre, Sucre"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "San Pablo",
+        "label":  "San Pablo, Bolívar"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "San Pablo",
+        "label":  "San Pablo, Nariño"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "San Pablo de Borbur",
+        "label":  "San Pablo de Borbur, Boyacá"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "San Pedro",
+        "label":  "San Pedro, Sucre"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "San Pedro",
+        "label":  "San Pedro, Valle del Cauca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "San Pedro de Cartago",
+        "label":  "San Pedro de Cartago, Nariño"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "San Pedro de los Milagros",
+        "label":  "San Pedro de los Milagros, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "San Pedro de Urabá",
+        "label":  "San Pedro de Urabá, Antioquia"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "San Pelayo",
+        "label":  "San Pelayo, Córdoba"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "San Rafael",
+        "label":  "San Rafael, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "San Roque",
+        "label":  "San Roque, Antioquia"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "San Sebastián",
+        "label":  "San Sebastián, Cauca"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "San Sebastián de Buenavista",
+        "label":  "San Sebastián de Buenavista, Magdalena"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "San Vicente",
+        "label":  "San Vicente, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "San Vicente de Chucurí",
+        "label":  "San Vicente de Chucurí, Santander"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "San Vicente del Caguán",
+        "label":  "San Vicente del Caguán, Caquetá"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "San Zenón",
+        "label":  "San Zenón, Magdalena"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Sandoná",
+        "label":  "Sandoná, Nariño"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Santa Ana",
+        "label":  "Santa Ana, Magdalena"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Santa Bárbara",
+        "label":  "Santa Bárbara, Antioquia"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Santa Bárbara",
+        "label":  "Santa Bárbara, Nariño"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Santa Bárbara",
+        "label":  "Santa Bárbara, Santander"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Santa Bárbara de Pinto",
+        "label":  "Santa Bárbara de Pinto, Magdalena"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Santa Catalina",
+        "label":  "Santa Catalina, Bolívar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Santa Fe de Antioquia",
+        "label":  "Santa Fe de Antioquia, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Santa Helena del Opón",
+        "label":  "Santa Helena del Opón, Santander"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Santa Isabel",
+        "label":  "Santa Isabel, Tolima"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Santa Lucía",
+        "label":  "Santa Lucía, Atlántico"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Santa María",
+        "label":  "Santa María, Boyacá"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Santa María",
+        "label":  "Santa María, Huila"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Santa Marta",
+        "label":  "Santa Marta, Magdalena"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Santa Rosa",
+        "label":  "Santa Rosa, Bolívar"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Santa Rosa",
+        "label":  "Santa Rosa, Cauca"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "Santa Rosa de Cabal",
+        "label":  "Santa Rosa de Cabal, Risaralda"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Santa Rosa de Osos",
+        "label":  "Santa Rosa de Osos, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Santa Rosa de Viterbo",
+        "label":  "Santa Rosa de Viterbo, Boyacá"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Santa Rosa del Sur",
+        "label":  "Santa Rosa del Sur, Bolívar"
+    },
+    {
+        "department":  "Vichada",
+        "municipality":  "Santa Rosalía",
+        "label":  "Santa Rosalía, Vichada"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Santa Sofía",
+        "label":  "Santa Sofía, Boyacá"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Santacruz",
+        "label":  "Santacruz, Nariño"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Santana",
+        "label":  "Santana, Boyacá"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Santander de Quilichao",
+        "label":  "Santander de Quilichao, Cauca"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Santiago",
+        "label":  "Santiago, Norte de Santander"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "Santiago",
+        "label":  "Santiago, Putumayo"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Santo Domingo",
+        "label":  "Santo Domingo, Antioquia"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Santo Domingo de Silos",
+        "label":  "Santo Domingo de Silos, Norte de Santander"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Santo Tomás",
+        "label":  "Santo Tomás, Atlántico"
+    },
+    {
+        "department":  "Risaralda",
+        "municipality":  "Santuario",
+        "label":  "Santuario, Risaralda"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Sapuyes",
+        "label":  "Sapuyes, Nariño"
+    },
+    {
+        "department":  "Arauca",
+        "municipality":  "Saravena",
+        "label":  "Saravena, Arauca"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Sardinata",
+        "label":  "Sardinata, Norte de Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Sasaima",
+        "label":  "Sasaima, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Sativanorte",
+        "label":  "Sativanorte, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Sativasur",
+        "label":  "Sativasur, Boyacá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Segovia",
+        "label":  "Segovia, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Sesquilé",
+        "label":  "Sesquilé, Cundinamarca"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Sevilla",
+        "label":  "Sevilla, Valle del Cauca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Siachoque",
+        "label":  "Siachoque, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Sibaté",
+        "label":  "Sibaté, Cundinamarca"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "Sibundoy",
+        "label":  "Sibundoy, Putumayo"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Silvania",
+        "label":  "Silvania, Cundinamarca"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Silvia",
+        "label":  "Silvia, Cauca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Simacota",
+        "label":  "Simacota, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Simijaca",
+        "label":  "Simijaca, Cundinamarca"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Simití",
+        "label":  "Simití, Bolívar"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Sincé",
+        "label":  "Sincé, Sucre"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Sincelejo",
+        "label":  "Sincelejo, Sucre"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Sipí",
+        "label":  "Sipí, Chocó"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Sitionuevo",
+        "label":  "Sitionuevo, Magdalena"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Soacha",
+        "label":  "Soacha, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Soatá",
+        "label":  "Soatá, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Socha",
+        "label":  "Socha, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Socotá",
+        "label":  "Socotá, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Sogamoso",
+        "label":  "Sogamoso, Boyacá"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "Solano",
+        "label":  "Solano, Caquetá"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Soledad",
+        "label":  "Soledad, Atlántico"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "Solita",
+        "label":  "Solita, Caquetá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Somondoco",
+        "label":  "Somondoco, Boyacá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Sonsón",
+        "label":  "Sonsón, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Sopetrán",
+        "label":  "Sopetrán, Antioquia"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Soplaviento",
+        "label":  "Soplaviento, Bolívar"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Sopó",
+        "label":  "Sopó, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Sora",
+        "label":  "Sora, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Soracá",
+        "label":  "Soracá, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Sotaquirá",
+        "label":  "Sotaquirá, Boyacá"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Sotará",
+        "label":  "Sotará, Cauca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Suaita",
+        "label":  "Suaita, Santander"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Suán",
+        "label":  "Suán, Atlántico"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Suárez",
+        "label":  "Suárez, Cauca"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Suárez",
+        "label":  "Suárez, Tolima"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Suaza",
+        "label":  "Suaza, Huila"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Subachoque",
+        "label":  "Subachoque, Cundinamarca"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Sucre",
+        "label":  "Sucre, Cauca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Sucre",
+        "label":  "Sucre, Santander"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Sucre",
+        "label":  "Sucre, Sucre"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Suesca",
+        "label":  "Suesca, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Supatá",
+        "label":  "Supatá, Cundinamarca"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Supía",
+        "label":  "Supía, Caldas"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Suratá",
+        "label":  "Suratá, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Susa",
+        "label":  "Susa, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Susacón",
+        "label":  "Susacón, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Sutamarchán",
+        "label":  "Sutamarchán, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Sutatausa",
+        "label":  "Sutatausa, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Sutatenza",
+        "label":  "Sutatenza, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Tabio",
+        "label":  "Tabio, Cundinamarca"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Tadó",
+        "label":  "Tadó, Chocó"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Talaigua Nuevo",
+        "label":  "Talaigua Nuevo, Bolívar"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Tamalameque",
+        "label":  "Tamalameque, Cesar"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Támara",
+        "label":  "Támara, Casanare"
+    },
+    {
+        "department":  "Arauca",
+        "municipality":  "Tame",
+        "label":  "Tame, Arauca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Támesis",
+        "label":  "Támesis, Antioquia"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Taminango",
+        "label":  "Taminango, Nariño"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Tangua",
+        "label":  "Tangua, Nariño"
+    },
+    {
+        "department":  "Vaupés",
+        "municipality":  "Taraira",
+        "label":  "Taraira, Vaupés"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Tarazá",
+        "label":  "Tarazá, Antioquia"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Tarqui",
+        "label":  "Tarqui, Huila"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Tarso",
+        "label":  "Tarso, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Tasco",
+        "label":  "Tasco, Boyacá"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Tauramena",
+        "label":  "Tauramena, Casanare"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Tausa",
+        "label":  "Tausa, Cundinamarca"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Tello",
+        "label":  "Tello, Huila"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Tena",
+        "label":  "Tena, Cundinamarca"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Tenerife",
+        "label":  "Tenerife, Magdalena"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Tenjo",
+        "label":  "Tenjo, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Tenza",
+        "label":  "Tenza, Boyacá"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Teorama",
+        "label":  "Teorama, Norte de Santander"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Teruel",
+        "label":  "Teruel, Huila"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Tesalia",
+        "label":  "Tesalia, Huila"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Tibacuy",
+        "label":  "Tibacuy, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Tibaná",
+        "label":  "Tibaná, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Tibasosa",
+        "label":  "Tibasosa, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Tibirita",
+        "label":  "Tibirita, Cundinamarca"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Tibú",
+        "label":  "Tibú, Norte de Santander"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Tierralta",
+        "label":  "Tierralta, Córdoba"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Timaná",
+        "label":  "Timaná, Huila"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Timbío",
+        "label":  "Timbío, Cauca"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Timbiquí",
+        "label":  "Timbiquí, Cauca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Tinjacá",
+        "label":  "Tinjacá, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Tipacoque",
+        "label":  "Tipacoque, Boyacá"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Tiquisio",
+        "label":  "Tiquisio, Bolívar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Titiribí",
+        "label":  "Titiribí, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Toca",
+        "label":  "Toca, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Tocaima",
+        "label":  "Tocaima, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Tocancipá",
+        "label":  "Tocancipá, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Togüí",
+        "label":  "Togüí, Boyacá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Toledo",
+        "label":  "Toledo, Antioquia"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Toledo",
+        "label":  "Toledo, Norte de Santander"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Tolú",
+        "label":  "Tolú, Sucre"
+    },
+    {
+        "department":  "Sucre",
+        "municipality":  "Tolú Viejo",
+        "label":  "Tolú Viejo, Sucre"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Tona",
+        "label":  "Tona, Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Tópaga",
+        "label":  "Tópaga, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Topaipí",
+        "label":  "Topaipí, Cundinamarca"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Toribío",
+        "label":  "Toribío, Cauca"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Toro",
+        "label":  "Toro, Valle del Cauca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Tota",
+        "label":  "Tota, Boyacá"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Totoró",
+        "label":  "Totoró, Cauca"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Trinidad",
+        "label":  "Trinidad, Casanare"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Trujillo",
+        "label":  "Trujillo, Valle del Cauca"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Tubará",
+        "label":  "Tubará, Atlántico"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Tuchín",
+        "label":  "Tuchín, Córdoba"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Tuluá",
+        "label":  "Tuluá, Valle del Cauca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Tumaco",
+        "label":  "Tumaco, Nariño"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Tunja",
+        "label":  "Tunja, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Tununguá",
+        "label":  "Tununguá, Boyacá"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Túquerres",
+        "label":  "Túquerres, Nariño"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Turbaco",
+        "label":  "Turbaco, Bolívar"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Turbaná",
+        "label":  "Turbaná, Bolívar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Turbo",
+        "label":  "Turbo, Antioquia"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Turmequé",
+        "label":  "Turmequé, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Tuta",
+        "label":  "Tuta, Boyacá"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Tutazá",
+        "label":  "Tutazá, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Ubalá",
+        "label":  "Ubalá, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Ubaque",
+        "label":  "Ubaque, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Ubaté",
+        "label":  "Ubaté, Cundinamarca"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Ulloa",
+        "label":  "Ulloa, Valle del Cauca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Úmbita",
+        "label":  "Úmbita, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Une",
+        "label":  "Une, Cundinamarca"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Unguía",
+        "label":  "Unguía, Chocó"
+    },
+    {
+        "department":  "Chocó",
+        "municipality":  "Unión Panamericana",
+        "label":  "Unión Panamericana, Chocó"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Uramita",
+        "label":  "Uramita, Antioquia"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "Uribia",
+        "label":  "Uribia, La Guajira"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Urrao",
+        "label":  "Urrao, Antioquia"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "Urumita",
+        "label":  "Urumita, La Guajira"
+    },
+    {
+        "department":  "Atlántico",
+        "municipality":  "Usiacurí",
+        "label":  "Usiacurí, Atlántico"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Útica",
+        "label":  "Útica, Cundinamarca"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Valdivia",
+        "label":  "Valdivia, Antioquia"
+    },
+    {
+        "department":  "Córdoba",
+        "municipality":  "Valencia",
+        "label":  "Valencia, Córdoba"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Valle de San José",
+        "label":  "Valle de San José, Santander"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Valle de San Juan",
+        "label":  "Valle de San Juan, Tolima"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "Valle del Guamuez",
+        "label":  "Valle del Guamuez, Putumayo"
+    },
+    {
+        "department":  "Cesar",
+        "municipality":  "Valledupar",
+        "label":  "Valledupar, Cesar"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Valparaíso",
+        "label":  "Valparaíso, Antioquia"
+    },
+    {
+        "department":  "Caquetá",
+        "municipality":  "Valparaíso",
+        "label":  "Valparaíso, Caquetá"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Vegachí",
+        "label":  "Vegachí, Antioquia"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Vélez",
+        "label":  "Vélez, Santander"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Venadillo",
+        "label":  "Venadillo, Tolima"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Venecia",
+        "label":  "Venecia, Antioquia"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Venecia",
+        "label":  "Venecia, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Ventaquemada",
+        "label":  "Ventaquemada, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Vergara",
+        "label":  "Vergara, Cundinamarca"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Versalles",
+        "label":  "Versalles, Valle del Cauca"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Vetas",
+        "label":  "Vetas, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Vianí",
+        "label":  "Vianí, Cundinamarca"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Victoria",
+        "label":  "Victoria, Caldas"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Vigía del Fuerte",
+        "label":  "Vigía del Fuerte, Antioquia"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Vijes",
+        "label":  "Vijes, Valle del Cauca"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Villa Caro",
+        "label":  "Villa Caro, Norte de Santander"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Villa de Leyva",
+        "label":  "Villa de Leyva, Boyacá"
+    },
+    {
+        "department":  "Norte de Santander",
+        "municipality":  "Villa del Rosario",
+        "label":  "Villa del Rosario, Norte de Santander"
+    },
+    {
+        "department":  "Cauca",
+        "municipality":  "Villa Rica",
+        "label":  "Villa Rica, Cauca"
+    },
+    {
+        "department":  "Putumayo",
+        "municipality":  "Villagarzón",
+        "label":  "Villagarzón, Putumayo"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Villagómez",
+        "label":  "Villagómez, Cundinamarca"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Villahermosa",
+        "label":  "Villahermosa, Tolima"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Villamaría",
+        "label":  "Villamaría, Caldas"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Villanueva",
+        "label":  "Villanueva, Bolívar"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Villanueva",
+        "label":  "Villanueva, Casanare"
+    },
+    {
+        "department":  "La Guajira",
+        "municipality":  "Villanueva",
+        "label":  "Villanueva, La Guajira"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Villanueva",
+        "label":  "Villanueva, Santander"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Villapinzón",
+        "label":  "Villapinzón, Cundinamarca"
+    },
+    {
+        "department":  "Tolima",
+        "municipality":  "Villarrica",
+        "label":  "Villarrica, Tolima"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Villavicencio",
+        "label":  "Villavicencio, Meta"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Villavieja",
+        "label":  "Villavieja, Huila"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Villeta",
+        "label":  "Villeta, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Viotá",
+        "label":  "Viotá, Cundinamarca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Viracachá",
+        "label":  "Viracachá, Boyacá"
+    },
+    {
+        "department":  "Meta",
+        "municipality":  "Vista Hermosa",
+        "label":  "Vista Hermosa, Meta"
+    },
+    {
+        "department":  "Caldas",
+        "municipality":  "Viterbo",
+        "label":  "Viterbo, Caldas"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Yacopí",
+        "label":  "Yacopí, Cundinamarca"
+    },
+    {
+        "department":  "Nariño",
+        "municipality":  "Yacuanquer",
+        "label":  "Yacuanquer, Nariño"
+    },
+    {
+        "department":  "Huila",
+        "municipality":  "Yaguará",
+        "label":  "Yaguará, Huila"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Yalí",
+        "label":  "Yalí, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Yarumal",
+        "label":  "Yarumal, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Yolombó",
+        "label":  "Yolombó, Antioquia"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Yondó",
+        "label":  "Yondó, Antioquia"
+    },
+    {
+        "department":  "Casanare",
+        "municipality":  "Yopal",
+        "label":  "Yopal, Casanare"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Yotoco",
+        "label":  "Yotoco, Valle del Cauca"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Yumbo",
+        "label":  "Yumbo, Valle del Cauca"
+    },
+    {
+        "department":  "Bolívar",
+        "municipality":  "Zambrano",
+        "label":  "Zambrano, Bolívar"
+    },
+    {
+        "department":  "Santander",
+        "municipality":  "Zapatoca",
+        "label":  "Zapatoca, Santander"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Zapayán",
+        "label":  "Zapayán, Magdalena"
+    },
+    {
+        "department":  "Antioquia",
+        "municipality":  "Zaragoza",
+        "label":  "Zaragoza, Antioquia"
+    },
+    {
+        "department":  "Valle del Cauca",
+        "municipality":  "Zarzal",
+        "label":  "Zarzal, Valle del Cauca"
+    },
+    {
+        "department":  "Boyacá",
+        "municipality":  "Zetaquira",
+        "label":  "Zetaquira, Boyacá"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Zipacón",
+        "label":  "Zipacón, Cundinamarca"
+    },
+    {
+        "department":  "Cundinamarca",
+        "municipality":  "Zipaquirá",
+        "label":  "Zipaquirá, Cundinamarca"
+    },
+    {
+        "department":  "Magdalena",
+        "municipality":  "Zona Bananera",
+        "label":  "Zona Bananera, Magdalena"
+    }
+]

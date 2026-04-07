@@ -2,42 +2,45 @@ import { motion } from "framer-motion";
 import { ArrowRight, BadgeCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/Button";
+import { useState } from "react";
+import { usePopOpenStore } from "@/store/video-pop-store";
 
 export function HeroSection() {
+  const [first, setFirst] = useState(true);
+
+  const { openPop } = usePopOpenStore();
   return (
-    <section className="grid gap-10 py-12 md:grid-cols-[1.1fr_0.9fr] md:py-20">
-      <div>
-        <motion.p initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="mb-4 text-xs uppercase tracking-[0.35em] text-brand-300">
-          Votacion con OTP
-        </motion.p>
+    <>
+      <section className="size-full flex justify-center gap-24 items-center flex-col">
         <motion.h1
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.08 }}
-          className="max-w-3xl font-display text-5xl leading-tight text-brand-50 md:text-7xl"
+          className="text-5xl leading-18 text-center text-brand-50 md:text-8xl"
         >
-          Decide si la marca evoluciona o conserva su identidad actual.
+          Tu voto decide <br className="hidden md:block" />
+          cómo nos veremos
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.16 }}
-          className="mt-6 max-w-2xl text-lg leading-8 text-brand-100/80"
+
+        
+        <Button
+          aria-label="Ver más"
+          size="2xl"
+          variant="primary"
+          onClick={() => openPop()}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.24 }}
         >
-          Flujo simple, validado por telefono y preparado para operar con backend desacoplado, Twilio y Firebase.
-        </motion.p>
-        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.24 }} className="mt-8 flex flex-wrap gap-4">
-          <Link to="/votacion">
-            <Button>
-              Empezar votacion <ArrowRight className="ml-2 inline-block h-4 w-4" />
-            </Button>
-          </Link>
-          <Link to="/registro-de-votaciones">
-            <Button variant="ghost">Ver registros</Button>
-          </Link>
-        </motion.div>
-      </div>
-      <div className="rounded-[32px] border border-white/10 bg-white/5 p-8">
+          Ver las opciones
+        </Button>
+      </section>
+      {/*   <div
+        data-cursor="play"
+        data-cursor-size="xs"
+        data-cursor-icon={first ? "play" : "pause"}
+        className=" rounded-4xl border border-white/10 bg-white/5 p-8"
+      >
         <div className="space-y-5">
           {[
             "Validacion de telefono",
@@ -45,13 +48,16 @@ export function HeroSection() {
             "Persistencia de paso de flujo",
             "Registro de voto y resumen",
           ].map((item) => (
-            <div key={item} className="flex items-center gap-3 rounded-2xl bg-black/10 px-4 py-4">
+            <div
+              key={item}
+              className="flex items-center gap-3 rounded-2xl bg-black/10 px-4 py-4"
+            >
               <BadgeCheck className="h-5 w-5 text-accent" />
               <span className="text-sm text-brand-50">{item}</span>
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </div> */}
+    </>
   );
 }

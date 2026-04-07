@@ -1,9 +1,22 @@
-export function PageIntro({ eyebrow, title, description }) {
+import { motion } from "framer-motion";
+
+export function PageIntro({ title, description }) {
   return (
-    <div className="mb-8 max-w-3xl">
-      <p className="mb-3 text-xs uppercase tracking-[0.35em] text-brand-300">{eyebrow}</p>
-      <h1 className="font-display text-4xl text-brand-50 md:text-5xl">{title}</h1>
-      <p className="mt-4 text-base leading-7 text-brand-100/80">{description}</p>
-    </div>
+    <motion.div className="w-full max-w-3xl text-center space-y-6">
+      <motion.h1
+        initial={{ opacity: 0, y: 36 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        dangerouslySetInnerHTML={{ __html: title }}
+        className="text-4xl md:text-7xl"
+      />
+      <motion.p
+        initial={{ opacity: 0, y: 36 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        dangerouslySetInnerHTML={{ __html: description }}
+        className="mt-4 text-2xl"
+      />
+    </motion.div>
   );
 }

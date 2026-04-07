@@ -1,19 +1,23 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { PageIntro } from "@/components/layout/PageIntro";
-import { Card } from "@/components/ui/Card";
-import { StepBadge } from "@/components/shared/StepBadge";
-import { PhoneStepForm } from "@/components/forms/PhoneStepForm";
-import { OtpStepForm } from "@/components/forms/OtpStepForm";
-import { VoteStepForm } from "@/components/forms/VoteStepForm";
+import { motion } from "framer-motion";
 import { useAuthFlow } from "@/hooks/use-auth-flow";
 import { useVotingStore } from "@/store/voting-store";
 import { votingService } from "@/services/voting-service";
 import { useAuthStore } from "@/store/auth-store";
+import { Button } from "@/components/ui/Button";
+import { RevealClipText } from "@/components/shared/RevealClipText";
+import { Steps } from "./components/Steps";
+
+const headlineLines = ["Para escribir la historia,", "necesitamos tu firma."];
 
 export function VotingPage() {
   const navigate = useNavigate();
+  const [steps, setSteps] = useState(1);
+
   const { session, error, isLoading, requestOtp, verifyOtp } = useAuthFlow();
-  const { currentStep, selectedOption, setStep, selectOption, hydrateSummary } = useVotingStore();
+  const { currentStep, selectedOption, setStep, selectOption, hydrateSummary } =
+    useVotingStore();
   const { markVoteCompleted } = useAuthStore();
 
   async function handlePhoneSubmit(phone) {
@@ -43,49 +47,17 @@ export function VotingPage() {
   }
 
   return (
-    <div>
-      <PageIntro
-        eyebrow="Votacion"
-        title="Flujo persistente por pasos"
-        description="La sesion de autenticacion y el paso de votacion quedan modelados para soportar persistencia y reanudacion."
-      />
-      <div className="mb-6 flex flex-wrap gap-3">
-        <StepBadge step={1} label="Telefono" isActive={currentStep === 1} />
-        <StepBadge step={2} label="OTP" isActive={currentStep === 2} />
-        <StepBadge step={3} label="Voto" isActive={currentStep === 3} />
+    <motion.div
+      initial={{ opacity: 0, y: 36 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      className="size-full max-w-6xl mx-auto flex justify-center items-center"
+    >
+      <div
+        className={`w-full min-h-135 ${steps >= 1 ? "" : "border"} border-cb rounded-2xl flex justify-center items-center`}
+      >
+        <Steps />
       </div>
-      <Card className="max-w-3xl">
-        {currentStep === 1 && (
-          <PhoneStepForm
-            onSubmit={handlePhoneSubmit}
-            isLoading={isLoading}
-            feedback={
-              session.hasVoted
-                ? { tone: "warning", message: "Ya no puedes votar con este numero." }
-                : error
-                  ? { tone: "error", message: error }
-                  : null
-            }
-          />
-        )}
-
-        {currentStep === 2 && (
-          <OtpStepForm
-            onSubmit={handleOtpSubmit}
-            isLoading={isLoading}
-            feedback={error ? { tone: "error", message: error } : { tone: "info", message: "Ingresa el codigo enviado por SMS." }}
-          />
-        )}
-
-        {currentStep === 3 && (
-          <VoteStepForm
-            selectedOption={selectedOption}
-            onSelect={selectOption}
-            onSubmit={handleVoteSubmit}
-            isSubmitting={false}
-          />
-        )}
-      </Card>
-    </div>
+    </motion.div>
   );
 }
