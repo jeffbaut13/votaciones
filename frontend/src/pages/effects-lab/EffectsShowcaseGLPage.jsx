@@ -35,10 +35,10 @@ export function EffectsShowcaseGLPage({ children }) {
         magnetStrength={isDesktop ? 0.34 : 0}
         driftStrength={prefersReducedMotion ? 0.4 : 1}
       />
-      <MagneticCursor
+      {/* <MagneticCursor
         disabled={!isDesktop}
         reducedMotion={prefersReducedMotion}
-      />
+      /> */}
       <main className="relative z-0 mx-auto h-full w-full px-6">{children}</main>
     </div>
   );

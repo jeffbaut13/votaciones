@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useAuthFlow } from "@/hooks/use-auth-flow";
@@ -7,13 +8,12 @@ import { useAuthStore } from "@/store/auth-store";
 import { Button } from "@/components/ui/Button";
 import { RevealClipText } from "@/components/shared/RevealClipText";
 import { Steps } from "./components/Steps";
-import { useState } from "react";
 
 const headlineLines = ["Para escribir la historia,", "necesitamos tu firma."];
 
 export function VotingPage() {
   const navigate = useNavigate();
-  const [steps, setSteps] = useState(0);
+  const [steps, setSteps] = useState(1);
 
   const { session, error, isLoading, requestOtp, verifyOtp } = useAuthFlow();
   const { currentStep, selectedOption, setStep, selectOption, hydrateSummary } =
@@ -56,45 +56,7 @@ export function VotingPage() {
       <div
         className={`w-full min-h-135 ${steps >= 1 ? "" : "border"} border-cb rounded-2xl flex justify-center items-center`}
       >
-        {steps >= 1 ? (
-          <Steps />
-        ) : (
-          <div className="size-full flex flex-col gap-6 items-center justify-center">
-            <RevealClipText
-              as="h1"
-              lines={headlineLines}
-              className="text-4xl md:text-7xl text-center"
-              moveDuration={2}
-              clipDuration={3}
-            />
-
-            <RevealClipText
-              as="p"
-              lines={[
-                "Queremos garantizar que cada voto sea único y transparente, ",
-                "necesitamos que te registres como un ciudadano de Inter Rapidísimo.",
-              ]}
-              className="text-center text-2xl"
-              moveDuration={2}
-              clipDuration={3}
-            />
-
-            <Button
-              variant="primary"
-              className="mt-6"
-              onClick={() => setSteps(1)}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 3,
-                delay: 0.6,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            >
-              Empezar
-            </Button>
-          </div>
-        )}
+        <Steps />
       </div>
     </motion.div>
   );

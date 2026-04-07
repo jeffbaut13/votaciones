@@ -1,14 +1,22 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Icono } from "@/components/ui/Icono";
 import { usePopOpenStore } from "@/store/video-pop-store";
-import { X } from "lucide-react";
+import { Play, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/Button";
 import { useNavigate } from "react-router-dom";
 
 export const VideoPop = () => {
-  const { isOpen, closePop, url, play, openVideo, closeVideo, setPlayState } =
-    usePopOpenStore();
+  const {
+    isOpen,
+    closePop,
+    url,
+    play,
+    openVideo,
+    closeVideo,
+    setPlayState,
+    colorBg,
+  } = usePopOpenStore();
   const videoRef = useRef(null);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -167,7 +175,8 @@ export const VideoPop = () => {
                 iconoLogo="/icons/logo-antiguo.svg"
                 alt="Imagen del video"
                 srcVideo={"/video/prueba.mp4"}
-                color="secondary"
+                color="fourty"
+                HandleVotacion={HandleVotacion}
               />
             </motion.div>
             <motion.div
@@ -184,6 +193,7 @@ export const VideoPop = () => {
                 alt="Imagen del video"
                 srcVideo="/video/prueba2.mp4"
                 color="primary"
+                HandleVotacion={HandleVotacion}
               />
             </motion.div>
           </div>
@@ -204,7 +214,7 @@ export const VideoPop = () => {
                   className="absolute z-10 inset-0 overflow-hidden"
                 >
                   <div
-                    className="absolute inset-0 size-full w-full bg-black"
+                    className={`absolute inset-0 size-full w-full flex justify-center items-center ${colorBg == "primary" ? "bg-black" : "bg-white"}`}
                     onMouseEnter={revealVideoMeta}
                     onMouseMove={revealVideoMeta}
                     onMouseLeave={hideVideoMetaIfPlaying}
@@ -223,12 +233,21 @@ export const VideoPop = () => {
                       onEnded={() => setPlayState(false)}
                       onPlay={() => setPlayState(true)}
                       onPause={() => setPlayState(false)}
-                      controls={false}
-                      className="size-full object-contain"
+                      controls={true}
+                      className="h-[90dvh] object-contain rounded-2xl"
                     />
+                    <Icono
+                      onClick={handleCloseVideo}
+                      color={`${colorBg === "primary" ? "primary" : "secondary"}`}
+                      customclass="absolute top-6 right-6 cursor-pointer transition"
+                      aria-label="Cerrar video"
+                      size="sm"
+                    >
+                      <X />
+                    </Icono>
 
                     {/* Aca un time lapse ubicando el tiempo una barra de progreso del video y un titulo este es dinamico de acuero d a legado o evolucion */}
-                    <AnimatePresence initial={false}>
+                    {/*   <AnimatePresence initial={false}>
                       {showVideoMeta && (
                         <motion.div
                           key="video-meta"
@@ -275,7 +294,7 @@ export const VideoPop = () => {
                           Votar
                         </Button>
                       </div>
-                    </AnimatePresence>
+                    </AnimatePresence> */}
                   </div>
                 </motion.div>
               </motion.div>
@@ -287,38 +306,97 @@ export const VideoPop = () => {
   );
 };
 
-const Content = ({ title, iconoLogo, alt, srcVideo, color = "primary" }) => {
+const Content = ({ title, iconoLogo, alt, srcVideo, color = "primary", HandleVotacion }) => {
   const { play, openSelectedVideo } = usePopOpenStore();
-  const themeColor = color === "primary" ? "text-brand-50" : "text-brand-100";
+  const [isHovered, setIsHovered] = useState(false);
+  const buttonClassName =
+    color === "secondary"
+      ? "!border-brand-100/30 !text-brand-100 hover:!bg-brand-100 hover:!text-brand-950"
+      : "";
+  const previewTransition = { duration: 0.55, ease: [0.22, 1, 0.36, 1] };
 
   return (
-    <div className="size-full flex flex-col items-center justify-evenly">
-      <h2 className={`text-2xl font-medium ${themeColor}`}>
-        {title === "legado" && "El Legado:"}
-        {title === "evolucion" && "La Evolución:"}
-      </h2>
-      <div
+    <div className="size-full flex items-center justify-center px-8">
+      <motion.div
+        layout
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
+        transition={{ layout: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } }}
         data-cursor={!play ? "play" : "pause"}
         data-cursor-icon={!play ? "play" : "pause"}
         data-cursor-size={"lg"}
         aria-label="Reproducir o pausar video"
-        className="group relative w-180 min-h-103 flex items-center justify-center cursor-pointer"
+        className="group relative flex min-h-136 w-full max-w-180 cursor-pointer flex-col items-center justify-center overflow-hidden"
       >
-        <picture className="w-91 h-auto inline-flex">
+        <motion.picture
+          layout
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="inline-flex h-auto w-91"
+        >
           <img src={iconoLogo} alt={alt} />
-        </picture>
-        <video
-          onClick={() => openSelectedVideo(title)}
-          src={srcVideo}
-          playsInline
-          autoPlay
-          loop
-          muted
-          className="scale-0 group-hover:scale-100 absolute size-full object-cover transition-all ease-out duration-1000"
-          poster=""
-        />
-      </div>
-      <div />
+        </motion.picture>
+
+        <motion.div
+          initial={false}
+          animate={{
+            gridTemplateRows: isHovered ? "1fr" : "0fr",
+            opacity: isHovered ? 1 : 0,
+            marginTop: isHovered ? "2rem" : "0rem",
+          }}
+          transition={previewTransition}
+          className="grid w-full overflow-hidden"
+        >
+          <div className="min-h-0">
+            <div className="relative group">
+              <motion.video
+                //onClick={() => openSelectedVideo(title)}
+                src={srcVideo}
+                playsInline
+                autoPlay
+                loop
+                muted
+                initial={false}
+                animate={{
+                  opacity: isHovered ? 1 : 0,
+                  scale: isHovered ? 1 : 0.86,
+                  y: isHovered ? 0 : 18,
+                }}
+                transition={previewTransition}
+                className="aspect-video w-full rounded-4xl object-cover"
+                poster=""
+              />
+              <Icono
+                onClick={() => openSelectedVideo(title, color)}
+                color="secondary"
+                customclass="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition bg-brand-50/70 rounded-full p-3"
+                aria-label="Reproducir video"
+                size="xl"
+              >
+                <Play />
+              </Icono>
+            </div>
+
+            <motion.div
+              initial={false}
+              animate={{
+                opacity: isHovered ? 1 : 0,
+                y: isHovered ? 0 : 14,
+                marginTop: isHovered ? "1.5rem" : "0rem",
+              }}
+              transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
+              className="flex justify-center"
+            >
+              <Button
+                variant={color === "primary" ? "primary" : "fourty"}
+                className={buttonClassName}
+                onClick={HandleVotacion}
+              >
+                Registra tu voto
+              </Button>
+            </motion.div>
+          </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

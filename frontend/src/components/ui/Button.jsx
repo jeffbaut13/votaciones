@@ -64,6 +64,8 @@ export function Button({
         return "border border-brand-50/30 text-brand-50 hover:bg-brand-50 hover:text-brand-100";
       case "third":
         return "text-brand-50/60 hover:text-brand-50";
+      case "fourty":
+        return "bg-brand-100 text-brand-50 hover:!opacity-70";
       case "arrow":
         return "text-brand-50/60 hover:text-brand-50";
       default:
@@ -73,6 +75,8 @@ export function Button({
 
   const sizes = () => {
     switch (size) {
+      case "xs":
+        return "text-xs";
       case "sm":
         return "text-sm";
       case "base":

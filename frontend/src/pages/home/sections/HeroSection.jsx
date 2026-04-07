@@ -11,36 +11,28 @@ export function HeroSection() {
   const { openPop } = usePopOpenStore();
   return (
     <>
-      <section className="size-full flex justify-center gap-14 items-center flex-col">
+      <section className="size-full flex justify-center gap-24 items-center flex-col">
         <motion.h1
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.08 }}
-          className="text-5xl leading-15 text-center text-brand-50 md:text-7xl"
+          className="text-5xl leading-18 text-center text-brand-50 md:text-8xl"
         >
-          Tu voto decide cómo nos veremos
+          Tu voto decide <br className="hidden md:block" />
+          cómo nos veremos
         </motion.h1>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.18 }}
-          className="text-3xl text-center"
-        >
-          Vota aquí o en cualquiera de los 3200 puntos{" "}
-          <br className="hidden lg:block" /> Inter Rapidísimo de todo el país.
-        </motion.h2>
-
+        
         <Button
           aria-label="Ver más"
-          size="xs"
+          size="2xl"
           variant="primary"
           onClick={() => openPop()}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.24 }}
         >
-          Ver más
+          Ver las opciones
         </Button>
       </section>
       {/*   <div
