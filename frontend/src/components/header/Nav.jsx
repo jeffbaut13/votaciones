@@ -2,11 +2,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
 const links = [
-  { to: "/", label: "Inicio" },
-  { to: "/auth-sms", label: "Auth SMS" },
-  { to: "/votacion", label: "Votacion" },
-  { to: "/registro-de-votaciones", label: "Registros" },
- 
+  { to: "/", label: "Home" },
+  { to: "/votacion", label: "Votar" },
+  { to: "/votacion", label: "Registrarse" },
+  { to: "/registro-de-voto", label: "Reporte votaciones" },
 ];
 
 export const Nav = ({ isOpen, setIsNavOpen }) => {
@@ -38,8 +37,8 @@ export const Nav = ({ isOpen, setIsNavOpen }) => {
                   className={({ isActive }) =>
                     `rounded-full px-4 py-2 transition ${
                       isActive
-                        ? "bg-brand-50 text-brand-100"
-                        : "text-brand-50 hover:bg-brand-50/10"
+                        ? " text-brand-50"
+                        : "text-brand-50/40 hover:text-brand-50 hover:bg-brand-50/10"
                     }`
                   }
                 >
