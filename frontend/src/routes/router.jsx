@@ -11,6 +11,7 @@ import { HabilitadoEstadoPage } from "@/pages/votacion-estados/HabilitadoEstadoP
 import { PendienteEstadoPage } from "@/pages/votacion-estados/PendienteEstadoPage";
 import { NuevoEstadoPage } from "@/pages/votacion-estados/NuevoEstadoPage";
 import { RegistroDeVotoPage } from "@/pages/votacion-estados/RegistroDeVotoPage";
+import { ThankSuccesPage } from "@/pages/votacion-estados/ThankSuccesPage";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,7 @@ export const router = createBrowserRouter([
       },
       { path: "votacion/estado/nuevo", element: <NuevoEstadoPage /> },
       { path: "registro-de-voto", element: <RegistroDeVotoPage /> },
+      { path: "thank-succes", element: <ThankSuccesPage /> },
       { path: "registro-de-votaciones", element: <VoteRecordsPage /> },
     ],
   },

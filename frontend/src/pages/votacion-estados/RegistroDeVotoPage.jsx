@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/Button";
 
 export function RegistroDeVotoPage() {
+  const navigate = useNavigate();
+
   const voteData = {
     options: [
       {
@@ -85,7 +88,11 @@ export function RegistroDeVotoPage() {
           <Button variant="secondary" size="xl">
             Detalle votaciones
           </Button>
-          <Button variant="secondary" size="xl">
+          <Button
+            variant="secondary"
+            size="xl"
+            onClick={() => navigate("/thank-succes")}
+          >
             Finalizar
           </Button>
         </div>
