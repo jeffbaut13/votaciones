@@ -16,7 +16,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.08 }}
-          className="text-5xl leading-18 text-center text-brand-50 md:text-8xl"
+          className="text-4xl leading-15 text-center text-brand-50 md:text-6xl"
         >
           38 años nos trajeron hasta aquí <br className="hidden md:block" />
           hoy tu voto tiene el poder de elegir cómo nos veremos
