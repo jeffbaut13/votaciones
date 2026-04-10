@@ -3,22 +3,11 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ConfirmVoteModal } from "@/components/shared/ConfirmVoteModal";
 
-function SelectedCardMarks() {
-  return (
-    <>
-      <span className="pointer-events-none absolute left-4 top-4 h-px w-20 rotate-27 bg-brand-100 md:left-5 md:top-5 md:w-28" />
-      <span className="pointer-events-none absolute right-4 top-4 h-px w-20 -rotate-27 bg-brand-100 md:right-5 md:top-5 md:w-28" />
-      <span className="pointer-events-none absolute bottom-4 left-4 h-px w-20 -rotate-27 bg-brand-100 md:bottom-5 md:left-5 md:w-28" />
-      <span className="pointer-events-none absolute bottom-4 right-4 h-px w-20 rotate-27 bg-brand-100 md:bottom-5 md:right-5 md:w-28" />
-    </>
-  );
-}
-
 const options = [
   {
     id: "logo-antiguo",
     label: "Logo antiguo",
-    className: "bg-brand-100",
+    className: "bg-black",
     content: (
       <img
         src="/icons/logo-antiguo-blanco.svg"
@@ -30,7 +19,7 @@ const options = [
   {
     id: "logo-nuevo",
     label: "Logo nuevo",
-    className: "bg-brand-100",
+    className: "bg-black",
     content: (
       <img
         src="/icons/logo-nuevo-blanco.svg"
@@ -86,8 +75,6 @@ export function NuevoEstadoPage() {
                     : "border-cb hover:border-brand-50/50  group hover:bg-brand-50"
                 }`}
               >
-                {isSelected ? <SelectedCardMarks /> : null}
-
                 <div className="relative flex h-full w-full cursor-pointer items-center justify-center px-6">
                   <picture
                     className={`p-6 transition duration-300 group-hover:opacity-0  ${isSelected ? "invert" : ""}`}

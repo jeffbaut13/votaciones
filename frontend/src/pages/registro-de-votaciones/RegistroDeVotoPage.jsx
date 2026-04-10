@@ -91,7 +91,7 @@ export function RegistroDeVotoPage() {
           <Button
             variant="secondary"
             size="xl"
-            onClick={() => navigate("/thank-succes")}
+            onClick={() => navigate("/success")}
           >
             Finalizar
           </Button>

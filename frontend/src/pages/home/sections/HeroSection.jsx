@@ -18,7 +18,7 @@ export function HeroSection() {
           transition={{ delay: 0.08 }}
           className="text-4xl leading-15 text-center text-brand-50 md:text-6xl"
         >
-          38 años nos trajeron hasta aquí <br className="hidden md:block" />
+          38 años nos trajeron hasta aquí, <br className="hidden md:block" />
           hoy tu voto tiene el poder de elegir cómo nos veremos
         </motion.h1>
 
