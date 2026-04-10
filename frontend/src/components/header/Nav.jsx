@@ -9,6 +9,18 @@ const links = [
 ];
 
 export const Nav = ({ isOpen, setIsNavOpen }) => {
+  const handleDownloadTerms = (event) => {
+    event.preventDefault();
+    setIsNavOpen(false);
+
+    const anchor = document.createElement("a");
+    anchor.href = "/documents/terminos.pdf";
+    anchor.download = "terminos.pdf";
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  };
+
   return (
     <>
       <AnimatePresence>
@@ -35,16 +47,24 @@ export const Nav = ({ isOpen, setIsNavOpen }) => {
                   to={link.to}
                   onClick={() => setIsNavOpen(false)}
                   className={({ isActive }) =>
-                    `rounded-full px-4 py-2 text-4xl transition ${
+                    `rounded-lg px-4 py-2 text-4xl transition ${
                       isActive
                         ? " text-brand-50"
-                        : "text-brand-50/40 hover:text-brand-50 hover:bg-brand-50/10"
+                        : "text-brand-50/40 hover:text-brand-50 hover:bg-brand-50/4"
                     }`
                   }
                 >
                   {link.label}
                 </NavLink>
               ))}
+              <a
+                href="/documents/terminos.pdf"
+                download="terminos.pdf"
+                onClick={handleDownloadTerms}
+                className="rounded-lg px-4 py-2 text-4xl text-brand-50/40 transition hover:text-brand-50 hover:bg-brand-50/4"
+              >
+                Términos y condiciones
+              </a>
             </motion.nav>
           </>
         )}
