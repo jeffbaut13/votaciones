@@ -15,8 +15,7 @@ export const Header = () => {
     <>
       <header className="sticky w-full z-1 top-0 bg-brand-950/85 h-auto">
         <div className="full flex items-center justify-between px-6">
-          <div className="full grid grid-cols-3 justify-items-center border-b border-cb py-4">
-            <div />
+          <div className="full flex items-center justify-between border-b border-cb py-4">
             <Link
               to="/"
               className="cursor-pointer w-fit h-full flex gap-2 max-h-7 items-center"
@@ -44,7 +43,7 @@ const BurgerAnimation = ({ isActive, onToggle }) => {
       onClick={onToggle}
       aria-label={isActive ? "Cerrar menu" : "Abrir menu"}
       aria-expanded={isActive}
-      className="group cursor-pointer relative z-40 inline-flex h-8 w-6 items-center justify-between justify-self-end"
+      className="group cursor-pointer relative z-40 inline-flex h-8 w-6 items-center justify-between"
       whileTap={{ scale: 0.92 }}
     >
       {Array.from({ length: 3 }).map((_, index) => {

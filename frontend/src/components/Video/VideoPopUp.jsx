@@ -306,7 +306,14 @@ export const VideoPop = () => {
   );
 };
 
-const Content = ({ title, iconoLogo, alt, srcVideo, color = "primary", HandleVotacion }) => {
+const Content = ({
+  title,
+  iconoLogo,
+  alt,
+  srcVideo,
+  color = "primary",
+  HandleVotacion,
+}) => {
   const { play, openSelectedVideo } = usePopOpenStore();
   const [isHovered, setIsHovered] = useState(false);
   const buttonClassName =
@@ -316,16 +323,18 @@ const Content = ({ title, iconoLogo, alt, srcVideo, color = "primary", HandleVot
   const previewTransition = { duration: 0.55, ease: [0.22, 1, 0.36, 1] };
 
   return (
-    <div className="size-full flex items-center justify-center px-8">
+    <motion.div
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+      data-cursor={!play ? "play" : "pause"}
+      data-cursor-icon={!play ? "play" : "pause"}
+      data-cursor-size={"lg"}
+      aria-label="Reproducir o pausar video"
+      className="size-full flex items-center justify-center px-8"
+    >
       <motion.div
         layout
-        onHoverStart={() => setIsHovered(true)}
-        onHoverEnd={() => setIsHovered(false)}
         transition={{ layout: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } }}
-        data-cursor={!play ? "play" : "pause"}
-        data-cursor-icon={!play ? "play" : "pause"}
-        data-cursor-size={"lg"}
-        aria-label="Reproducir o pausar video"
         className="group relative flex min-h-136 w-full max-w-180 cursor-pointer flex-col items-center justify-center overflow-hidden"
       >
         <motion.picture
@@ -397,6 +406,6 @@ const Content = ({ title, iconoLogo, alt, srcVideo, color = "primary", HandleVot
           </div>
         </motion.div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };

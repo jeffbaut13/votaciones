@@ -20,7 +20,6 @@ const OTP_STATUS_TO_ROUTE = {
   nuevo: "/votacion/estado/nuevo",
 };
 
-
 function isEmailValid(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -103,7 +102,12 @@ function StepContainer({ children, stepKey }) {
   );
 }
 
-function LineInput({ className = "", hasError = false, errorMessage = "", ...props }) {
+function LineInput({
+  className = "",
+  hasError = false,
+  errorMessage = "",
+  ...props
+}) {
   return (
     <div className="relative">
       <input
@@ -365,41 +369,45 @@ export const Steps = () => {
     };
 
     if (!formData.firstName.trim()) {
-      errors.firstName = "Ingresa tus nombres.";
+      errors.firstName = "Para continuar, debes escribir tu nombre";
     } else if (!isNameValid(formData.firstName.trim())) {
-      errors.firstName = "Solo se permiten letras y espacios.";
+      errors.firstName = "Para continuar, solo se permiten letras y espacios.";
     }
 
     if (!formData.lastName.trim()) {
-      errors.lastName = "Ingresa tus apellidos.";
+      errors.lastName = "Para continuar, debes escribir tu apellido";
     } else if (!isNameValid(formData.lastName.trim())) {
-      errors.lastName = "Solo se permiten letras y espacios.";
+      errors.lastName = "Para continuar, solo se permiten letras y espacios.";
     }
 
     if (!formData.city.trim()) {
-      errors.city = "Selecciona tu ciudad de residencia.";
+      errors.city = "Para continuar, necesitamos saber tu ciudad de residencia";
     }
 
     if (!formData.documentType.trim()) {
-      errors.documentType = "Selecciona el tipo de documento.";
+      errors.documentType =
+        "Para continuar, necesitamos saber el tipo de documento.";
     }
 
     if (!formData.documentNumber.trim()) {
-      errors.documentNumber = "Ingresa el número de documento.";
+      errors.documentNumber =
+        "Para continuar, necesitamos saber tu número de documento";
     } else if (!isDocumentValid(formData.documentNumber.trim())) {
-      errors.documentNumber = "Mínimo 4 dígitos sin caracteres especiales.";
+      errors.documentNumber =
+        "Para continuar, el número de documento debe tener al menos 4 dígitos sin caracteres especiales.";
     }
 
     if (!formData.email.trim()) {
-      errors.email = "Ingresa tu correo electrónico.";
+      errors.email = "Para continuar, debes ingresar tu correo electrónico";
     } else if (!isEmailValid(formData.email.trim())) {
-      errors.email = "Correo debe incluir @ y dominio válido.";
+      errors.email =
+        "Para continuar debes ingresar un correo válido, incluir @ y dominio.com";
     }
 
     if (!formData.phone.trim()) {
-      errors.phone = "Ingresa tu teléfono.";
+      errors.phone = "Para continuar, debes ingresar un número de celular";
     } else if (!isPhoneValid(formData.phone.trim())) {
-      errors.phone = "El teléfono debe tener exactamente 10 dígitos.";
+      errors.phone = "El número debe tener exactamente 10 dígitos.";
     }
 
     return errors;
@@ -708,7 +716,9 @@ export const Steps = () => {
                     placeholder="300 201 3456"
                     inputMode="numeric"
                     value={formatPhoneDisplay(formData.phone)}
-                    onChange={(event) => updateField("phone", event.target.value)}
+                    onChange={(event) =>
+                      updateField("phone", event.target.value)
+                    }
                     onBlur={() => touch("phone")}
                     autoComplete="nope"
                     data-lpignore="true"
@@ -730,7 +740,7 @@ export const Steps = () => {
           <StepContainer stepKey="step-4">
             <div className="mx-auto mt-8 w-full max-w-3xl space-y-12 text-center">
               <p className="text-4xl leading-tight text-brand-50/80">
-                Te hemos enviado un codigo de seguridad por SMS. Ingresalo aca:
+                Te hemos enviado un código de seguridad por SMS. Ingrésalo acá:
               </p>
 
               <div className="flex justify-center gap-3 md:gap-4">
