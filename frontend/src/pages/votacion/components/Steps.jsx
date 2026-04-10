@@ -1,5 +1,5 @@
 ﻿import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, RefreshCcw } from "lucide-react";
+import { ChevronDown, RefreshCcw, AlertCircle } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/Button";
@@ -9,7 +9,7 @@ const TOTAL_STEPS = 4;
 
 const CITY_OPTIONS = cityMunicipalityData;
 
-const DOCUMENT_TYPES = ["Cedula de ciudadania", "Cedula de extranjeria"];
+const DOCUMENT_TYPES = ["Cédula de ciudadanía", "Cédula de extranjería"];
 
 const COUNTRY_CODES = ["+57", "+1", "+52", "+34"];
 
@@ -20,36 +20,24 @@ const OTP_STATUS_TO_ROUTE = {
   nuevo: "/votacion/estado/nuevo",
 };
 
-const DAY_OPTIONS = Array.from({ length: 31 }, (_, index) => {
-  const day = String(index + 1).padStart(2, "0");
-  return { value: day, label: day };
-});
-
-const MONTH_OPTIONS = [
-  { value: "ene", label: "ene" },
-  { value: "feb", label: "feb" },
-  { value: "mar", label: "mar" },
-  { value: "abr", label: "abr" },
-  { value: "may", label: "may" },
-  { value: "jun", label: "jun" },
-  { value: "jul", label: "jul" },
-  { value: "ago", label: "ago" },
-  { value: "sep", label: "sep" },
-  { value: "oct", label: "oct" },
-  { value: "nov", label: "nov" },
-  { value: "dic", label: "dic" },
-];
-
-const YEAR_OPTIONS = Array.from(
-  { length: new Date().getFullYear() - 1899 },
-  (_, index) => {
-    const year = String(new Date().getFullYear() - index);
-    return { value: year, label: year };
-  },
-);
 
 function isEmailValid(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function isNameValid(value) {
+  // Solo letras, espacios y acentos
+  return /^[a-zA-Zá-ýÁ-Ý\s]+$/.test(value);
+}
+
+function isDocumentValid(value) {
+  // Solo dígitos, mínimo 4
+  return /^\d{4,}$/.test(value);
+}
+
+function isPhoneValid(value) {
+  // Exactamente 10 dígitos
+  return /^\d{10}$/.test(value);
 }
 
 function formatCountdown(seconds) {
@@ -115,18 +103,26 @@ function StepContainer({ children, stepKey }) {
   );
 }
 
-function LineInput({ className = "", hasError = false, ...props }) {
+function LineInput({ className = "", hasError = false, errorMessage = "", ...props }) {
   return (
-    <input
-      {...props}
-      autoComplete="nope"
-      spellCheck="false"
-      data-lpignore="true"
-      data-form-type="other"
-      className={`w-full border-b bg-transparent pb-3 text-4xl leading-none text-brand-50 outline-none transition placeholder:text-brand-50/55 focus:border-brand-50 ${
-        hasError ? "border-brand-50" : "border-cb"
-      } ${className}`}
-    />
+    <div className="relative">
+      <input
+        {...props}
+        autoComplete="nope"
+        spellCheck="false"
+        data-lpignore="true"
+        data-form-type="other"
+        className={`w-full border-b bg-transparent pb-3 pr-10 text-4xl leading-none text-brand-50 outline-none transition placeholder:text-brand-50/55 focus:border-brand-50 ${
+          hasError ? "border-accent" : "border-cb"
+        } ${className}`}
+      />
+      {hasError && (
+        <AlertCircle className="absolute right-0 top-0.5 h-7 w-7 text-accent" />
+      )}
+      {hasError && errorMessage && (
+        <p className="mt-2 text-sm text-accent">{errorMessage}</p>
+      )}
+    </div>
   );
 }
 
@@ -136,162 +132,49 @@ function UnderlineSelect({
   options,
   placeholder,
   hasError = false,
+  errorMessage = "",
 }) {
   return (
-    <div
-      className={`relative border-b pb-3 ${hasError ? "border-brand-50" : "border-cb"}`}
-    >
-      <select
-        value={value}
-        onChange={onChange}
-        autoComplete="nope"
-        data-lpignore="true"
-        className="w-full appearance-none bg-transparent pr-10 text-4xl leading-none text-brand-50 outline-none"
+    <div>
+      <div
+        className={`relative border-b pb-3 ${hasError ? "border-accent" : "border-cb"}`}
       >
-        <option value="" className="bg-brand-100 text-brand-50/55">
-          {placeholder}
-        </option>
-        {options.map((option) => (
-          <option
-            key={option}
-            value={option}
-            className="bg-brand-100 text-brand-50"
-          >
-            {option}
+        <select
+          value={value}
+          onChange={onChange}
+          autoComplete="nope"
+          data-lpignore="true"
+          className="w-full appearance-none bg-transparent pr-10 text-4xl leading-none text-brand-50 outline-none"
+        >
+          <option value="" className="bg-brand-100 text-brand-50/55">
+            {placeholder}
           </option>
-        ))}
-      </select>
-      <ChevronDown className="pointer-events-none absolute right-0 top-1 h-7 w-7 text-brand-50/75" />
-    </div>
-  );
-}
-
-function DateTokenSelect({
-  value,
-  placeholder,
-  options,
-  onChange,
-  onBlur,
-  widthClass,
-}) {
-  const containerRef = useRef(null);
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    if (!isOpen) {
-      return undefined;
-    }
-
-    const handleOutsideClick = (event) => {
-      if (!containerRef.current?.contains(event.target)) {
-        setIsOpen(false);
-        onBlur?.();
-      }
-    };
-
-    window.addEventListener("mousedown", handleOutsideClick);
-    return () => {
-      window.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [isOpen, onBlur]);
-
-  const selected = options.find((option) => option.value === value);
-
-  return (
-    <div ref={containerRef} className={`relative ${widthClass}`}>
-      <button
-        type="button"
-        onClick={() => setIsOpen((current) => !current)}
-        className={`flex w-full items-center justify-center bg-transparent text-center text-4xl leading-none outline-none transition ${
-          value ? "text-brand-50" : "text-brand-50/20"
-        }`}
-      >
-        <span>{selected?.label || placeholder}</span>
-      </button>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 8 }}
-            transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute left-0 top-full z-30 mt-2 w-full overflow-hidden rounded-xl border border-cb bg-brand-100"
-          >
-            <div className="max-h-52 overflow-y-auto">
-              {options.map((option) => (
-                <button
-                  key={option.value}
-                  type="button"
-                  onMouseDown={(event) => event.preventDefault()}
-                  onClick={() => {
-                    onChange(option.value);
-                    setIsOpen(false);
-                    onBlur?.();
-                  }}
-                  className={`w-full border-b border-cb px-2 py-2 text-center text-2xl transition hover:bg-brand-50/10 ${
-                    option.value === value
-                      ? "text-brand-50"
-                      : "text-brand-50/70"
-                  }`}
-                >
-                  {option.label}
-                </button>
-              ))}
-            </div>
-          </motion.div>
+          {options.map((option) => (
+            <option
+              key={option}
+              value={option}
+              className="bg-brand-100 text-brand-50"
+            >
+              {option}
+            </option>
+          ))}
+        </select>
+        <ChevronDown
+          className={`pointer-events-none absolute right-0 top-1 h-7 w-7 transition ${
+            hasError ? "text-accent" : "text-brand-50/75"
+          }`}
+        />
+        {hasError && (
+          <AlertCircle className="pointer-events-none absolute right-10 top-1 h-7 w-7 text-accent" />
         )}
-      </AnimatePresence>
-    </div>
-  );
-}
-
-function ExpeditionDateSelect({ dateParts, onChangePart, onBlur }) {
-  const isDateComplete = Boolean(
-    dateParts.day && dateParts.month && dateParts.year,
-  );
-
-  return (
-    <div className="grid grid-cols-[1fr_auto] items-end gap-4 border-b border-cb pb-3">
-      <p
-        className={`text-4xl leading-none transition ${
-          isDateComplete ? "text-brand-50" : "text-brand-50/70"
-        }`}
-      >
-        Fecha de expedicion
-      </p>
-
-      <div className="flex items-center">
-        <DateTokenSelect
-          value={dateParts.day}
-          placeholder="DD"
-          options={DAY_OPTIONS}
-          onChange={(nextValue) => onChangePart("day", nextValue)}
-          onBlur={onBlur}
-          widthClass="w-22"
-        />
-        <span className="text-4xl leading-none text-brand-50/20">/</span>
-        <DateTokenSelect
-          value={dateParts.month}
-          placeholder="MM"
-          options={MONTH_OPTIONS}
-          onChange={(nextValue) => onChangePart("month", nextValue)}
-          onBlur={onBlur}
-          widthClass="w-22"
-        />
-        <span className="text-4xl leading-none text-brand-50/20">/</span>
-        <DateTokenSelect
-          value={dateParts.year}
-          placeholder="AAAA"
-          options={YEAR_OPTIONS}
-          onChange={(nextValue) => onChangePart("year", nextValue)}
-          onBlur={onBlur}
-          widthClass="w-28"
-        />
       </div>
+      {hasError && errorMessage && (
+        <p className="mt-2 text-sm text-accent">{errorMessage}</p>
+      )}
     </div>
   );
 }
+
 function SearchableCitySelect({
   value,
   options,
@@ -299,6 +182,7 @@ function SearchableCitySelect({
   placeholder,
   hasError = false,
   onBlur,
+  errorMessage = "",
 }) {
   const containerRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -354,70 +238,78 @@ function SearchableCitySelect({
   };
 
   return (
-    <div ref={containerRef} className="relative">
-      <div
-        className={`relative border-b pb-3 ${hasError ? "border-brand-50" : "border-cb"}`}
-      >
-        <input
-          value={query}
-          onFocus={() => setIsOpen(true)}
-          onChange={(event) => {
-            setQuery(event.target.value);
-            setIsOpen(true);
-          }}
-          onBlur={() => {
-            window.setTimeout(() => {
-              onBlur?.();
-            }, 120);
-          }}
-          placeholder={placeholder}
-          autoComplete="nope"
-          spellCheck="false"
-          data-lpignore="true"
-          data-form-type="other"
-          className="w-full bg-transparent pr-10 text-4xl leading-none text-brand-50 outline-none placeholder:text-brand-50/55"
-        />
-        <ChevronDown
-          className={`pointer-events-none absolute right-0 top-1 h-7 w-7 text-brand-50/75 transition ${
-            isOpen ? "rotate-180" : "rotate-0"
-          }`}
-        />
-      </div>
+    <div>
+      <div ref={containerRef} className="relative">
+        <div
+          className={`relative border-b pb-3 ${hasError ? "border-accent" : "border-cb"}`}
+        >
+          <input
+            value={query}
+            onFocus={() => setIsOpen(true)}
+            onChange={(event) => {
+              setQuery(event.target.value);
+              setIsOpen(true);
+            }}
+            onBlur={() => {
+              window.setTimeout(() => {
+                onBlur?.();
+              }, 120);
+            }}
+            placeholder={placeholder}
+            autoComplete="nope"
+            spellCheck="false"
+            data-lpignore="true"
+            data-form-type="other"
+            className="w-full bg-transparent pr-10 text-4xl leading-none text-brand-50 outline-none placeholder:text-brand-50/55"
+          />
+          <ChevronDown
+            className={`pointer-events-none absolute right-0 top-1 h-7 w-7 transition ${
+              hasError ? "text-accent" : "text-brand-50/75"
+            } ${isOpen ? "rotate-180" : "rotate-0"}`}
+          />
+          {hasError && (
+            <AlertCircle className="pointer-events-none absolute right-10 top-1 h-7 w-7 text-accent" />
+          )}
+        </div>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 8 }}
-            transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute left-0 right-0 top-full z-20 mt-3 overflow-hidden rounded-2xl border border-cb bg-brand-100"
-          >
-            <div className="max-h-72 overflow-y-auto">
-              {filteredOptions.length ? (
-                filteredOptions.map((option) => (
-                  <button
-                    key={option.label}
-                    type="button"
-                    onMouseDown={(event) => event.preventDefault()}
-                    onClick={() => handleSelect(option)}
-                    className="flex w-full items-center justify-between gap-6 border-b border-cb px-4 py-3 text-left text-lg text-brand-50 transition hover:bg-brand-50/10"
-                  >
-                    <span>{option.municipality}</span>
-                    <span className="text-sm text-brand-50/60">
-                      {option.department}
-                    </span>
-                  </button>
-                ))
-              ) : (
-                <p className="px-4 py-5 text-lg text-brand-50/70">
-                  No hay resultados para tu busqueda.
-                </p>
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 8 }}
+              transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute left-0 right-0 top-full z-20 mt-3 overflow-hidden rounded-2xl border border-cb bg-brand-100"
+            >
+              <div className="max-h-72 overflow-y-auto">
+                {filteredOptions.length ? (
+                  filteredOptions.map((option) => (
+                    <button
+                      key={option.label}
+                      type="button"
+                      onMouseDown={(event) => event.preventDefault()}
+                      onClick={() => handleSelect(option)}
+                      className="flex w-full items-center justify-between gap-6 border-b border-cb px-4 py-3 text-left text-lg text-brand-50 transition hover:bg-brand-50/10"
+                    >
+                      <span>{option.municipality}</span>
+                      <span className="text-sm text-brand-50/60">
+                        {option.department}
+                      </span>
+                    </button>
+                  ))
+                ) : (
+                  <p className="px-4 py-5 text-lg text-brand-50/70">
+                    No hay resultados para tu busqueda.
+                  </p>
+                )}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+      {hasError && errorMessage && (
+        <p className="mt-2 text-sm text-accent">{errorMessage}</p>
+      )}
     </div>
   );
 }
@@ -433,36 +325,13 @@ export const Steps = () => {
     city: "",
     documentType: "",
     documentNumber: "",
-    expeditionDate: "",
     email: "",
     countryCode: "+57",
     phone: "",
   });
   const [otpValues, setOtpValues] = useState(["", "", "", "", "", ""]);
-  const [expeditionDateParts, setExpeditionDateParts] = useState({
-    day: "",
-    month: "",
-    year: "",
-  });
   const [touched, setTouched] = useState({});
   const otpRefs = useRef([]);
-
-  useEffect(() => {
-    const isComplete =
-      expeditionDateParts.day &&
-      expeditionDateParts.month &&
-      expeditionDateParts.year;
-
-    if (!isComplete) {
-      setFormData((current) => ({ ...current, expeditionDate: "" }));
-      return;
-    }
-
-    setFormData((current) => ({
-      ...current,
-      expeditionDate: `${expeditionDateParts.day}/${expeditionDateParts.month}/${expeditionDateParts.year}`,
-    }));
-  }, [expeditionDateParts]);
 
   useEffect(() => {
     if (step !== 4 || countdown <= 0) {
@@ -491,17 +360,20 @@ export const Steps = () => {
       city: "",
       documentType: "",
       documentNumber: "",
-      expeditionDate: "",
       email: "",
       phone: "",
     };
 
     if (!formData.firstName.trim()) {
       errors.firstName = "Ingresa tus nombres.";
+    } else if (!isNameValid(formData.firstName.trim())) {
+      errors.firstName = "Solo se permiten letras y espacios.";
     }
 
     if (!formData.lastName.trim()) {
       errors.lastName = "Ingresa tus apellidos.";
+    } else if (!isNameValid(formData.lastName.trim())) {
+      errors.lastName = "Solo se permiten letras y espacios.";
     }
 
     if (!formData.city.trim()) {
@@ -513,23 +385,21 @@ export const Steps = () => {
     }
 
     if (!formData.documentNumber.trim()) {
-      errors.documentNumber = "Ingresa el numero de documento.";
-    }
-
-    if (!formData.expeditionDate.trim()) {
-      errors.expeditionDate = "Ingresa la fecha de expedicion.";
+      errors.documentNumber = "Ingresa el número de documento.";
+    } else if (!isDocumentValid(formData.documentNumber.trim())) {
+      errors.documentNumber = "Mínimo 4 dígitos sin caracteres especiales.";
     }
 
     if (!formData.email.trim()) {
-      errors.email = "Ingresa tu correo electronico.";
+      errors.email = "Ingresa tu correo electrónico.";
     } else if (!isEmailValid(formData.email.trim())) {
-      errors.email = "Correo electronico invalido.";
+      errors.email = "Correo debe incluir @ y dominio válido.";
     }
 
     if (!formData.phone.trim()) {
-      errors.phone = "Ingresa tu telefono.";
-    } else if (formData.phone.trim().length !== 10) {
-      errors.phone = "Telefono incompleto.";
+      errors.phone = "Ingresa tu teléfono.";
+    } else if (!isPhoneValid(formData.phone.trim())) {
+      errors.phone = "El teléfono debe tener exactamente 10 dígitos.";
     }
 
     return errors;
@@ -541,11 +411,7 @@ export const Steps = () => {
     }
 
     if (step === 2) {
-      return (
-        !stepErrors.documentType &&
-        !stepErrors.documentNumber &&
-        !stepErrors.expeditionDate
-      );
+      return !stepErrors.documentType && !stepErrors.documentNumber;
     }
 
     if (step === 3) {
@@ -556,9 +422,22 @@ export const Steps = () => {
   }, [step, stepErrors, otpValues]);
 
   const updateField = (key, value) => {
+    let cleanValue = value;
+
+    if (key === "firstName" || key === "lastName") {
+      // Solo letras, espacios y acentos
+      cleanValue = value.replace(/[^a-zA-Zá-ýÁ-Ý\s]/g, "");
+    } else if (key === "documentNumber") {
+      // Solo dígitos
+      cleanValue = value.replace(/\D/g, "");
+    } else if (key === "phone") {
+      // Solo dígitos, máximo 10
+      cleanValue = value.replace(/\D/g, "").slice(0, 10);
+    }
+
     setFormData((current) => ({
       ...current,
-      [key]: key === "phone" ? value.replace(/\D/g, "").slice(0, 10) : value,
+      [key]: cleanValue,
     }));
   };
 
@@ -582,7 +461,6 @@ export const Steps = () => {
         ...current,
         documentType: true,
         documentNumber: true,
-        expeditionDate: true,
       }));
       return;
     }
@@ -725,6 +603,7 @@ export const Steps = () => {
                 }
                 onBlur={() => touch("firstName")}
                 hasError={Boolean(touched.firstName && stepErrors.firstName)}
+                errorMessage={stepErrors.firstName}
               />
               <LineInput
                 placeholder="Apellidos"
@@ -734,6 +613,7 @@ export const Steps = () => {
                 }
                 onBlur={() => touch("lastName")}
                 hasError={Boolean(touched.lastName && stepErrors.lastName)}
+                errorMessage={stepErrors.lastName}
               />
               <SearchableCitySelect
                 value={formData.city}
@@ -742,6 +622,7 @@ export const Steps = () => {
                 onBlur={() => touch("city")}
                 placeholder="Ciudad de residencia"
                 hasError={Boolean(touched.city && stepErrors.city)}
+                errorMessage={stepErrors.city}
               />
             </div>
 
@@ -762,30 +643,19 @@ export const Steps = () => {
                 hasError={Boolean(
                   touched.documentType && stepErrors.documentType,
                 )}
+                errorMessage={stepErrors.documentType}
               />
               <LineInput
-                placeholder="Numero de documento"
+                placeholder="Número de documento"
                 value={formData.documentNumber}
                 onChange={(event) =>
-                  updateField(
-                    "documentNumber",
-                    event.target.value.replace(/\D/g, ""),
-                  )
+                  updateField("documentNumber", event.target.value)
                 }
                 onBlur={() => touch("documentNumber")}
                 hasError={Boolean(
                   touched.documentNumber && stepErrors.documentNumber,
                 )}
-              />
-              <ExpeditionDateSelect
-                dateParts={expeditionDateParts}
-                onChangePart={(part, partValue) => {
-                  setExpeditionDateParts((current) => ({
-                    ...current,
-                    [part]: partValue,
-                  }));
-                }}
-                onBlur={() => touch("expeditionDate")}
+                errorMessage={stepErrors.documentNumber}
               />
             </div>
 
@@ -798,51 +668,57 @@ export const Steps = () => {
             <div className="space-y-10">
               <LineInput
                 type="email"
-                placeholder="Correo electronico"
+                placeholder="Correo electrónico"
                 value={formData.email}
                 onChange={(event) => updateField("email", event.target.value)}
                 onBlur={() => touch("email")}
                 hasError={Boolean(touched.email && stepErrors.email)}
+                errorMessage={stepErrors.email}
               />
 
-              <div className="grid grid-cols-[6.5rem_1px_1fr] items-center gap-4 border-b border-cb pb-3">
-                <div className="relative">
-                  <select
-                    value={formData.countryCode}
-                    onChange={(event) =>
-                      updateField("countryCode", event.target.value)
-                    }
+              <div>
+                <div className="grid grid-cols-[6.5rem_1px_1fr] items-center gap-4 border-b border-cb pb-3">
+                  <div className="relative">
+                    <select
+                      value={formData.countryCode}
+                      onChange={(event) =>
+                        updateField("countryCode", event.target.value)
+                      }
+                      autoComplete="nope"
+                      data-lpignore="true"
+                      className="w-full appearance-none bg-transparent text-4xl leading-none text-brand-50 outline-none"
+                    >
+                      {COUNTRY_CODES.map((code) => (
+                        <option
+                          key={code}
+                          value={code}
+                          className="bg-brand-100 text-brand-50"
+                        >
+                          {code}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="pointer-events-none absolute right-0 top-1 h-7 w-7 text-brand-50/75" />
+                  </div>
+
+                  <span className="h-10 w-px bg-brand-50/25" />
+
+                  <input
+                    type="tel"
+                    placeholder="300 201 3456"
+                    inputMode="numeric"
+                    value={formatPhoneDisplay(formData.phone)}
+                    onChange={(event) => updateField("phone", event.target.value)}
+                    onBlur={() => touch("phone")}
                     autoComplete="nope"
                     data-lpignore="true"
-                    className="w-full appearance-none bg-transparent text-4xl leading-none text-brand-50 outline-none"
-                  >
-                    {COUNTRY_CODES.map((code) => (
-                      <option
-                        key={code}
-                        value={code}
-                        className="bg-brand-100 text-brand-50"
-                      >
-                        {code}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="pointer-events-none absolute right-0 top-1 h-7 w-7 text-brand-50/75" />
+                    data-form-type="other"
+                    className="w-full bg-transparent text-4xl leading-none text-brand-50 placeholder:text-brand-50/55 outline-none"
+                  />
                 </div>
-
-                <span className="h-10 w-px bg-brand-50/25" />
-
-                <input
-                  type="tel"
-                  placeholder="316 329 0555"
-                  inputMode="numeric"
-                  value={formatPhoneDisplay(formData.phone)}
-                  onChange={(event) => updateField("phone", event.target.value)}
-                  onBlur={() => touch("phone")}
-                  autoComplete="nope"
-                  data-lpignore="true"
-                  data-form-type="other"
-                  className="w-full bg-transparent text-4xl leading-none text-brand-50 placeholder:text-brand-50/55 outline-none"
-                />
+                {touched.phone && stepErrors.phone && (
+                  <p className="mt-2 text-sm text-accent">{stepErrors.phone}</p>
+                )}
               </div>
             </div>
 
