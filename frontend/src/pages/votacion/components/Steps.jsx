@@ -1,7 +1,7 @@
 ﻿import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, RefreshCcw, AlertCircle } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/Button";
 import cityMunicipalityData from "@/data/colombia-cities-municipios.json";
 
@@ -318,6 +318,62 @@ function SearchableCitySelect({
   );
 }
 
+function MockRecaptcha({ verified, onChange }) {
+  const [checking, setChecking] = useState(false);
+
+  const handleClick = () => {
+    if (verified || checking) return;
+    setChecking(true);
+    window.setTimeout(() => {
+      setChecking(false);
+      onChange(true);
+    }, 1200);
+  };
+
+  return (
+    <div className="flex items-center justify-between rounded-md border border-cb bg-brand-50/5 px-4 py-3">
+      <div className="flex items-center gap-3">
+        <button
+          type="button"
+          onClick={handleClick}
+          className={`flex h-7 w-7 shrink-0 items-center justify-center rounded border-2 transition-all duration-300 ${
+            verified
+              ? "border-[#4a90d9] bg-[#4a90d9]"
+              : checking
+                ? "border-cb"
+                : "border-cb hover:border-brand-50/60"
+          }`}
+        >
+          {checking && (
+            <motion.span
+              animate={{ rotate: 360 }}
+              transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+              className="block h-3.5 w-3.5 rounded-full border-2 border-brand-50/20 border-t-brand-50/70"
+            />
+          )}
+          {verified && !checking && (
+            <svg viewBox="0 0 12 10" fill="none" className="h-3.5 w-3.5">
+              <path
+                d="M1 5l3.5 3.5L11 1"
+                stroke="white"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+        </button>
+        <span className="text-base text-brand-50/75">No soy un robot</span>
+      </div>
+      <div className="flex flex-col items-center gap-0.5 border-l border-cb pl-4">
+        <RefreshCcw className="h-8 w-8 text-[#4a90d9]" />
+        <span className="text-[9px] leading-none text-brand-50/40">reCAPTCHA</span>
+        <span className="text-[8px] leading-none text-brand-50/25">Privacidad · Términos</span>
+      </div>
+    </div>
+  );
+}
+
 export const Steps = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -335,6 +391,8 @@ export const Steps = () => {
   });
   const [otpValues, setOtpValues] = useState(["", "", "", "", "", ""]);
   const [touched, setTouched] = useState({});
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [recaptchaVerified, setRecaptchaVerified] = useState(false);
   const otpRefs = useRef([]);
 
   useEffect(() => {
@@ -423,11 +481,16 @@ export const Steps = () => {
     }
 
     if (step === 3) {
-      return !stepErrors.email && !stepErrors.phone;
+      return (
+        !stepErrors.email &&
+        !stepErrors.phone &&
+        termsAccepted &&
+        recaptchaVerified
+      );
     }
 
     return otpValues.every((value) => value.length === 1);
-  }, [step, stepErrors, otpValues]);
+  }, [step, stepErrors, otpValues, termsAccepted, recaptchaVerified]);
 
   const updateField = (key, value) => {
     let cleanValue = value;
@@ -474,7 +537,13 @@ export const Steps = () => {
     }
 
     if (step === 3) {
-      setTouched((current) => ({ ...current, email: true, phone: true }));
+      setTouched((current) => ({
+        ...current,
+        email: true,
+        phone: true,
+        terms: true,
+        recaptcha: true,
+      }));
     }
   };
 
@@ -728,6 +797,80 @@ export const Steps = () => {
                 </div>
                 {touched.phone && stepErrors.phone && (
                   <p className="mt-2 text-sm text-accent">{stepErrors.phone}</p>
+                )}
+              </div>
+
+              {/* Checkbox términos y condiciones */}
+              <div className="space-y-1.5">
+                <label className="flex cursor-pointer items-start gap-3">
+                  <div
+                    role="checkbox"
+                    aria-checked={termsAccepted}
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === " " || e.key === "Enter") {
+                        e.preventDefault();
+                        setTermsAccepted((v) => !v);
+                        setTouched((c) => ({ ...c, terms: true }));
+                      }
+                    }}
+                    onClick={() => {
+                      setTermsAccepted((v) => !v);
+                      setTouched((c) => ({ ...c, terms: true }));
+                    }}
+                    className={`mt-0.5 flex h-5 w-5 shrink-0 cursor-pointer items-center justify-center rounded border-2 transition-all duration-200 outline-none focus-visible:ring-1 focus-visible:ring-brand-50/50 ${
+                      termsAccepted
+                        ? "border-brand-50 bg-brand-50"
+                        : touched.terms && !termsAccepted
+                          ? "border-accent"
+                          : "border-cb hover:border-brand-50/60"
+                    }`}
+                  >
+                    {termsAccepted && (
+                      <svg viewBox="0 0 12 10" fill="none" className="h-3 w-3">
+                        <path
+                          d="M1 5l3.5 3.5L11 1"
+                          stroke="#18191a"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    )}
+                  </div>
+                  <span className="select-none text-sm leading-relaxed text-brand-50/75">
+                    Acepto los{" "}
+                    <Link
+                      to="/terminos-y-condiciones"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2 transition hover:text-brand-50"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      términos y condiciones
+                    </Link>
+                  </span>
+                </label>
+                {touched.terms && !termsAccepted && (
+                  <p className="ml-8 text-sm text-accent">
+                    Debes aceptar los términos y condiciones para continuar
+                  </p>
+                )}
+              </div>
+
+              {/* Mock reCAPTCHA */}
+              <div>
+                <MockRecaptcha
+                  verified={recaptchaVerified}
+                  onChange={(value) => {
+                    setRecaptchaVerified(value);
+                    setTouched((c) => ({ ...c, recaptcha: true }));
+                  }}
+                />
+                {touched.recaptcha && !recaptchaVerified && (
+                  <p className="mt-2 text-sm text-accent">
+                    Por favor verifica que no eres un robot
+                  </p>
                 )}
               </div>
             </div>

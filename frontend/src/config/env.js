@@ -1,5 +1,6 @@
 export const env = {
   apiUrl: import.meta.env.VITE_API_URL || "http://localhost:4000/api",
+  siteAccessPassword: import.meta.env.VITE_SITE_ACCESS_PASSWORD || "",
   firebase: {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "",
     authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "",
