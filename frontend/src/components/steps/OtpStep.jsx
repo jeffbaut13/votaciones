@@ -72,7 +72,7 @@ export default function OtpStep({ userId, onVerified }) {
       />
 
       {error && (
-        <p className="text-sm text-red-500 bg-red-50 rounded-lg px-3 py-2">{error}</p>
+        <p className="text-sm text-accent bg-accent/20 rounded-lg px-3 py-2">{error}</p>
       )}
 
       {resendSuccess && (

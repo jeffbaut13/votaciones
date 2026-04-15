@@ -109,7 +109,11 @@ VITE_FIREBASE_STORAGE_BUCKET=tu_storage_bucket
 VITE_FIREBASE_MESSAGING_SENDER_ID=tu_sender_id
 VITE_FIREBASE_APP_ID=tu_app_id
 VITE_API_URL=http://localhost:3000
+VITE_SITE_ACCESS_PASSWORD=tu_password_privada_del_sitio
 ```
+
+### Frontend en Vercel
+Configura la variable de entorno `VITE_SITE_ACCESS_PASSWORD` en el proyecto de Vercel (Production/Preview/Development) para controlar la contraseña de acceso global del sitio.
 
 ## 🔄 Flujo de autenticación
 

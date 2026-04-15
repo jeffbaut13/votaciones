@@ -13,11 +13,21 @@ import { ThankSuccesPage } from "@/pages/votacion-estados/ThankSuccesPage";
 import { Terminos } from "@/pages/terminos/Terminos";
 import { Thankiu } from "@/pages/success/Thankiu";
 import { RegistroDeVotoPage } from "@/pages/registro-de-votaciones/RegistroDeVotoPage";
+import { SitePasswordGuard } from "@/components/guards/SitePasswordGuard";
+import { SiteAccessPage } from "@/pages/access/SiteAccessPage";
 
 export const router = createBrowserRouter([
   {
+    path: "/acceso",
+    element: <SiteAccessPage />,
+  },
+  {
     path: "/",
-    element: <AppShell />,
+    element: (
+      <SitePasswordGuard>
+        <AppShell />
+      </SitePasswordGuard>
+    ),
     children: [
       { index: true, element: <HomePage /> },
       { path: "auth-sms", element: <AuthSmsPage /> },
