@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "Objeto",
+    "content": "El presente documento establece los términos y condiciones que regulan el proceso de votación denominado “Elige Nuestro Logo”, organizado por Inter Rapidísimo mediante el cual el público en general podrá participar en la selección de una de las opciones de identidad visual."
+  },
+  {
+    "id": 2,
+    "title": "Mecanismos de participación",
+    "content": "Las personas interesadas en participar podrán ejercer su voto a través de los siguientes canales habilitados:<br/> <ul><li>Página web oficial: eligenuestrologo.com</li><li>Puntos de atención al cliente de Inter Rapidísimo a nivel nacional</li></ul>"
+  },
+  {
+    "id": 3,
+    "title": "Requisitos para participar",
+    "content": "Para poder participar en el proceso de votación, los usuarios deberán suministrar la siguiente información personal:<br/> <ul><li>Nombre completo</li><li>Número de cédula de ciudadanía</li><li>Número de teléfono celular</li><li>Ciudad de residencia</li></ul> <br />El suministro de esta información constituye un requisito indispensable para la validación de la participación."
+  },
+  {
+    "id": 4,
+    "title": "Validación de identidad",
+    "content": "Con el fin de garantizar la transparencia y autenticidad del proceso, cada participante deberá realizar un proceso de validación de identidad mediante un código de seguridad que será enviado vía SMS al número de celular registrado. <br />Solo una vez completada esta validación, el participante podrá emitir su voto."
+  },
+  {
+    "id": 5,
+    "title": "Condiciones de la votación",
+    "content": "<ul><li>Cada persona podrá votar una <strong>única vez</strong> durante todo el proceso.</li><li>Los participantes podrán seleccionar <strong>una de las dos (2) opciones</strong> de logo disponibles.</li><li>Cualquier intento de fraude, suplantación o duplicidad en la votación podrá resultar en la anulación del voto.</li></ul>"
+  },
+  {
+    "id": 6,
+    "title": "Vigencia del proceso de votación",
+    "content": "El proceso de votación estará habilitado desde el <strong>21 de mayo hasta el 26 de mayo</strong>, inclusive."
+  },
+  {
+    "id": 7,
+    "title": "Anuncio del resultado",
+    "content": "El resultado de la votación será anunciado el día <strong>26 de mayo</strong>, en el marco de un evento en vivo organizado por Inter Rapidísimo."
+  },
+  {
+    "id": 8,
+    "title": "Auditoría del proceso",
+    "content": "Con el fin de garantizar la transparencia, imparcialidad y confiabilidad del proceso, la totalidad de la votación será auditada por la firma Ernst & Young Global Limited (EY)."
+  },
+  {
+    "id": 9,
+    "title": "Aceptación de los términos",
+    "content": "La participación en el proceso de votación implica la aceptación plena e incondicional de los presentes términos y condiciones."
+  },
+  {
+    "id": 10,
+    "title": "Disposiciones finales",
+    "content": "La Compañía se reserva el derecho de modificar, suspender o cancelar el proceso de votación por causas justificadas, garantizando en todo momento la transparencia del proceso y la adecuada comunicación a los participantes."
+  }
+]
